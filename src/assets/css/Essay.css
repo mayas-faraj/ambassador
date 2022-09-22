@@ -1,0 +1,218 @@
+@font-face {
+  font-family: "minion";
+  src: url("../fonts/MinionPro-Disp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold";
+  src: url("../fonts/MinionPro-BoldDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-it";
+  src: url("../fonts/MinionPro-ItDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-semibold-it";
+  src: url("../fonts/MinionPro-SemiboldItDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold-it";
+  src: url("../fonts/MinionPro-BoldIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium";
+  src: url("../fonts/MinionPro-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium-it";
+  src: url("../fonts/MinionPro-MediumIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold-subh";
+  src: url("../fonts/MinionPro-BoldSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium-subh";
+  src: url("../fonts/MinionPro-MediumSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-it-subh";
+  src: url("../fonts/MinionPro-ItSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "arial-narrow";
+  src: url("../fonts/Arial Narrow.ttf") format("truetype");
+}
+/* line 5, ../../../style/sass/Essay.scss */
+html {
+  scroll-behavior: auto !important;
+  background-color: #151620;
+}
+
+/* line 10, ../../../style/sass/Essay.scss */
+.essay-header {
+  text-align: center;
+  padding: 35px 0 45px;
+  position: relative;
+  background-color: #151620;
+}
+
+/* line 17, ../../../style/sass/Essay.scss */
+.essay-header__menu {
+  font-family: minion-bold;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  color: #cc9966;
+}
+
+/* line 25, ../../../style/sass/Essay.scss */
+.essays__title {
+  font-family: 'minion-medium-subh';
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  white-space: pre-line;
+  padding: 40px 20px 0;
+  color: #4a4a4a;
+}
+
+/* line 36, ../../../style/sass/Essay.scss */
+.essays__title::after {
+  content: ' ';
+  width: 425px;
+  display: block;
+  height: 3px;
+  border-bottom: 1px solid #cc9966;
+  border-top: 1px solid #cc9966;
+  margin: 20px auto 15px;
+}
+@media (max-width: 720px) {
+  /* line 36, ../../../style/sass/Essay.scss */
+  .essays__title::after {
+    width: 100%;
+  }
+}
+
+/* line 49, ../../../style/sass/Essay.scss */
+.essays-list {
+  height: calc(100vh - 340px);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  max-width: 100% !important;
+}
+@media (max-width: 1350px) {
+  /* line 49, ../../../style/sass/Essay.scss */
+  .essays-list {
+    height: calc(100vh - 230px);
+  }
+}
+@media (max-width: 700px) {
+  /* line 49, ../../../style/sass/Essay.scss */
+  .essays-list {
+    height: calc(100vh - 340px);
+  }
+}
+
+/* line 64, ../../../style/sass/Essay.scss */
+.essays-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 68, ../../../style/sass/Essay.scss */
+.essay-seperator {
+  bottom: -2px;
+  transform: scale(-1);
+}
+
+/* line 73, ../../../style/sass/Essay.scss */
+.essay-seperator path {
+  fill: #e0dcd4;
+}
+
+/* line 77, ../../../style/sass/Essay.scss */
+.essay-wrapper {
+  position: relative;
+  background-color: #e0dcd4;
+  color: #4a4a4a;
+  letter-spacing: 0px;
+  min-height: 500px;
+  margin-bottom: 40px;
+}
+
+/* line 86, ../../../style/sass/Essay.scss */
+.essay {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 15px;
+  max-width: unset !important;
+  min-height: 500px;
+}
+
+/* line 95, ../../../style/sass/Essay.scss */
+.essay-book__link {
+  width: max-content;
+  margin: 0 auto;
+}
+
+/* line 100, ../../../style/sass/Essay.scss */
+.essay::after {
+  content: ' ';
+  background-image: url(../imgs/lines.svg);
+  height: 120px;
+  width: 100%;
+  top: calc(50% - 60px);
+  position: absolute;
+}
+
+/* line 109, ../../../style/sass/Essay.scss */
+.essay-info {
+  font-family: minion-bold-it;
+  font-size: 22px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: pre-line;
+  text-align: center;
+  color: #cc9966;
+  max-width: 965px;
+  margin: 0 auto;
+}
+
+/* line 121, ../../../style/sass/Essay.scss */
+.essay-info__comment {
+  font-family: minion-bold;
+}
+
+/* line 125, ../../../style/sass/Essay.scss */
+.react-pdf__Page__canvas {
+  width: fit-content !important;
+  height: 100% !important;
+  max-height: 60vh;
+  max-width: 95%;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: top;
+  cursor: zoom-in;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 15px #5e5e5e;
+  box-sizing: border-box;
+}
+
+/* line 140, ../../../style/sass/Essay.scss */
+.react-pdf__Page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* line 145, ../../../style/sass/Essay.scss */
+.react-pdf__Document {
+  position: relative;
+  z-index: 99;
+}
+
+/* line 150, ../../../style/sass/Essay.scss */
+.react-pdf__Page__textContent {
+  display: none;
+}

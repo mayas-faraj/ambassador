@@ -1,0 +1,10 @@
+@import "_colors";
+
+.under-construction {
+	min-height: 300px;
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	color: $primary-color;
+	font-size: 25px;
+}

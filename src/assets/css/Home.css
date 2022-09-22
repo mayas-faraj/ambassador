@@ -1,0 +1,324 @@
+@font-face {
+  font-family: "minion";
+  src: url("../fonts/MinionPro-Disp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold";
+  src: url("../fonts/MinionPro-BoldDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-it";
+  src: url("../fonts/MinionPro-ItDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-semibold-it";
+  src: url("../fonts/MinionPro-SemiboldItDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold-it";
+  src: url("../fonts/MinionPro-BoldIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium";
+  src: url("../fonts/MinionPro-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium-it";
+  src: url("../fonts/MinionPro-MediumIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold-subh";
+  src: url("../fonts/MinionPro-BoldSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium-subh";
+  src: url("../fonts/MinionPro-MediumSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-it-subh";
+  src: url("../fonts/MinionPro-ItSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "arial-narrow";
+  src: url("../fonts/Arial Narrow.ttf") format("truetype");
+}
+/* line 5, ../../../style/sass/Home.scss */
+html {
+  scroll-behavior: smooth;
+  font-size: 20px;
+}
+
+/* line 10, ../../../style/sass/Home.scss */
+body {
+  background-color: #151620;
+}
+
+/* line 14, ../../../style/sass/Home.scss */
+header {
+  position: relative;
+  background-color: #151620;
+}
+
+/* line 19, ../../../style/sass/Home.scss */
+.header-wrapper {
+  position: relative;
+}
+
+/* line 24, ../../../style/sass/Home.scss */
+.header {
+  position: relative;
+  text-align: center;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 34, ../../../style/sass/Home.scss */
+.top-header,
+.top-header__overlay {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  -moz-transition: -moz-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  -moz-transform: translateY(-150px);
+  -ms-transform: translateY(-150px);
+  -webkit-transform: translateY(-150px);
+  transform: translateY(-150px);
+}
+
+/* line 43, ../../../style/sass/Home.scss */
+.top-header {
+  padding: 0px 60px;
+  z-index: 999901;
+  box-sizing: border-box;
+}
+
+/* line 49, ../../../style/sass/Home.scss */
+.top-header__overlay {
+  max-width: 100% !important;
+  background-color: rgba(204, 153, 102, 0.8);
+  height: 68px;
+  left: 0;
+  z-index: 999900;
+}
+
+/* line 57, ../../../style/sass/Home.scss */
+.top-header__overlay--visible,
+.top-header--visible {
+  -moz-transform: translateY(0px) !important;
+  -ms-transform: translateY(0px) !important;
+  -webkit-transform: translateY(0px) !important;
+  transform: translateY(0px) !important;
+}
+
+/* line 62, ../../../style/sass/Home.scss */
+.top-header__title {
+  text-align: center;
+  color: #151620 !important;
+  margin: 0;
+}
+
+/* line 68, ../../../style/sass/Home.scss */
+.top-header__menu {
+  float: left;
+  width: 26px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+/* line 74, ../../../style/sass/Home.scss */
+.top-header__menu rect {
+  fill: #151620 !important;
+}
+
+/* line 79, ../../../style/sass/Home.scss */
+.header-menu {
+  text-align: left;
+  margin-left: 58px;
+  margin-bottom: 20px;
+  letter-spacing: 2.8px;
+  line-height: 18px;
+  -moz-transition: -moz-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+/* line 89, ../../../style/sass/Home.scss */
+.header-menu--sticky {
+  -moz-transform: translateX(-100vw);
+  -ms-transform: translateX(-100vw);
+  -webkit-transform: translateX(-100vw);
+  transform: translateX(-100vw);
+  position: fixed;
+  top: 68px;
+  left: initial;
+  margin-left: 58px;
+}
+
+/* line 98, ../../../style/sass/Home.scss */
+.header-menu--visible {
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+  background-color: rgba(204, 153, 102, 0.8);
+  padding: 0 20px;
+}
+
+/* line 104, ../../../style/sass/Home.scss */
+.header__title {
+  margin: 18px 0;
+  text-align: center;
+}
+
+/* line 109, ../../../style/sass/Home.scss */
+.header__title,
+.top-header__title {
+  font-family: minion-it;
+  letter-spacing: 5.4px;
+  color: #ce9c72;
+  font-size: 23px;
+  line-height: 34px;
+}
+
+/* line 118, ../../../style/sass/Home.scss */
+.header__subtitle {
+  font-family: minion;
+  display: block;
+}
+
+/* line 123, ../../../style/sass/Home.scss */
+.header-menu__list {
+  list-style-type: none;
+  padding-left: 0px;
+  text-transform: uppercase;
+}
+
+/* line 129, ../../../style/sass/Home.scss */
+.header-menu__link {
+  -moz-transition: color 1s;
+  -o-transition: color 1s;
+  -webkit-transition: color 1s;
+  transition: color 1s;
+  font-family: arial-narrow, arial, sans-serif;
+  font-size: 15px;
+}
+
+/* line 135, ../../../style/sass/Home.scss */
+.header-menu__link:hover {
+  color: #cc9966;
+}
+
+/* line 139, ../../../style/sass/Home.scss */
+.header__img {
+  transform: scale(0.9);
+}
+
+/* line 143, ../../../style/sass/Home.scss */
+.about-navigator,
+.italy-navigator,
+.article-navigator,
+.navigator__image {
+  width: 100%;
+}
+
+/* line 150, ../../../style/sass/Home.scss */
+.navigator__image {
+  max-width: 100% !important;
+}
+
+/* line 154, ../../../style/sass/Home.scss */
+.about-navigator {
+  background-image: url(../imgs/claudio-pacifico-libya.jpg);
+}
+
+/* line 158, ../../../style/sass/Home.scss */
+.italy-navigator {
+  background-image: url(../imgs/claudio-pacifico-with-arafat.jpg);
+}
+
+/* line 162, ../../../style/sass/Home.scss */
+.desert-navigator {
+  background-image: url(../imgs/claudio-pacifico-desert.jpg);
+}
+/* line 164, ../../../style/sass/Home.scss */
+.desert-navigator .navigator__link {
+  padding-right: 58vw;
+  margin-top: 110px;
+}
+
+/* line 170, ../../../style/sass/Home.scss */
+.article-navigator {
+  background-image: url(../imgs/claudio-pacifico-newspaper.jpg);
+}
+
+/* line 174, ../../../style/sass/Home.scss */
+.about-navigator,
+.desert-navigator,
+.article-navigator,
+.italy-navigator {
+  height: 41.5vw;
+  background-size: cover;
+  display: flex;
+  background-blend-mode: multiply;
+  background-color: #fff;
+  background-position: bottom;
+  -moz-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+/* line 187, ../../../style/sass/Home.scss */
+.about-navigator:hover,
+.desert-navigator:hover,
+.article-navigator:hover,
+.italy-navigator:hover {
+  background-color: #3b3b3b;
+}
+
+/* line 194, ../../../style/sass/Home.scss */
+.navigator__link {
+  margin: auto;
+  font-family: 'minion-semibold-it';
+  font-size: 30px;
+  letter-spacing: 4px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* line 203, ../../../style/sass/Home.scss */
+.swiper-button-next, .swiper-button-prev {
+  color: #cc9966 !important;
+}
+
+/* line 207, ../../../style/sass/Home.scss */
+.swiper-pagination-bullet-active {
+  background-color: #cc9966 !important;
+}
+
+/* line 211, ../../../style/sass/Home.scss */
+.swiper-pagination-bullet {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+@media screen and (min-width: 700px) {
+  /* line 220, ../../../style/sass/Home.scss */
+  .header-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+  }
+
+  /* line 227, ../../../style/sass/Home.scss */
+  .navigator__link {
+    font-size: 4vw;
+  }
+}

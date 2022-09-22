@@ -1,0 +1,22 @@
+/* line 3, ../../../style/sass/Footer.scss */
+.footer {
+  background-color: #151620;
+  max-width: 100% !important;
+  font-size: 14px;
+  color: #e0dcd4;
+}
+/* line 9, ../../../style/sass/Footer.scss */
+.footer a {
+  color: #cc9966;
+}
+/* line 13, ../../../style/sass/Footer.scss */
+.footer img {
+  max-width: 100% !important;
+}
+
+/* line 18, ../../../style/sass/Footer.scss */
+.footer-copyright {
+  text-align: center;
+  padding: 5px;
+  line-height: 200px;
+}

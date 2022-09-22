@@ -1,0 +1,152 @@
+@import "compass/css3";
+@import "_colors";
+@import "_fonts";
+
+html {
+	scroll-behavior: auto !important;
+	background-color: $primary-color;
+}
+
+.essay-header {
+	text-align: center;
+	padding: 35px 0 45px;
+	position: relative;
+	background-color: $primary-color;
+}
+
+.essay-header__menu {
+	font-family: minion-bold;
+	font-size: 22px;
+	line-height: 26px;
+	letter-spacing: 1px;
+	color: $secondary-color;
+}
+
+.essays__title {
+    font-family: 'minion-medium-subh';
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    white-space: pre-line;
+    padding: 40px 20px 0;
+    color: $text-color;
+}
+
+.essays__title::after {
+    content: ' ';
+    width: 425px;
+    display: block;
+    height: 3px;
+    border-bottom: 1px solid $secondary-color;
+    border-top: 1px solid $secondary-color;
+    margin: 20px auto 15px;
+    @media (max-width: 720px) {
+	    width: 100%;
+    }
+}
+
+.essays-list {
+    height: calc(100vh - 340px);
+    overflow-y: scroll;
+    scrollbar-width: none;
+    max-width: 100% !important;
+
+    @media (max-width: $desktop-width) {
+    	height: calc(100vh - 230px);
+    }
+
+    @media (max-width: $mobile-width) {
+    	height: calc(100vh - 340px);
+    }
+}
+
+.essays-list::-webkit-scrollbar {
+	display: none;
+}
+
+.essay-seperator {
+	bottom: -2px;
+	transform: scale(-1);
+}
+
+.essay-seperator path {
+	fill: $accent-color;
+}
+
+.essay-wrapper {
+	position: relative;
+	background-color: $accent-color;
+	color: $text-color;
+	letter-spacing: 0px;
+	min-height: 500px;
+	margin-bottom: 40px;
+}
+
+.essay {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	padding-top: 15px;
+	max-width: unset !important;
+	min-height: 500px;
+}
+
+.essay-book__link {
+	width: max-content;
+	margin: 0 auto;
+}
+
+.essay::after {
+	content: ' ';
+	background-image: url(../imgs/lines.svg);
+	height: 120px;
+	width: 100%;
+	top: calc(50% - 60px);
+	position: absolute;
+}
+
+.essay-info {
+	font-family: minion-bold-it;
+	font-size: 22px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	white-space: pre-line;
+	text-align: center;
+	color: $secondary-color;
+	max-width: 965px;
+	margin: 0 auto;
+}
+
+.essay-info__comment {
+	font-family: minion-bold;
+}
+
+.react-pdf__Page__canvas {
+	width: fit-content !important;
+	height: 100% !important;
+	max-height: 60vh;
+	max-width: 95%;
+	margin: 0 auto;
+	object-fit: cover;
+	object-position: top;
+	cursor: zoom-in;
+	padding: 10px;
+	background-color: #fff;
+	box-shadow: 0px 0px 15px #5e5e5e;
+	box-sizing: border-box;
+}
+
+.react-pdf__Page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.react-pdf__Document {
+    position: relative;
+    z-index: 99;
+}
+
+.react-pdf__Page__textContent {
+	display: none;
+}

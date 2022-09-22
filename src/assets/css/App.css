@@ -1,0 +1,402 @@
+@font-face {
+  font-family: "minion";
+  src: url("../fonts/MinionPro-Disp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold";
+  src: url("../fonts/MinionPro-BoldDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-it";
+  src: url("../fonts/MinionPro-ItDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-semibold-it";
+  src: url("../fonts/MinionPro-SemiboldItDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold-it";
+  src: url("../fonts/MinionPro-BoldIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium";
+  src: url("../fonts/MinionPro-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium-it";
+  src: url("../fonts/MinionPro-MediumIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold-subh";
+  src: url("../fonts/MinionPro-BoldSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium-subh";
+  src: url("../fonts/MinionPro-MediumSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-it-subh";
+  src: url("../fonts/MinionPro-ItSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "arial-narrow";
+  src: url("../fonts/Arial Narrow.ttf") format("truetype");
+}
+/* line 5, ../../../style/sass/App.scss */
+body {
+  font-family: arial-narrow, arial, sans-serif;
+  letter-spacing: 2.8px;
+  color: #e0dcd4;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1350px) {
+  /* line 13, ../../../style/sass/App.scss */
+  #root {
+    zoom: 90%;
+  }
+}
+/* line 18, ../../../style/sass/App.scss */
+#root {
+  background-color: #e0dcd4;
+}
+
+/* line 22, ../../../style/sass/App.scss */
+#root > * > * {
+  max-width: 1344px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 28, ../../../style/sass/App.scss */
+#library {
+  background-color: #151620;
+}
+
+/* line 32, ../../../style/sass/App.scss */
+.section-seperator {
+  position: absolute;
+  left: calc(50vw - 150px);
+  z-index: 10;
+  width: 300px;
+}
+@media screen and (min-width: 700px) and (max-width: 1350px) {
+  /* line 32, ../../../style/sass/App.scss */
+  .section-seperator {
+    left: calc(50vw - 90px);
+  }
+}
+
+/* line 43, ../../../style/sass/App.scss */
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 48, ../../../style/sass/App.scss */
+.underconstructor {
+  margin-top: 100px;
+  font-size: 26px;
+  letter-spacing: 2px;
+}
+
+/* line 54, ../../../style/sass/App.scss */
+.glitch {
+  position: relative;
+  color: #fff;
+}
+
+/* line 60, ../../../style/sass/App.scss */
+.line:not(:first-child) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 67, ../../../style/sass/App.scss */
+.line:nth-child(1) {
+  animation: clip 3000ms -300ms linear infinite, glitch1 500ms -933ms linear infinite;
+}
+@keyframes glitch1 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(1px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(2px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(2px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* line 67, ../../../style/sass/App.scss */
+.line:nth-child(2) {
+  animation: clip 3000ms -600ms linear infinite, glitch2 500ms -742ms linear infinite;
+}
+@keyframes glitch2 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(1px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(1px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(-1px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* line 67, ../../../style/sass/App.scss */
+.line:nth-child(3) {
+  animation: clip 3000ms -900ms linear infinite, glitch3 500ms -213ms linear infinite;
+}
+@keyframes glitch3 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(1px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(3px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(2px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* line 67, ../../../style/sass/App.scss */
+.line:nth-child(4) {
+  animation: clip 3000ms -1200ms linear infinite, glitch4 500ms -776ms linear infinite;
+}
+@keyframes glitch4 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(-1px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(0px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(1px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* line 67, ../../../style/sass/App.scss */
+.line:nth-child(5) {
+  animation: clip 3000ms -1500ms linear infinite, glitch5 500ms -334ms linear infinite;
+}
+@keyframes glitch5 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(5px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(4px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(-1px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* line 67, ../../../style/sass/App.scss */
+.line:nth-child(6) {
+  animation: clip 3000ms -1800ms linear infinite, glitch6 500ms -13ms linear infinite;
+}
+@keyframes glitch6 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(0px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(0px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(-3px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* line 67, ../../../style/sass/App.scss */
+.line:nth-child(7) {
+  animation: clip 3000ms -2100ms linear infinite, glitch7 500ms -565ms linear infinite;
+}
+@keyframes glitch7 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(5px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(4px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(-2px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* line 67, ../../../style/sass/App.scss */
+.line:nth-child(8) {
+  animation: clip 3000ms -2400ms linear infinite, glitch8 500ms -919ms linear infinite;
+}
+@keyframes glitch8 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(2px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(5px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(-4px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* line 67, ../../../style/sass/App.scss */
+.line:nth-child(9) {
+  animation: clip 3000ms -2700ms linear infinite, glitch9 500ms -774ms linear infinite;
+}
+@keyframes glitch9 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(-1px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(3px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(-4px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* line 67, ../../../style/sass/App.scss */
+.line:nth-child(10) {
+  animation: clip 3000ms -3000ms linear infinite, glitch10 500ms -564ms linear infinite;
+}
+@keyframes glitch10 {
+  0% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+    color: #fff;
+  }
+  85% {
+    transform: translateX(1px);
+    color: #4E9A26;
+  }
+  90% {
+    transform: translateX(-3px);
+    color: #AC1212;
+  }
+  95% {
+    transform: translateX(-3px);
+    color: #fff;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes clip {
+  0% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 120%, 0 120%);
+  }
+  100% {
+    clip-path: polygon(0 -20%, 100% -20%, 100% 0%, 0 0);
+  }
+}

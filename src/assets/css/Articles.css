@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "minion";
+  src: url("../fonts/MinionPro-Disp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold";
+  src: url("../fonts/MinionPro-BoldDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-it";
+  src: url("../fonts/MinionPro-ItDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-semibold-it";
+  src: url("../fonts/MinionPro-SemiboldItDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold-it";
+  src: url("../fonts/MinionPro-BoldIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium";
+  src: url("../fonts/MinionPro-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium-it";
+  src: url("../fonts/MinionPro-MediumIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold-subh";
+  src: url("../fonts/MinionPro-BoldSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium-subh";
+  src: url("../fonts/MinionPro-MediumSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-it-subh";
+  src: url("../fonts/MinionPro-ItSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "arial-narrow";
+  src: url("../fonts/Arial Narrow.ttf") format("truetype");
+}
+/* line 5, ../../../style/sass/Articles.scss */
+.articles-header {
+  margin-bottom: -20px;
+  background-color: #e0dcd4;
+}
+
+/* line 10, ../../../style/sass/Articles.scss */
+.articles-header {
+  color: #818181;
+}
+
+/* line 14, ../../../style/sass/Articles.scss */
+.articles-content {
+  background-color: #e0dcd4;
+  margin-bottom: 200px;
+}
+
+/* line 19, ../../../style/sass/Articles.scss */
+.articles-container {
+  max-width: 1200px !important;
+}
+
+/* line 23, ../../../style/sass/Articles.scss */
+.articles-header__image-container {
+  position: relative;
+  max-width: 100% !important;
+}
+
+/* line 28, ../../../style/sass/Articles.scss */
+.articles-header__image-container::after {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 55px;
+  background-image: url(../imgs/lines.svg);
+  position: absolute;
+  margin-top: -35px;
+  z-index: 999;
+  background-size: 150px auto;
+  opacity: .5;
+}
+
+/* line 41, ../../../style/sass/Articles.scss */
+.articles-header__image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* line 47, ../../../style/sass/Articles.scss */
+.articles-header__title {
+  font-family: 'minion-bold-subh';
+  font-size: 34px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 40px 0 0;
+  color: #cc9966;
+  letter-spacing: 1px;
+}
+
+/* line 57, ../../../style/sass/Articles.scss */
+.articles-header__title::before,
+.articles-header__title::after {
+  content: ' ';
+  width: 90px;
+  display: inline-block;
+  height: 3px;
+  border-bottom: 1px solid #cc9966;
+  border-top: 1px solid #cc9966;
+}
+
+/* line 67, ../../../style/sass/Articles.scss */
+.articles-header__title::before {
+  margin-right: 10px;
+}
+
+/* line 71, ../../../style/sass/Articles.scss */
+.articles-header__title::after {
+  margin-left: 10px;
+}
+
+/* line 75, ../../../style/sass/Articles.scss */
+.articles-header__paragraph {
+  font-family: 'minion-medium-subh';
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+/* line 83, ../../../style/sass/Articles.scss */
+.articles-seperator {
+  bottom: 3px;
+  transform: scale(-1);
+}
+
+/* line 87, ../../../style/sass/Articles.scss */
+.articles-seperator path {
+  fill: #e0dcd4;
+}
+
+/* line 91, ../../../style/sass/Articles.scss */
+.articles {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-top: 75px;
+  justify-content: center;
+}
+
+/* line 99, ../../../style/sass/Articles.scss */
+.articles-item {
+  flex-basis: 292px;
+}
+
+/* line 103, ../../../style/sass/Articles.scss */
+.articles-item__image {
+  width: 100%;
+  height: 169px;
+  object-fit: cover;
+}
+
+/* line 109, ../../../style/sass/Articles.scss */
+.articles-item__type {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  font-family: arial-narrow;
+  text-transform: uppercase;
+  color: #cc9966;
+  letter-spacing: 2px;
+}
+
+/* line 119, ../../../style/sass/Articles.scss */
+.articles-item__name {
+  font-family: minion-bold;
+  font-size: 20px;
+  color: #151620;
+  margin-top: 5px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  line-height: 26px;
+  white-space: pre-wrap;
+}

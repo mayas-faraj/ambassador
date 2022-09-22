@@ -1,0 +1,9 @@
+/* line 3, ../../../style/sass/PageNotFound.scss */
+.under-construction {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #151620;
+  font-size: 25px;
+}

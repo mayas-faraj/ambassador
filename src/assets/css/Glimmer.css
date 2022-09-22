@@ -1,0 +1,7 @@
+/* line 1, ../../../style/sass/Glimmer.scss */
+.glimmer {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  margin: 0 auto;
+}

@@ -1,0 +1,224 @@
+@font-face {
+  font-family: "minion";
+  src: url("../fonts/MinionPro-Disp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold";
+  src: url("../fonts/MinionPro-BoldDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-it";
+  src: url("../fonts/MinionPro-ItDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-semibold-it";
+  src: url("../fonts/MinionPro-SemiboldItDisp.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold-it";
+  src: url("../fonts/MinionPro-BoldIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium";
+  src: url("../fonts/MinionPro-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium-it";
+  src: url("../fonts/MinionPro-MediumIt.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-bold-subh";
+  src: url("../fonts/MinionPro-BoldSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-medium-subh";
+  src: url("../fonts/MinionPro-MediumSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "minion-it-subh";
+  src: url("../fonts/MinionPro-ItSubh.otf") format("opentype");
+}
+@font-face {
+  font-family: "arial-narrow";
+  src: url("../fonts/Arial Narrow.ttf") format("truetype");
+}
+/* line 5, ../../../style/sass/Travel.scss */
+.travel-header {
+  background-color: #151620;
+  position: relative;
+  height: 88px;
+  text-align: center;
+  padding-top: 80px;
+}
+
+/* line 13, ../../../style/sass/Travel.scss */
+.travel-header::after {
+  content: ' ';
+  background-image: url(../imgs/lines.svg);
+  display: block;
+  width: 100%;
+  height: 56px;
+  position: absolute;
+  margin-top: 30px;
+  z-index: 10;
+  background-size: 150px auto;
+  opacity: .5;
+}
+
+/* line 27, ../../../style/sass/Travel.scss */
+.travel-header__menu {
+  font-family: minion-bold;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  color: #cc9966;
+  position: relative;
+  z-index: 999;
+}
+
+/* line 37, ../../../style/sass/Travel.scss */
+.travel-content {
+  padding-top: 4px;
+}
+
+/* line 41, ../../../style/sass/Travel.scss */
+.travel-container {
+  max-width: 800px !important;
+}
+
+/* line 45, ../../../style/sass/Travel.scss */
+.travel-header__title {
+  font-family: 'minion-bold-subh';
+  font-size: 34px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 40px 0 0;
+  color: #cc9966;
+  letter-spacing: 1px;
+}
+
+/* line 55, ../../../style/sass/Travel.scss */
+.travel-header__title::before,
+.travel-header__title::after {
+  content: ' ';
+  width: 90px;
+  display: inline-block;
+  height: 3px;
+  border-bottom: 1px solid #cc9966;
+  border-top: 1px solid #cc9966;
+}
+
+/* line 65, ../../../style/sass/Travel.scss */
+.travel-header__title::before {
+  margin-right: 10px;
+}
+
+/* line 69, ../../../style/sass/Travel.scss */
+.travel-header__title::after {
+  margin-left: 10px;
+}
+
+/* line 73, ../../../style/sass/Travel.scss */
+.travel-header__paragraph {
+  font-family: 'minion-medium-subh';
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: #818181;
+}
+
+/* line 82, ../../../style/sass/Travel.scss */
+.travel-seperator {
+  transform: scale(-1);
+  bottom: -1px;
+}
+
+/* line 86, ../../../style/sass/Travel.scss */
+.travel-seperator path {
+  fill: #e0dcd4;
+}
+
+/* line 90, ../../../style/sass/Travel.scss */
+.travel__content {
+  padding: 0px 70px;
+  margin-top: 0;
+  font-family: 'minion-medium-subh';
+  font-size: 18px;
+  line-height: 25px;
+  color: #4a4a4a;
+  white-space: pre-wrap;
+  text-align: justify;
+  letter-spacing: 1px;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  letter-spacing: 0.3px;
+}
+
+/* line 105, ../../../style/sass/Travel.scss */
+.travel-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1000px !important;
+  width: 100%;
+  margin-top: 35px;
+}
+
+/* line 115, ../../../style/sass/Travel.scss */
+.travel-item {
+  cursor: zoom-in;
+  flex-basis: 200px;
+}
+
+/* line 120, ../../../style/sass/Travel.scss */
+.travel-item__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* line 126, ../../../style/sass/Travel.scss */
+.travel-item__title {
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+}
+
+/* line 132, ../../../style/sass/Travel.scss */
+.pswp__default-caption,
+.travel-item__title {
+  font-family: minion-it;
+  letter-spacing: 1.5px;
+  white-space: pre-line;
+  font-size: 17px !important;
+  color: #cc9966 !important;
+}
+
+/* line 141, ../../../style/sass/Travel.scss */
+.travel-list {
+  font-family: 'minion-bold';
+  font-size: 25px;
+  display: table;
+  margin-top: 60px;
+  margin-bottom: 200px;
+}
+
+/* line 149, ../../../style/sass/Travel.scss */
+.travel-list__item {
+  display: table-row;
+}
+
+/* line 153, ../../../style/sass/Travel.scss */
+.travel-list__number {
+  display: table-cell;
+  width: 60px;
+  padding-bottom: 30px;
+}
+
+/* line 159, ../../../style/sass/Travel.scss */
+.travel-list__desc {
+  display: table-cell;
+  text-align: center;
+}
