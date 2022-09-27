@@ -35,6 +35,10 @@ body {
 	z-index: 10;
 	width: 300px;
 
+	#shape {
+		fill: #15161e;
+	}
+
 	@media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
 		left: calc(50vw - 90px);
 	}

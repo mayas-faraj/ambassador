@@ -1,6 +1,9 @@
 admin-cp
+build
+.next
 backend
 documentation
 node_modules
 README.md
 style/.sass-cache
+style/sass/.sass-cache/

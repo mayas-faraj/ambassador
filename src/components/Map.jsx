@@ -28,7 +28,7 @@ class Map extends React.Component {
 					</div>
 				</div>
 				<div className="map__footer">
-					<h3 className="map__title">Mappa<br/>degli spostamenti</h3>
+					<h3 className="map__title">mappa<br/>degli spostamenti</h3>
 				</div>
 			</div>
 		);

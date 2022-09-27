@@ -80,6 +80,10 @@ body {
   z-index: 10;
   width: 300px;
 }
+/* line 38, ../../../style/sass/App.scss */
+.section-seperator #shape {
+  fill: #15161e;
+}
 @media screen and (min-width: 700px) and (max-width: 1350px) {
   /* line 32, ../../../style/sass/App.scss */
   .section-seperator {
@@ -87,34 +91,34 @@ body {
   }
 }
 
-/* line 43, ../../../style/sass/App.scss */
+/* line 47, ../../../style/sass/App.scss */
 a {
   color: #fff;
   text-decoration: none;
 }
 
-/* line 48, ../../../style/sass/App.scss */
+/* line 52, ../../../style/sass/App.scss */
 .underconstructor {
   margin-top: 100px;
   font-size: 26px;
   letter-spacing: 2px;
 }
 
-/* line 54, ../../../style/sass/App.scss */
+/* line 58, ../../../style/sass/App.scss */
 .glitch {
   position: relative;
   color: #fff;
 }
 
-/* line 60, ../../../style/sass/App.scss */
+/* line 64, ../../../style/sass/App.scss */
 .line:not(:first-child) {
   position: absolute;
   top: 0;
   left: 0;
 }
-/* line 67, ../../../style/sass/App.scss */
+/* line 71, ../../../style/sass/App.scss */
 .line:nth-child(1) {
-  animation: clip 3000ms -300ms linear infinite, glitch1 500ms -933ms linear infinite;
+  animation: clip 3000ms -300ms linear infinite, glitch1 500ms -662ms linear infinite;
 }
 @keyframes glitch1 {
   0% {
@@ -125,24 +129,24 @@ a {
     color: #fff;
   }
   85% {
-    transform: translateX(1px);
+    transform: translateX(-4px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(2px);
+    transform: translateX(-3px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(2px);
+    transform: translateX(0px);
     color: #fff;
   }
   100% {
     transform: translateX(0);
   }
 }
-/* line 67, ../../../style/sass/App.scss */
+/* line 71, ../../../style/sass/App.scss */
 .line:nth-child(2) {
-  animation: clip 3000ms -600ms linear infinite, glitch2 500ms -742ms linear infinite;
+  animation: clip 3000ms -600ms linear infinite, glitch2 500ms -724ms linear infinite;
 }
 @keyframes glitch2 {
   0% {
@@ -153,24 +157,24 @@ a {
     color: #fff;
   }
   85% {
-    transform: translateX(1px);
+    transform: translateX(-4px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(1px);
+    transform: translateX(0px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-1px);
+    transform: translateX(3px);
     color: #fff;
   }
   100% {
     transform: translateX(0);
   }
 }
-/* line 67, ../../../style/sass/App.scss */
+/* line 71, ../../../style/sass/App.scss */
 .line:nth-child(3) {
-  animation: clip 3000ms -900ms linear infinite, glitch3 500ms -213ms linear infinite;
+  animation: clip 3000ms -900ms linear infinite, glitch3 500ms -867ms linear infinite;
 }
 @keyframes glitch3 {
   0% {
@@ -181,24 +185,24 @@ a {
     color: #fff;
   }
   85% {
-    transform: translateX(1px);
+    transform: translateX(-1px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(3px);
+    transform: translateX(0px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(2px);
+    transform: translateX(0px);
     color: #fff;
   }
   100% {
     transform: translateX(0);
   }
 }
-/* line 67, ../../../style/sass/App.scss */
+/* line 71, ../../../style/sass/App.scss */
 .line:nth-child(4) {
-  animation: clip 3000ms -1200ms linear infinite, glitch4 500ms -776ms linear infinite;
+  animation: clip 3000ms -1200ms linear infinite, glitch4 500ms -480ms linear infinite;
 }
 @keyframes glitch4 {
   0% {
@@ -209,24 +213,24 @@ a {
     color: #fff;
   }
   85% {
-    transform: translateX(-1px);
+    transform: translateX(2px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(0px);
+    transform: translateX(-4px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(1px);
+    transform: translateX(-1px);
     color: #fff;
   }
   100% {
     transform: translateX(0);
   }
 }
-/* line 67, ../../../style/sass/App.scss */
+/* line 71, ../../../style/sass/App.scss */
 .line:nth-child(5) {
-  animation: clip 3000ms -1500ms linear infinite, glitch5 500ms -334ms linear infinite;
+  animation: clip 3000ms -1500ms linear infinite, glitch5 500ms -854ms linear infinite;
 }
 @keyframes glitch5 {
   0% {
@@ -237,24 +241,24 @@ a {
     color: #fff;
   }
   85% {
-    transform: translateX(5px);
+    transform: translateX(-1px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(4px);
+    transform: translateX(3px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-1px);
+    transform: translateX(3px);
     color: #fff;
   }
   100% {
     transform: translateX(0);
   }
 }
-/* line 67, ../../../style/sass/App.scss */
+/* line 71, ../../../style/sass/App.scss */
 .line:nth-child(6) {
-  animation: clip 3000ms -1800ms linear infinite, glitch6 500ms -13ms linear infinite;
+  animation: clip 3000ms -1800ms linear infinite, glitch6 500ms -180ms linear infinite;
 }
 @keyframes glitch6 {
   0% {
@@ -265,11 +269,11 @@ a {
     color: #fff;
   }
   85% {
-    transform: translateX(0px);
+    transform: translateX(5px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(0px);
+    transform: translateX(4px);
     color: #AC1212;
   }
   95% {
@@ -280,9 +284,9 @@ a {
     transform: translateX(0);
   }
 }
-/* line 67, ../../../style/sass/App.scss */
+/* line 71, ../../../style/sass/App.scss */
 .line:nth-child(7) {
-  animation: clip 3000ms -2100ms linear infinite, glitch7 500ms -565ms linear infinite;
+  animation: clip 3000ms -2100ms linear infinite, glitch7 500ms -32ms linear infinite;
 }
 @keyframes glitch7 {
   0% {
@@ -293,24 +297,24 @@ a {
     color: #fff;
   }
   85% {
-    transform: translateX(5px);
+    transform: translateX(4px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(4px);
+    transform: translateX(-2px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-2px);
+    transform: translateX(5px);
     color: #fff;
   }
   100% {
     transform: translateX(0);
   }
 }
-/* line 67, ../../../style/sass/App.scss */
+/* line 71, ../../../style/sass/App.scss */
 .line:nth-child(8) {
-  animation: clip 3000ms -2400ms linear infinite, glitch8 500ms -919ms linear infinite;
+  animation: clip 3000ms -2400ms linear infinite, glitch8 500ms -675ms linear infinite;
 }
 @keyframes glitch8 {
   0% {
@@ -321,24 +325,24 @@ a {
     color: #fff;
   }
   85% {
-    transform: translateX(2px);
+    transform: translateX(-1px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(5px);
+    transform: translateX(-3px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-4px);
+    transform: translateX(1px);
     color: #fff;
   }
   100% {
     transform: translateX(0);
   }
 }
-/* line 67, ../../../style/sass/App.scss */
+/* line 71, ../../../style/sass/App.scss */
 .line:nth-child(9) {
-  animation: clip 3000ms -2700ms linear infinite, glitch9 500ms -774ms linear infinite;
+  animation: clip 3000ms -2700ms linear infinite, glitch9 500ms -649ms linear infinite;
 }
 @keyframes glitch9 {
   0% {
@@ -353,20 +357,20 @@ a {
     color: #4E9A26;
   }
   90% {
-    transform: translateX(3px);
+    transform: translateX(1px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-4px);
+    transform: translateX(1px);
     color: #fff;
   }
   100% {
     transform: translateX(0);
   }
 }
-/* line 67, ../../../style/sass/App.scss */
+/* line 71, ../../../style/sass/App.scss */
 .line:nth-child(10) {
-  animation: clip 3000ms -3000ms linear infinite, glitch10 500ms -564ms linear infinite;
+  animation: clip 3000ms -3000ms linear infinite, glitch10 500ms -262ms linear infinite;
 }
 @keyframes glitch10 {
   0% {
@@ -377,15 +381,15 @@ a {
     color: #fff;
   }
   85% {
-    transform: translateX(1px);
+    transform: translateX(0px);
     color: #4E9A26;
   }
   90% {
-    transform: translateX(-3px);
+    transform: translateX(3px);
     color: #AC1212;
   }
   95% {
-    transform: translateX(-3px);
+    transform: translateX(3px);
     color: #fff;
   }
   100% {

@@ -147,6 +147,13 @@ header {
 	width: 100%;
 }
 
+.biografia__container,
+.letture__container, 
+.diplomacy__container,
+.travel__container {
+	max-width: 100% !important;
+}
+
 .navigator__image {
 	max-width: 100% !important;
 }
@@ -229,3 +236,20 @@ header {
 	}
 }
 
+.viaggi-seperator {
+	path {
+		fill: #9c9c9c !important;
+	}
+}
+
+.map-seperator {
+	path {
+		fill: #000 !important;
+	}	
+}
+
+#plusText {
+	font-size: 30px;
+	fill: $accent-color;
+	font-family: minion;
+}

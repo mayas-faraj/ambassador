@@ -8,7 +8,7 @@ import Events from "../components/Events";
 import Contact from "../components/Contact";
 import Travel from "../components/Travel";
 import Footer from "../components/Footer";
-import {ReactComponent as Seperator} from "../assets/imgs/seperator.svg";
+import {ReactComponent as Seperator} from "../assets/imgs/home-seperator.svg";
 //import {ReactComponent as Menu} from "./assets/imgs/menu.svg";
 import '../assets/css/Home.css';
 import ambassadorImg from '../assets/imgs/ambassador.png';
@@ -45,6 +45,10 @@ function Home(props) {
 		{"id": "events", "element": <Events />},
 		{"id": "contact", "element": <Contact />},
 		{"id": "viaggi", "element": <Travel />},
+		{"id": "biografia", "element": <Biografia />},
+		{"id": "letture", "element": <Letture />},
+		{"id": "diplomacy", "element": <Diplomacy />},
+		{"id": "travel", "element": <TravelSection />}
 	];
 
 
@@ -108,24 +112,44 @@ function Home(props) {
 				SECTIONS.map((section, index)=>(
 					<Fragment key={section.id}>
 						<div id={section.id}><div className={section.id+"__container"}>{section.element}</div></div>
-						{index<3 && <a href={"#"+SECTIONS[index+1].id}><Seperator className={section.id+"-seperator section-seperator"} /></a>}
+						{((true || index<3) && index<SECTIONS.length-1) && <a href={"#"+SECTIONS[index+1].id}><Seperator className={section.id+"-seperator section-seperator"} /></a>}
 					</Fragment>
 				))
 			}
-			<div id="biografia" ref={biografiaRef}  className="about-navigator">
-				<Link className="navigator__link" to="/adad/about">Biografia</Link>
-			</div>
-			<div id="letture" ref={lettureRef}  className="article-navigator">
-				<Link className="navigator__link" to="/adad/articles">Letture</Link>
-			</div>
-			<div id="diplomacy" ref={diplomacyRef}  className="italy-navigator">
-				<Link className="navigator__link" to="/adad/diplomacy-report">Repertorio<br/>Diplomatico</Link>
-			</div>
-			<div id="travel" ref={travelRef}  className="desert-navigator">
-				<Link className="navigator__link" to="/adad/travel">Viaggi<br/>e spedizioni</Link>
-			</div>
 			<Footer/>
 		</Fragment>
+	);
+}
+
+function Biografia(props) {
+	return (
+		<div ref={props.biografiaRef}  className="about-navigator">
+			<Link className="navigator__link" to="/adad/about">biografia</Link>
+		</div>
+	);
+}
+
+function Letture(props) {
+	return (
+		<div ref={props.lettureRef}  className="article-navigator">
+			<Link className="navigator__link" to="/adad/articles">letture</Link>
+		</div>
+	);
+}
+
+function Diplomacy(props) {
+	return (
+		<div ref={props.diplomacyRef}  className="italy-navigator">
+			<Link className="navigator__link" to="/adad/diplomacy-report">repertorio<br/>Diplomatico</Link>
+		</div>
+	);
+}
+
+function TravelSection(props) {
+	return (
+		<div ref={props.travelRef}  className="desert-navigator">
+			<Link className="navigator__link" to="/adad/travel">viaggi<br/>e spedizioni</Link>
+		</div>
 	);
 }
 

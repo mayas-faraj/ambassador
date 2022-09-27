@@ -228,36 +228,44 @@ header {
 }
 
 /* line 150, ../../../style/sass/Home.scss */
+.biografia__container,
+.letture__container,
+.diplomacy__container,
+.travel__container {
+  max-width: 100% !important;
+}
+
+/* line 157, ../../../style/sass/Home.scss */
 .navigator__image {
   max-width: 100% !important;
 }
 
-/* line 154, ../../../style/sass/Home.scss */
+/* line 161, ../../../style/sass/Home.scss */
 .about-navigator {
   background-image: url(../imgs/claudio-pacifico-libya.jpg);
 }
 
-/* line 158, ../../../style/sass/Home.scss */
+/* line 165, ../../../style/sass/Home.scss */
 .italy-navigator {
   background-image: url(../imgs/claudio-pacifico-with-arafat.jpg);
 }
 
-/* line 162, ../../../style/sass/Home.scss */
+/* line 169, ../../../style/sass/Home.scss */
 .desert-navigator {
   background-image: url(../imgs/claudio-pacifico-desert.jpg);
 }
-/* line 164, ../../../style/sass/Home.scss */
+/* line 171, ../../../style/sass/Home.scss */
 .desert-navigator .navigator__link {
   padding-right: 58vw;
   margin-top: 110px;
 }
 
-/* line 170, ../../../style/sass/Home.scss */
+/* line 177, ../../../style/sass/Home.scss */
 .article-navigator {
   background-image: url(../imgs/claudio-pacifico-newspaper.jpg);
 }
 
-/* line 174, ../../../style/sass/Home.scss */
+/* line 181, ../../../style/sass/Home.scss */
 .about-navigator,
 .desert-navigator,
 .article-navigator,
@@ -274,7 +282,7 @@ header {
   transition: background-color 0.5s;
 }
 
-/* line 187, ../../../style/sass/Home.scss */
+/* line 194, ../../../style/sass/Home.scss */
 .about-navigator:hover,
 .desert-navigator:hover,
 .article-navigator:hover,
@@ -282,7 +290,7 @@ header {
   background-color: #3b3b3b;
 }
 
-/* line 194, ../../../style/sass/Home.scss */
+/* line 201, ../../../style/sass/Home.scss */
 .navigator__link {
   margin: auto;
   font-family: 'minion-semibold-it';
@@ -292,24 +300,24 @@ header {
   padding-top: 30px;
 }
 
-/* line 203, ../../../style/sass/Home.scss */
+/* line 210, ../../../style/sass/Home.scss */
 .swiper-button-next, .swiper-button-prev {
   color: #cc9966 !important;
 }
 
-/* line 207, ../../../style/sass/Home.scss */
+/* line 214, ../../../style/sass/Home.scss */
 .swiper-pagination-bullet-active {
   background-color: #cc9966 !important;
 }
 
-/* line 211, ../../../style/sass/Home.scss */
+/* line 218, ../../../style/sass/Home.scss */
 .swiper-pagination-bullet {
   width: 14px !important;
   height: 14px !important;
 }
 
 @media screen and (min-width: 700px) {
-  /* line 220, ../../../style/sass/Home.scss */
+  /* line 227, ../../../style/sass/Home.scss */
   .header-menu {
     position: absolute;
     top: 0;
@@ -317,8 +325,24 @@ header {
     z-index: 999999;
   }
 
-  /* line 227, ../../../style/sass/Home.scss */
+  /* line 234, ../../../style/sass/Home.scss */
   .navigator__link {
     font-size: 4vw;
   }
+}
+/* line 240, ../../../style/sass/Home.scss */
+.viaggi-seperator path {
+  fill: #9c9c9c !important;
+}
+
+/* line 246, ../../../style/sass/Home.scss */
+.map-seperator path {
+  fill: #000 !important;
+}
+
+/* line 251, ../../../style/sass/Home.scss */
+#plusText {
+  font-size: 30px;
+  fill: #e0dcd4;
+  font-family: minion;
 }
