@@ -106,12 +106,12 @@ export default props=>{
 												</a>
 											</li>
 											<li className="book-info-share-item">
-												<a href={`https://facebook.com/sharer/sharer.php?u=${document.location.href.replace("/adad", "share.php")}`} target="_blank" rel="nofollow">
+												<a href={`https://facebook.com/sharer/sharer.php?u=${document.location.href.replace("/adad", "/share.php")}`} target="_blank" rel="nofollow">
 													<FacebookButtonIcon/>
 												</a>
 											</li>
 											<li className="book-info-share-item">
-												<a href={`https://twitter.com/intent/tweet/?url=${document.location.href.replace("/adad", "share.php")}`} target="_blank" rel="nofollow">
+												<a href={`https://twitter.com/intent/tweet/?url=${document.location.href.replace("/adad", "/share.php")}`} target="_blank" rel="nofollow">
 													<TwitterButtonIcon/>
 												</a>
 											</li>

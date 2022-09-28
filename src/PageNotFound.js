@@ -20,13 +20,6 @@ export default function PageNotFound(props) {
 			<div className="under-construction">
 				<p> Siamo spiacenti, questa pagina è in costruzione e sarà presto disponibile </p>
 			</div>
-			<footer className="footer">
-				<div className="footer-copyright">
-					<p>
-					Claudio Pacifico Website | designed in Italy by <a href="https://www.linkedin.com/in/sam-mouazin-63248b13/" target="_blank" rel="noreferrer">Sam Mouazin</a><br/>and developed in Dubai by <a href="https://adad.net" target="_blank" rel="noreferrer">Loavi.net</a>
-					</p>
-				</div>
-			</footer>
 		</Fragment>
 	);
 }

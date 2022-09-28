@@ -140,7 +140,7 @@ function Letture(props) {
 function Diplomacy(props) {
 	return (
 		<div ref={props.diplomacyRef}  className="italy-navigator">
-			<Link className="navigator__link" to="/adad/diplomacy-report">repertorio<br/>Diplomatico</Link>
+			<Link className="navigator__link" to="/adad/diplomacy-report">repertorio<br/>diplomatico</Link>
 		</div>
 	);
 }
