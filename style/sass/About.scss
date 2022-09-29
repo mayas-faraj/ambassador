@@ -113,19 +113,9 @@
     margin-top: 0;
 }
 
-.about-section__text--highlight {
-    color: #000;
-}
-
 .about-section__text--large {
     font-size: 25px;
     line-height: 33px;
-}
-
-.about-section__text--highlight,
-.about-section__text--centric {
-    text-align: center;
-    hyphens: manual;
 }
 
 .about-section__title {
@@ -185,4 +175,36 @@
 	}
 
 }
+
+#about-it-incarichi-1 p,
+#about-it-onorificenze p,
+#about-en-incarichi-1 p,
+#about-en-onorificenze p,
+#about-fr-incarichi-1 p,
+#about-fr-onorificenze p {
+    hyphens: manual;
+    color: #000;
+}
+
+#about-it-incarichi-1 p,
+#about-it-onorificenze p,
+#about-it-conoscenze-linguistiche p,
+#about-it-interessi-personali p,
+#about-it-sport p,
+#about-it-dopo-il-2013-1 p, 
+#about-en-incarichi-1 p,
+#about-en-onorificenze p,
+#about-en-conoscenze-linguistiche p,
+#about-en-interessi-personali p,
+#about-en-sport p,
+#about-en-dopo-il-2013-1 p, 
+#about-fr-incarichi-1 p,
+#about-fr-onorificenze p,
+#about-fr-conoscenze-linguistiche p,
+#about-fr-interessi-personali p,
+#about-fr-sport p,
+#about-fr-dopo-il-2013-1 p {
+    text-align: center;
+}
+
 

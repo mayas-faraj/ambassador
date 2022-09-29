@@ -9,36 +9,9 @@ import  '../assets/css/About.css';
 
 export default function About() {
 	const context=React.useContext(SettingContext);
-	/*
-	const [head1, setHead1]=React.useState("");
-	const [head2, setHead2]=React.useState("");
-	const [incarichi1, setIncarichi1]=React.useState("");
-	const [incarichi2, setIncarichi2]=React.useState("");
-	const [dopoil20131, setDopoil20131]=React.useState("");
-	const [dopoil20132, setDopoil20132]=React.useState("");
-	const [onorificenze, setOnorificenze]=React.useState("");
-	const [conoscenzelinguistiche, setConoscenzelinguistiche]=React.useState("");
-	const [interessipersonali, setInteressipersonali]=React.useState("");
-	const [sport, setSport]=React.useState("");
-
-
-	React.useEffect(()=>{
-		axios.post(context.backendApiUrl, {"operation": "read-section", "slug": "boigraphia-head-1"}).then(result=>setHead1(result.data)).catch(err=>console.error(err));
-		axios.post(context.backendApiUrl, {"operation": "read-section", "slug": "boigraphia-head-2"}).then(result=>setHead2(result.data)).catch(err=>console.error(err));
-		axios.post(context.backendApiUrl, {"operation": "read-section", "slug": "boigraphia-incarichi-1"}).then(result=>setIncarichi1(result.data)).catch(err=>console.error(err));
-		axios.post(context.backendApiUrl, {"operation": "read-section", "slug": "boigraphia-incarichi-2"}).then(result=>setIncarichi2(result.data)).catch(err=>console.error(err));
-		axios.post(context.backendApiUrl, {"operation": "read-section", "slug": "boigraphia-dopo-il-2013-1"}).then(result=>setDopoil20131(result.data)).catch(err=>console.error(err));
-		axios.post(context.backendApiUrl, {"operation": "read-section", "slug": "boigraphia-dopo-il-2013-2"}).then(result=>setDopoil20132(result.data)).catch(err=>console.error(err));
-		axios.post(context.backendApiUrl, {"operation": "read-section", "slug": "boigraphia-onorificenze"}).then(result=>setOnorificenze(result.data)).catch(err=>console.error(err));
-		axios.post(context.backendApiUrl, {"operation": "read-section", "slug": "boigraphia-conoscenze-linguistiche"}).then(result=>setConoscenzelinguistiche(result.data)).catch(err=>console.error(err));
-		axios.post(context.backendApiUrl, {"operation": "read-section", "slug": "boigraphia-interessi-personali"}).then(result=>setInteressipersonali(result.data)).catch(err=>console.error(err));
-		axios.post(context.backendApiUrl, {"operation": "read-section", "slug": "boigraphia-sport"}).then(result=>setsport(result.data)).catch(err=>console.error(err));
-	}, []);
-	*/
-
 	const [sections, setSections]=React.useState([]);
 	React.useEffect(()=>{
-		axios.post(context.backendApiUrl, {"operation": "read-sections"})
+		axios.post(context.backendApiUrl, {"operation": "read-about-it-sections"})
 		.then(result=>setSections(result.data))
 		.catch(err=>console.error(err));
 
@@ -75,7 +48,7 @@ export default function About() {
 							</div>
 							<div className="about-section__text-container">
 								{section.title && <h2 className="about-section__title">{section.title}</h2>}
-								{section.title && <h2 className="about-section__title"><small>{section.sub_title}</small></h2>}
+								{section.sub_title && <h2 className="about-section__title"><small>{section.sub_title}</small></h2>}
 								{section.content && <p className="about-section__text" dangerouslySetInnerHTML={{__html: section.content}}></p>}
 							</div>
 						</div>

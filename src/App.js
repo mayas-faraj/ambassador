@@ -9,6 +9,8 @@ const Home=React.lazy(()=>import("./layout/Home"));
 const Book=React.lazy(()=>import("./layout/Book"));
 const Essay=React.lazy(()=>import("./layout/Essay"));
 const AboutIt=React.lazy(()=>import("./layout/AboutIt"));
+const AboutEn=React.lazy(()=>import("./layout/AboutEn"));
+const AboutFr=React.lazy(()=>import("./layout/AboutFr"));
 const Honor=React.lazy(()=>import("./layout/Honor"));
 const Articles=React.lazy(()=>import("./layout/Articles"));
 const Article=React.lazy(()=>import("./layout/Article"));
@@ -25,6 +27,8 @@ function App() {
 					<Route exact path="/adad/libri/:slug" element={<Book className="book"/>}/>
 					<Route exact path="/adad/saggi/:slug" element={<Essay className="book"/>}/>
 					<Route exact path="/adad/about" element={<AboutIt className="about"/>}/>
+					<Route exact path="/adad/about-english" element={<AboutEn className="about"/>}/>
+					<Route exact path="/adad/about-french" element={<AboutFr className="about"/>}/>
 					<Route exact path="/adad/honor" element={<Honor className="honor"/>}/>
 					<Route exact path="/adad/travel" element={<Travel className="travel"/>}/>
 					<Route exact path="/adad/diplomacy-report" element={<DiplomacyReport className="diplomacy-report"/>}/>

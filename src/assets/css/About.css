@@ -167,44 +167,32 @@
 }
 
 /* line 116, ../../../style/sass/About.scss */
-.about-section__text--highlight {
-  color: #000;
-}
-
-/* line 120, ../../../style/sass/About.scss */
 .about-section__text--large {
   font-size: 25px;
   line-height: 33px;
 }
 
-/* line 125, ../../../style/sass/About.scss */
-.about-section__text--highlight,
-.about-section__text--centric {
-  text-align: center;
-  hyphens: manual;
-}
-
-/* line 131, ../../../style/sass/About.scss */
+/* line 121, ../../../style/sass/About.scss */
 .about-section__title {
   text-align: center;
   font-size: 22px;
   letter-spacing: 1px;
 }
 
-/* line 137, ../../../style/sass/About.scss */
+/* line 127, ../../../style/sass/About.scss */
 .about-section {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-/* line 143, ../../../style/sass/About.scss */
+/* line 133, ../../../style/sass/About.scss */
 .about-section__image-container {
   flex-basis: 160px;
   min-width: 160px;
 }
 
-/* line 148, ../../../style/sass/About.scss */
+/* line 138, ../../../style/sass/About.scss */
 .about-section__text-container {
   flex-basis: 300px;
   flex-grow: 1;
@@ -216,33 +204,65 @@
   line-height: 25px;
 }
 
-/* line 160, ../../../style/sass/About.scss */
+/* line 150, ../../../style/sass/About.scss */
 .about-seperator {
   bottom: 3px;
   transform: scale(-1);
 }
 
-/* line 165, ../../../style/sass/About.scss */
+/* line 155, ../../../style/sass/About.scss */
 .about-seperator path {
   fill: #e0dcd4;
 }
 
 @media screen and (min-width: 700px) {
-  /* line 171, ../../../style/sass/About.scss */
+  /* line 161, ../../../style/sass/About.scss */
   .about-container > * {
     padding-left: 110px;
     padding-right: 110px;
     box-sizing: border-box;
   }
 
-  /* line 177, ../../../style/sass/About.scss */
+  /* line 167, ../../../style/sass/About.scss */
   .about-section {
     gap: calc(45vw - 350px);
   }
 }
 @media screen and (min-width: 1350px) {
-  /* line 183, ../../../style/sass/About.scss */
+  /* line 173, ../../../style/sass/About.scss */
   .about-section {
     gap: 250px;
   }
+}
+/* line 179, ../../../style/sass/About.scss */
+#about-it-incarichi-1 p,
+#about-it-onorificenze p,
+#about-en-incarichi-1 p,
+#about-en-onorificenze p,
+#about-fr-incarichi-1 p,
+#about-fr-onorificenze p {
+  hyphens: manual;
+  color: #000;
+}
+
+/* line 189, ../../../style/sass/About.scss */
+#about-it-incarichi-1 p,
+#about-it-onorificenze p,
+#about-it-conoscenze-linguistiche p,
+#about-it-interessi-personali p,
+#about-it-sport p,
+#about-it-dopo-il-2013-1 p,
+#about-en-incarichi-1 p,
+#about-en-onorificenze p,
+#about-en-conoscenze-linguistiche p,
+#about-en-interessi-personali p,
+#about-en-sport p,
+#about-en-dopo-il-2013-1 p,
+#about-fr-incarichi-1 p,
+#about-fr-onorificenze p,
+#about-fr-conoscenze-linguistiche p,
+#about-fr-interessi-personali p,
+#about-fr-sport p,
+#about-fr-dopo-il-2013-1 p {
+  text-align: center;
 }
