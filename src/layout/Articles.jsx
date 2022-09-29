@@ -11,7 +11,7 @@ export default function Articles() {
 	const [articles, setArticles]=React.useState([]);
 	const context=React.useContext(SettingContext);
 
-	const loadData=React.useEffect(()=>{
+	React.useEffect(()=>{
 		axios.post(context.backendApiUrl, {"operation": "read-all-articles"})
 		.then(result=>setArticles(result.data))
 		.catch(err=>console.error(err));
