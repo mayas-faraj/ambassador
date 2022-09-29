@@ -25,7 +25,7 @@ function Home(props) {
 	const travelRef=React.useRef();
 
 	const MENU=[
-		{"title": "Biografia", "link": "about"},
+		{"title": "Biografia", "link": "about-it"},
 		{"title": "Onorificenze", "link": "honor"},
 		{"title": "Libri", "link": "#library", clickHandler: ()=>setActiveCategoryIndex(0)},
 		{"title": "Saggi e articoli", "link": "#library", clickHandler: ()=>setActiveCategoryIndex(1)},
@@ -124,7 +124,7 @@ function Home(props) {
 function Biografia(props) {
 	return (
 		<div ref={props.biografiaRef}  className="about-navigator">
-			<Link className="navigator__link" to="/adad/about">biografia</Link>
+			<Link className="navigator__link" to="/adad/about-it">biografia</Link>
 		</div>
 	);
 }

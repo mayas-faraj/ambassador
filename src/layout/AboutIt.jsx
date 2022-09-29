@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
+import LanguageSwitcher from '../components/LanguageSwitcher';
 import Footer from '../components/Footer';
 import SettingContext from '../SettingContext';
 import {ReactComponent as Seperator} from "../assets/imgs/seperator.svg";
@@ -24,6 +25,7 @@ export default function About() {
 					<Link to="/adad/#biografia"><img className="about-header__image" src={funeralImg} alt="Claudio Pacifico on libya"/></Link>
 					<Seperator className="about-seperator section-seperator" />
 				</div>
+				<LanguageSwitcher pageLink="/adad/about-it" downloadLink="/books/about-it.pdf"/>
 				<h1 className="about-header__title">Biografia</h1>
 				<p className="about-header__text">
 				Ambasciatore claudio pacifico.<br/>

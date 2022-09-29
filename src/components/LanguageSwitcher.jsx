@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import {ReactComponent as DownloadIcon} from '../assets/imgs/download.svg';
-//import '../assets/css/LanguageSwitcher.css';
+import '../assets/css/LanguageSwitcher.css';
 
 export default function LanguageSwitcher(props) {
 	const languages=[
@@ -14,15 +14,15 @@ export default function LanguageSwitcher(props) {
 
 	return (
 		<div className="switcher">
-		{
-			languages.map(language=>(
+		{  
+			(props.pageLink && props.downloadLink) && languages.map(language=>(
 				<div key={language.name} className="switcher-container">
-					<Link className="switcher-container__link" to={props.pageLink.replace("-it", language.name)}>
+					<Link className="switcher-container__link" to={props.pageLink.replace("-it", "-"+language.name)}>
 						<img className="switcher-container__flag" src={language.flag} alt={language.title+" flag"}/>
 					</Link>
-					<Link className="switcher-container__link" to={props.downloadLink.replace("-it", language.name)}>
+					<a className="switcher-container__link" href={props.downloadLink.replace("-it", "-"+language.name)} download>
 						<DownloadIcon />
-					</Link>
+					</a>
 
 				</div>
 			))

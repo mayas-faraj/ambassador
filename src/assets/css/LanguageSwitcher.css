@@ -1,0 +1,37 @@
+/* line 3, ../../../style/sass/LanguageSwitcher.scss */
+.switcher {
+  display: flex;
+  justify-content: end;
+  padding-right: 110px;
+  margin-top: 44px;
+  box-sizing: border-box;
+}
+
+/* line 11, ../../../style/sass/LanguageSwitcher.scss */
+.switcher-container {
+  margin: 0px 2px;
+}
+
+/* line 15, ../../../style/sass/LanguageSwitcher.scss */
+.switcher-container__flag {
+  width: 30px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #151620;
+  border-bottom: none;
+}
+
+/* line 24, ../../../style/sass/LanguageSwitcher.scss */
+.switcher-container svg {
+  background-color: #201e21;
+  border-radius: 0 0 5px 5px;
+  height: 20px;
+  display: block;
+  width: 30px;
+  border: 1px solid #151620;
+  border-top: none;
+  fill: #cc9966;
+  padding-bottom: 6px;
+  margin-top: -3px;
+}

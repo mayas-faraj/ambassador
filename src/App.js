@@ -26,9 +26,9 @@ function App() {
 					<Route exact path="/adad" element={<Home className="home"/>}/>
 					<Route exact path="/adad/libri/:slug" element={<Book className="book"/>}/>
 					<Route exact path="/adad/saggi/:slug" element={<Essay className="book"/>}/>
-					<Route exact path="/adad/about" element={<AboutIt className="about"/>}/>
-					<Route exact path="/adad/about-english" element={<AboutEn className="about"/>}/>
-					<Route exact path="/adad/about-french" element={<AboutFr className="about"/>}/>
+					<Route exact path="/adad/about-it" element={<AboutIt className="about"/>}/>
+					<Route exact path="/adad/about-en" element={<AboutEn className="about"/>}/>
+					<Route exact path="/adad/about-fr" element={<AboutFr className="about"/>}/>
 					<Route exact path="/adad/honor" element={<Honor className="honor"/>}/>
 					<Route exact path="/adad/travel" element={<Travel className="travel"/>}/>
 					<Route exact path="/adad/diplomacy-report" element={<DiplomacyReport className="diplomacy-report"/>}/>
