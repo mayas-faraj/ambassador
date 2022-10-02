@@ -1,11 +1,11 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import Link from 'next/link';
 import axios from 'axios';
-import SettingContext from '../components/SettingContext';
+import SettingContext from 'components/SettingContext';
 import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
-import headerImage from '../assets/imgs/header-articles.png';
-import Footer from "../components/Footer";
-import style from '../style/Articles.module.scss';
+import headerImage from 'assets/imgs/header-articles.png';
+import Footer from "/components/Footer";
+import style from '/style/Articles.module.scss';
 
 export default function Articles() {
 	const [articles, setArticles]=React.useState([]);
@@ -21,7 +21,7 @@ export default function Articles() {
 		<React.Fragment>
 			<header className={style["articles-header"]}>
 				<div className={style["articles-header__image-container"]}>
-					<Link to="/adad/#letture"><img className={style["articles-header__image"]} src={headerImage} alt="Claudio Pacifico in newspaper"/></Link>
+					<Link href="/adad/#letture"><img className={style["articles-header__image"]} src={headerImage} alt="Claudio Pacifico in newspaper"/></Link>
 					<Seperator className="articles-seperator section-seperator" />
 					
 				</div>
@@ -38,11 +38,11 @@ export default function Articles() {
 					{
 						articles.map(article=>(
 							<div key={article.slug} className={style["articles-item"]}>
-								<Link to={"/adad/article/"+article.slug}>
+								<Link href={"/adad/article/"+article.slug}>
 									<img className={style["articles-item__image"]} src={context.uploadsUrl+"/"+article.image} alt={article.excerpt}/>
 								</Link>
 								<strong className={style["articles-item__type"]}>{article.type}</strong>
-								<Link to={"/adad/article/"+article.slug}>
+								<Link href={"/adad/article/"+article.slug}>
 									<p className={style["articles-item__name"]}>{article.title + "\n..."}</p>
 								</Link>
 							</div>

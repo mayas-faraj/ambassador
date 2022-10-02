@@ -1,19 +1,19 @@
 import React from 'react';
 import axios from 'axios';
-import SettingContext from './SettingContext';
-import Glimmer from './Glimmer.jsx';
-import {ReactComponent as FacebookIcon} from '../assets/imgs/facebook-logo.svg';
-import {ReactComponent as LinkedinIcon} from '../assets/imgs/linkedin-logo.svg';
-import {ReactComponent as TwitterIcon} from '../assets/imgs/twitter-logo.svg';
-import {ReactComponent as YoutubeIcon} from '../assets/imgs/youtube-logo.svg';
-import {ReactComponent as FacebookButtonIcon} from '../assets/imgs/social-facebook.svg';
-import {ReactComponent as TwitterButtonIcon} from '../assets/imgs/social-twitter.svg';
-import {ReactComponent as LinkedinButtonIcon} from '../assets/imgs/social-linkedin.svg';
-import {ReactComponent as YoutubeButtonIcon} from '../assets/imgs/social-youtube.svg';
-import {ReactComponent as InstagramButtonIcon} from '../assets/imgs/social-instagram.svg';
+import SettingContext from './setting-context';
+import Glimmer from './glimmer';
+import {ReactComponent as FacebookIcon} from '/public/assets/imgs/facebook-logo.svg';
+import {ReactComponent as LinkedinIcon} from '/public/assets/imgs/linkedin-logo.svg';
+import {ReactComponent as TwitterIcon} from '/public/assets/imgs/twitter-logo.svg';
+import {ReactComponent as YoutubeIcon} from '/public/assets/imgs/youtube-logo.svg';
+import {ReactComponent as FacebookButtonIcon} from '/public/assets/imgs/social-facebook.svg';
+import {ReactComponent as TwitterButtonIcon} from '/public/assets/imgs/social-twitter.svg';
+import {ReactComponent as LinkedinButtonIcon} from '/public/assets/imgs/social-linkedin.svg';
+import {ReactComponent as YoutubeButtonIcon} from '/public/assets/imgs/social-youtube.svg';
+import {ReactComponent as InstagramButtonIcon} from '/public/assets/imgs/social-instagram.svg';
 import {ReactComponent as ArrowImage} from '/public/assets/imgs/arrow.svg';
-import {ReactComponent as MobileImage} from '../assets/imgs/iphone-dark.svg';
-import style from '../style/Blog.module.scss';
+import {ReactComponent as MobileImage} from '/public/assets/imgs/iphone-dark.svg';
+import style from '/style/Blog.module.scss';
 
 const SOCIALS=[
 	{
@@ -46,7 +46,7 @@ const SOCIALS=[
 const MONTHS=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const VISIBLE_BLOGS_COUNT=2;
 
-class Blog extends React.Component {
+export default class Blog extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state={ currentSocial: "twitter", blogs: null, blogIndex: 0};
@@ -201,5 +201,3 @@ class Blog extends React.Component {
 		);
 	}
 }
-
-export default Blog;

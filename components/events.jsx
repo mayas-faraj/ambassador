@@ -1,8 +1,8 @@
 import React, {Fragment} from 'react';
 import axios from 'axios';
-import SettingContext from './SettingContext';
+import SettingContext from './setting-context';
 import pulseImage from '/public/assets/imgs/pulse.svg';
-import style from '../style/Events.module.scss';
+import style from '/style/Events.module.scss';
 
 class Events extends React.Component {
 	constructor(props) {

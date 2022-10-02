@@ -1,19 +1,19 @@
 import React, {Fragment} from "react";
-import {Link} from "react-router-dom";
-import Meetings from "../components/Meetings";
-import Blog from "../components/Blog";
-import Publications from "../components/Publications";
-import Map from "../components/Map";
-import Events from "../components/Events";
-import Contact from "../components/Contact";
-import Travel from "../components/Travel";
-import Footer from "../components/Footer";
-import {ReactComponent as Seperator} from "../assets/imgs/home-seperator.svg";
+import Link from 'next/link';
+import Meetings from "/components/meetings";
+import Blog from "/components/blog";
+import Publications from "/components/publications";
+import Map from "/components/map";
+import Events from "/components/events";
+import Contact from "/components/contact";
+import Travel from "/components/travel";
+import Footer from "/components/footer";
+import {ReactComponent as Seperator} from "/public/assets/imgs/home-seperator.svg";
 //import {ReactComponent as Menu} from "./assets/imgs/menu.svg";
-import style from '../style/Home.module.scss';
+import style from '/style/Home.module.scss';
 import ambassadorImg from '/public/assets/imgs/ambassador.png';
 
-function Home(props) {
+export default function Home(props) {
 	const [stickyHeader, setStickyHeader]=React.useState(false);
 	const [activeCategoryIndex, setActiveCategoryIndex]=React.useState(0);
 	const [stickyMenuVisible, setStickyMenuVisible]=React.useState(false);
@@ -39,18 +39,17 @@ function Home(props) {
 
 	const SECTIONS=[
 		{"id": "meetings", "element": <Meetings />},
-		{"id": "blog", "element": <Blog />},
-		{"id": "library", "element": <Publications setRef={libraryRef} activeCategoryIndex={activeCategoryIndex}/>},
-		{"id": "map", "element": <Map />},
-		{"id": "events", "element": <Events />},
-		{"id": "contact", "element": <Contact />},
-		{"id": "viaggi", "element": <Travel />},
-		{"id": "biografia", "element": <Biografia />},
-		{"id": "letture", "element": <Letture />},
-		{"id": "diplomacy", "element": <Diplomacy />},
-		{"id": "travel", "element": <TravelSection />}
+		//{"id": "blog", "element": <Blog />},
+		//{"id": "library", "element": <Publications setRef={libraryRef} activeCategoryIndex={activeCategoryIndex}/>},
+		//{"id": "map", "element": <Map />},
+		//{"id": "events", "element": <Events />},
+		//{"id": "contact", "element": <Contact />},
+		//{"id": "viaggi", "element": <Travel />},
+		//{"id": "biografia", "element": <Biografia />},
+		//{"id": "letture", "element": <Letture />},
+		//{"id": "diplomacy", "element": <Diplomacy />},
+		//{"id": "travel", "element": <TravelSection />}
 	];
-
 
 	/*
 	const setSticky=()=> {
@@ -98,13 +97,13 @@ function Home(props) {
 						{MENU.map(item=>
 							<li key={item.title} className={style["header-menu__item"]}>
 							{item.link.startsWith("#") && <a className={style["header-menu__link"]} href={item.link} onClick={item.clickHandler}>{item.title}</a>}
-							{item.link.startsWith("#") || <Link className={style["header-menu__link"]} to={item.link}>{item.title}</Link>}
+							{item.link.startsWith("#") || <Link className={style["header-menu__link"]} href={item.link}>{item.title}</Link>}
 							</li>)}
 						</ul></nav>
 					</div>
 				</div>
 				<div className={style["header"]}>
-					<img className={style["header__img"]} alt="claudio pacifico" src={ambassadorImg}/>
+					<img className={style["header__img"]} alt="claudio pacifico" src={ambassadorImg.src}/>
 					<h1 className={style["header__title"]}>Ambasciatore d&apos;Italia<span className="header__subtitle">Claudio Pacifico</span></h1>
 				</div>
 			</header>
@@ -124,7 +123,7 @@ function Home(props) {
 function Biografia(props) {
 	return (
 		<div ref={props.biografiaRef}  className={style["about-navigator"]}>
-			<Link className={style["navigator__link"]} to="/adad/about-it">biografia</Link>
+			<Link className={style["navigator__link"]} href="/adad/about-it">biografia</Link>
 		</div>
 	);
 }
@@ -132,7 +131,7 @@ function Biografia(props) {
 function Letture(props) {
 	return (
 		<div ref={props.lettureRef}  className={style["article-navigator"]}>
-			<Link className={style["navigator__link"]} to="/adad/articles">letture</Link>
+			<Link className={style["navigator__link"]} href="/adad/articles">letture</Link>
 		</div>
 	);
 }
@@ -140,7 +139,7 @@ function Letture(props) {
 function Diplomacy(props) {
 	return (
 		<div ref={props.diplomacyRef}  className={style["italy-navigator"]}>
-			<Link className={style["navigator__link"]} to="/adad/diplomacy-report">repertorio<br/>diplomatico</Link>
+			<Link className={style["navigator__link"]} href="/adad/diplomacy-report">repertorio<br/>diplomatico</Link>
 		</div>
 	);
 }
@@ -148,9 +147,7 @@ function Diplomacy(props) {
 function TravelSection(props) {
 	return (
 		<div ref={props.travelRef}  className={style["desert-navigator"]}>
-			<Link className={style["navigator__link"]} to="/adad/travel">viaggi<br/>e spedizioni</Link>
+			<Link className={style["navigator__link"]} href="/adad/travel">viaggi<br/>e spedizioni</Link>
 		</div>
 	);
 }
-
-export default Home;

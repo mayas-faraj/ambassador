@@ -2,25 +2,27 @@ import React, {Fragment} from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import {Document, Page} from 'react-pdf/dist/esm/entry.webpack';
-import {Link, useParams} from 'react-router-dom';
+import Link from 'next/link';
+import {useRouter} from 'next/router';
 import axios from 'axios';
 import {Helmet} from 'react-helmet';
-import Pagination from '../components/Pagination';
-import Glimmer from '../components/Glimmer';
-import Footer from '../components/Footer';
-import SettingContext from '../components/SettingContext';
+import Pagination from 'components/Pagination';
+import Glimmer from 'components/Glimmer';
+import Footer from 'components/Footer';
+import SettingContext from 'components/SettingContext';
 import transparentImage from '/public/assets/imgs/transparent.png';
 import textImage from '/public/assets/imgs/text.png';
 import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
 import {ReactComponent as ShareIcon} from '/public/assets/imgs/share.svg';
-import {ReactComponent as FullScreenIcon} from '../assets/imgs/full-screen.svg';
-import {ReactComponent as FacebookButtonIcon} from '../assets/imgs/social-facebook.svg';
-import {ReactComponent as TwitterButtonIcon} from '../assets/imgs/social-twitter.svg';
-import {ReactComponent as LinkedinButtonIcon} from '../assets/imgs/social-linkedin.svg';
-import style from '../style/Book.module.scss';
+import {ReactComponent as FullScreenIcon} from 'assets/imgs/full-screen.svg';
+import {ReactComponent as FacebookButtonIcon} from 'assets/imgs/social-facebook.svg';
+import {ReactComponent as TwitterButtonIcon} from 'assets/imgs/social-twitter.svg';
+import {ReactComponent as LinkedinButtonIcon} from 'assets/imgs/social-linkedin.svg';
+import style from '/style/Book.module.scss';
 
 export default props=>{
-	const {slug}=useParams();
+	const router=useRouter();
+	const slug=router.query.book;
 	const context=React.useContext(SettingContext);
 	const [book, setBook]=React.useState(null);
 	const [books, setBooks]=React.useState([]);
@@ -56,7 +58,7 @@ export default props=>{
 	return (
 		<Fragment key={slug}>
 			<header className={style["book-header"]}>
-				<Link to="/adad/#library" className={style["book-header__menu"]}>
+				<Link href="/adad/#library" className={style["book-header__menu"]}>
 				Libri e Pubblicazioni  dell’Ambasciatore d’Italia.<br/>
 				Storia e cultura dei Paesi arabi e asiatici,<br/>
 				luoghi in cui ha vissuto a lungo.
@@ -74,7 +76,7 @@ export default props=>{
 										<div className={style["book-list-wrapper"]}>
 										{
 											books.filter(book=>book.image!=null && book.image!="").reverse().map(book=>book.image && (
-												<Link key={book.slug} className={style["book-item"]} to={"/adad/libri/"+book.slug} title={book.title} ref={book.slug===slug?itemRef:null}>
+												<Link key={book.slug} className={style["book-item"]} href={"/adad/libri/"+book.slug} title={book.title} ref={book.slug===slug?itemRef:null}>
 													<img src={book.image?context.uploadsUrl+"/"+book.image:transparentImage} className={style["book-item__image"]} alt={book.title} />
 												</Link>
 											))

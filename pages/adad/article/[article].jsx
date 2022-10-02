@@ -1,23 +1,24 @@
 import React, {Fragment} from 'react';
-import {Link, useParams} from 'react-router-dom';
+import Link from 'next/link';
+import {useRouter} from 'next/router';
 import axios from 'axios';
-import Glimmer from '../components/Glimmer';
-import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
-import Footer from '../components/Footer';
-import SettingContext from '../components/SettingContext';
-import style from '../style/Article.module.scss';
+import Glimmer from '/components/glimmer';
+import Seperator from "/public/assets/imgs/seperator.svg";
+import Footer from '/components/footer';
+import SettingContext from '/components/setting-context';
+import style from '/style/Article.module.scss';
 
 
 export default function Article() {
-	let {slug}=useParams();
-
+	const router=useRouter();
+	const slug=router.query.article;
 	const context=React.useContext(SettingContext);
 	const [article, setArticle]=React.useState(null);
 	const articleLoad=React.useEffect(()=>{
-		axios.post(context.backendApiUrl, {"operation": "read-article", "slug": slug})
-		.then(result=>setArticle(result.data[0]))
-		.catch(err=>console.log(err));
-	}, []);
+			slug && axios.post(context.backendApiUrl, {"operation": "read-article", "slug": slug})
+			.then(result=>setArticle(result.data[0]))
+			.catch(err=>console.log(err));
+	}, [slug]);
 
 	return (
 		<Fragment>
@@ -25,12 +26,14 @@ export default function Article() {
 		{article!==null && (
 			<Fragment>
 				<header className={style["article-header"]}>
-					<Link to="/adad/articles" className={style["article-header__menu"]}>
+					<Link href="/adad/articles" className={style["article-header__menu"]}>
+						<a>
 						Episodi, ricordi e analisi,<br/>
 						scritti dall’Ambasciatore d’Italia<br/>
 						Claudio Pacifico
+						</a>
 					</Link>
-					<Seperator className="article-seperator section-seperator" />
+					<Seperator className={style["article-seperator"] + " section-seperator"} />
 				</header>
 				<div className={style["article-content"]}>
 					<div className={style["article-container"]}>

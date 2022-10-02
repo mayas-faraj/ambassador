@@ -1,25 +1,27 @@
 import React, {Fragment} from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
-import {Link, useParams} from 'react-router-dom';
+import Link from 'next/router';
+import {useRouter} from 'next/router';
 import axios from 'axios';
 import {Helmet} from 'react-helmet';
 import {Document, Page} from 'react-pdf/dist/esm/entry.webpack';
-import Pagination from '../components/Pagination';
-import Glimmer from '../components/Glimmer';
-import Footer from '../components/Footer';
-import SettingContext from '../components/SettingContext';
+import Pagination from 'components/Pagination';
+import Glimmer from 'components/Glimmer';
+import Footer from 'components/Footer';
+import SettingContext from 'components/SettingContext';
 import transparentImage from '/public/assets/imgs/transparent.png';
 import textImage from '/public/assets/imgs/text.png';
 import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
 import {ReactComponent as ShareIcon} from '/public/assets/imgs/share.svg';
-import {ReactComponent as FacebookButtonIcon} from '../assets/imgs/social-facebook.svg';
-import {ReactComponent as TwitterButtonIcon} from '../assets/imgs/social-twitter.svg';
-import {ReactComponent as LinkedinButtonIcon} from '../assets/imgs/social-linkedin.svg';
-import style from '../style/Essay.module.scss';
+import {ReactComponent as FacebookButtonIcon} from 'assets/imgs/social-facebook.svg';
+import {ReactComponent as TwitterButtonIcon} from 'assets/imgs/social-twitter.svg';
+import {ReactComponent as LinkedinButtonIcon} from 'assets/imgs/social-linkedin.svg';
+import style from '/style/Essay.module.scss';
 
 export default props=>{
-	const {slug}=useParams();
+	const router=useRouter();
+	const slug=useParams().essay;
 	const context=React.useContext(SettingContext);
 	const [essays, setEssays]=React.useState(null);
 	const [bookPagesCount, setBookPagesCount]=React.useState([]);
@@ -49,7 +51,7 @@ export default props=>{
 	return (
 		<Fragment>
 			<header className={style["essay-header"]}>
-				<Link to="/adad/#saggi" className={style["essay-header__menu"]}>
+				<Link href="/adad/#saggi" className={style["essay-header__menu"]}>
 				Saggi di politica internazionale e Articoli
 				</Link>
 				<Seperator className="essay-seperator section-seperator" />

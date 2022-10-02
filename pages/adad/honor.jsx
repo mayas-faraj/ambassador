@@ -1,16 +1,16 @@
 import {Fragment} from 'react';
-import {Link} from 'react-router-dom';
-import Footer from '../components/Footer';
+import Link from 'next/link';
+import Footer from 'components./footer';
 import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
-import funeralImg from '../assets/imgs/claudio-pacifico-libya.jpg';
-import style from '../style/About.module.scss';
+import funeralImg from 'assets/imgs/claudio-pacifico-libya.jpg';
+import style from '/style/About.module.scss';
 
 export default function Honor() {
 	return (
 		<Fragment>
 			<header className={style["about-header"]}>
 				<div className={style["about-header__image-container"]}>
-					<Link to="/adad/"><img className={style["about-header__image"]} src={funeralImg} alt="Claudio Pacifico on libya"/></Link>
+					<Link href="/adad/"><img className={style["about-header__image"]} src={funeralImg} alt="Claudio Pacifico on libya"/></Link>
 					<Seperator className="about-seperator section-seperator" />
 				</div>
 				<h1 className={style["about-header__title"]}>Onorificenze</h1>

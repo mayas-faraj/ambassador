@@ -99,7 +99,7 @@ html {
 
 .essay::after {
 	content: ' ';
-	background-image: url(../imgs/lines.svg);
+	background-image: url(/public/assets/imgs/lines.svg);
 	height: 120px;
 	width: 100%;
 	top: calc(50% - 60px);

@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Gallery, Item } from "react-photoswipe-gallery";
-import Glimmer from "../components/Glimmer";
+import Glimmer from "/components/Glimmer";
 import { ReactComponent as Seperator } from "/public/assets/imgs/seperator.svg";
-import Footer from "../components/Footer";
+import Footer from "/components./footer";
 import "photoswipe/dist/photoswipe.css";
-import style from "../style/DiplomaticReport.module.scss";
+import style from "/style/DiplomaticReport.module.scss";
 import countries from "/public/assets/data/countries.json";
 
 export default function DiplomaticReport() {
@@ -19,8 +19,8 @@ export default function DiplomaticReport() {
 	for(let i=0; i<countries.length; i++)
 		if(countries[i].images!=null)
 			for(let j=0; j<countries[i].images.length; j++) {
-				countries[i].images[j].original=require("../assets/imgs/diplomacy-report/"+countries[i].imageDirectory+"/"+countries[i].images[j].name);
-				countries[i].images[j].thumbnail=require("../assets/imgs/diplomacy-report/thumbnails/"+countries[i].imageDirectory+"/"+countries[i].images[j].name);
+				countries[i].images[j].original=require("/public/assets/imgs/diplomacy-report/"+countries[i].imageDirectory+"/"+countries[i].images[j].name);
+				countries[i].images[j].thumbnail=require("/public/assets/imgs/diplomacy-report/thumbnails/"+countries[i].imageDirectory+"/"+countries[i].images[j].name);
 			}
 
 	function contentScrollHandler() {

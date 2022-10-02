@@ -1,4 +1,4 @@
-import style from "../style/Pagination.module.scss";
+import style from "/style/Pagination.module.scss";
 
 export default function(props) {
 	let pages=Array(props.pagesCount);

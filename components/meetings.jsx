@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import Link from 'next/link';
 import axios from 'axios';
-import SettingContext from './SettingContext';
-import Glimmer from './Glimmer.jsx';
-import style from '../style/Meetings.module.scss';
+import SettingContext from './setting-context';
+import Glimmer from './glimmer';
+import style from '/style/Meetings.module.scss';
 
 class Meetings extends React.Component {
 	constructor(props) {
@@ -28,12 +28,12 @@ class Meetings extends React.Component {
 				{ this.state.meetings!=null && this.state.meetings.length===0 && <p className={style["meetings-noitems"]}>gli articoli arriveranno presto</p> }
 				{ this.state.meetings!=null && this.state.meetings.status!=="failed" && this.state.meetings.map(meeting=>(
 						<div key={meeting.title} className={style["meetings-item"]}>
-							<Link to={"/adad/article/"+meeting.slug}>
+							<Link href={"/adad/article/"+meeting.slug}>
 								<img src={this.context.uploadsUrl+"/"+meeting.image} className={style["meetings-item__image"]} alt={"Claudio Pacifico meeting, "+meeting.title}/>
 							</Link>
 
 							<h3 className={style["meetings-item__title"]}>
-								<Link className={style["meetings-item__link"]} to={"/adad/article/"+meeting.slug}>
+								<Link className={style["meetings-item__link"]} href={"/adad/article/"+meeting.slug}>
 									{meeting.title.replaceAll("\\n", "\n")}
 								</Link>
 							</h3>

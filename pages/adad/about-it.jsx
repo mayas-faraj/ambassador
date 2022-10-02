@@ -1,12 +1,12 @@
 import React, {Fragment} from 'react';
-import {Link} from 'react-router-dom';
+import Link from 'next/link';
 import axios from 'axios';
-import LanguageSwitcher from '../components/LanguageSwitcher';
-import Footer from '../components/Footer';
-import SettingContext from '../components/SettingContext';
+import LanguageSwitcher from 'components/LanguageSwitcher';
+import Footer from 'components./footer';
+import SettingContext from 'components/SettingContext';
 import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
-import funeralImg from '../assets/imgs/claudio-pacifico-libya.jpg';
-import style from '../style/About.module.scss';
+import funeralImg from 'assets/imgs/claudio-pacifico-libya.jpg';
+import style from '/style/About.module.scss';
 
 export default function About() {
 	const context=React.useContext(SettingContext);
@@ -22,7 +22,7 @@ export default function About() {
 		<Fragment>
 			<header className={style["about-header"]}>
 				<div className={style["about-header__image-container"]}>
-					<Link to="/adad/#biografia"><img className={style["about-header__image"]} src={funeralImg} alt="Claudio Pacifico on libya"/></Link>
+					<Link href="/adad/#biografia"><img className={style["about-header__image"]} src={funeralImg} alt="Claudio Pacifico on libya"/></Link>
 					<Seperator className="about-seperator section-seperator" />
 				</div>
 				<LanguageSwitcher pageLink="/adad/about-it" downloadLink="/books/about-it.pdf"/>

@@ -1,5 +1,5 @@
 import React, {Fragment} from "react";
-import {Link} from "react-router-dom";
+import Link from 'next/link';
 import Meetings from "../components/Meetings";
 import Blog from "../components/Blog";
 import Publications from "../components/Publications";

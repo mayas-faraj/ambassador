@@ -1,16 +1,15 @@
 import React, {Fragment} from 'react';
-import {Link} from "react-router-dom";
+import Link from 'next/link';
 import axios from 'axios';
 import {Swiper, SwiperSlide} from 'swiper/react';
 import {Pagination} from 'swiper';
-import Glimmer from './Glimmer.jsx';
-import SettingContext from './SettingContext';
+import Glimmer from './glimmer';
+import SettingContext from './setting-context';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import style from '../style/Publication.module.scss';
+import style from '/style/Publication.module.scss';
 import transparentImage from '/public/assets/imgs/transparent.png';
-import pageSound from '/public/assets/sounds/page.mp3';
 
 
 class Publications extends React.Component {
@@ -24,7 +23,7 @@ class Publications extends React.Component {
 		};
 
 		this.categoryClickHandler=this.categoryClickHandler.bind(this);
-		this.pageAudio=new Audio(pageSound);
+		this.pageAudio=new Audio('/public/assets/sounds/page.mp3');
 	}
 
 	static contextType=SettingContext;
@@ -129,7 +128,7 @@ class Publications extends React.Component {
 						{ this.state.books.length===0 && <p className={style["publications-noitems"]}>gli articoli arriveranno presto</p> }
 						{ this.state.books.status!=="failed" && this.state.books.status!=="error" && this.state.books.map((book, index)=>(
 								<SwiperSlide key={book.title}>
-										<Link className={style["publications-item"]} onMouseEnter={()=>this.bookHoverEventHandler(index)} to={"/adad/"+this.state.categories[this.state.activeCategoryIndex].name+"/"+book.slug}>
+										<Link className={style["publications-item"]} onMouseEnter={()=>this.bookHoverEventHandler(index)} href={"/adad/"+this.state.categories[this.state.activeCategoryIndex].name+"/"+book.slug}>
 											<p className={"publications-item__content"+(/[ا-ي]/.test(book.title)?" publications-item__content--arabic":"")}>
 											{book.title}
 											</p>

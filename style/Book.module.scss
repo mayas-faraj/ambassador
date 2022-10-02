@@ -146,7 +146,7 @@ html {
 .book-browse-basic::before,
 .book-browse-revision::before {
 	content: ' ';
-	background-image: url(../imgs/lines.svg);
+	background-image: url(/public/assets/imgs/lines.svg);
 	height: 150px;
 	width: 100%;
 	top: calc(50% - 75px);

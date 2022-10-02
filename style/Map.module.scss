@@ -22,7 +22,7 @@ $map-general-color: #0a401e;
 	top: -63px;
 	left: 0;
 	//background: repeating-linear-gradient(120deg, transparent 0, $lines-color 1px, $lines-color 1px, transparent 3px, transparent 6px);
-	background-image: url(../imgs/lines.svg);
+	background-image: url(/public/assets/imgs/lines.svg);
 	background-size: 120px;
 	z-index: 99;
 	pointer-events: none;
