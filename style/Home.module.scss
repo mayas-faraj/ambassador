@@ -1,0 +1,241 @@
+@import "compass/css3";
+@import "colors";
+@import "fonts";
+
+.header-wrapper {
+	position: relative;
+}
+
+
+.header {
+	position: relative;	
+	text-align: center;
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.top-header,
+.top-header__overlay {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	@include transition(transform .5s);
+	@include transform(translateY(-150px));
+}
+
+.top-header {
+	padding: 0px 60px;
+	z-index: 999901;
+	box-sizing: border-box;
+}
+
+.top-header__overlay {
+	max-width: 100% !important;
+	background-color: rgba($secondary-color, .8);
+	height: 68px;
+	left: 0;
+	z-index: 999900;
+}
+
+.top-header__overlay--visible,
+.top-header--visible {
+	@include transform(translateY(0px) !important);
+}
+
+.top-header__title {
+	text-align: center;
+	color: $primary-color !important;
+	margin: 0;
+}
+
+.top-header__menu {
+	float: left;
+	width: 26px;
+	margin-top: 20px;
+	cursor: pointer;
+
+	rect {
+		fill: $primary-color !important;
+	}
+}
+
+.header-menu {
+	text-align: left;
+	margin-left: 58px;
+	margin-bottom: 20px;
+	letter-spacing: 2.8px;
+	line-height: 18px;
+	@include transition(transform .5s);
+}
+
+
+.header-menu--sticky {
+	@include transform(translateX(-100vw));
+	position: fixed;
+	top: 68px;
+	left: initial;
+	margin-left: 58px;
+}
+
+
+.header-menu--visible {
+	@include transform(translateX(0px));
+	background-color: rgba($secondary-color, .8);
+	padding: 0 20px;
+}
+
+.header__title {
+	margin: 18px 0;
+	text-align: center;
+}
+
+.header__title, 
+.top-header__title {
+	font-family: minion-it;
+	letter-spacing: 5.4px;
+	color: #ce9c72;
+	font-size: 23px;
+	line-height: 34px;
+}
+
+.header__subtitle {
+	font-family: minion;
+	display: block;
+}
+
+.header-menu__list {
+	list-style-type: none;
+	padding-left: 0px;
+	text-transform: uppercase;
+}
+
+.header-menu__link {
+	@include transition(color 1s);
+	font-family: arial-narrow, arial, sans-serif;
+	font-size: 15px;
+}
+
+.header-menu__link:hover {
+	color: $secondary-color;
+}
+
+.header__img {
+	transform: scale(.9);
+}
+
+.about-navigator,
+.italy-navigator, 
+.article-navigator,
+.navigator__image {
+	width: 100%;
+}
+
+.biografia__container,
+.letture__container, 
+.diplomacy__container,
+.travel__container {
+	max-width: 100% !important;
+}
+
+.navigator__image {
+	max-width: 100% !important;
+}
+
+.about-navigator {
+	background-image: url(../imgs/claudio-pacifico-libya.jpg);
+}
+
+.italy-navigator {
+	background-image: url(../imgs/claudio-pacifico-with-arafat.jpg);
+}
+
+.desert-navigator {
+	background-image: url(../imgs/claudio-pacifico-desert.jpg);
+	.navigator__link {
+		padding-right: 58vw;
+		margin-top: 110px;
+	}
+}
+
+.article-navigator {
+	background-image: url(../imgs/claudio-pacifico-newspaper.jpg);
+}
+
+.about-navigator,
+.desert-navigator,
+.article-navigator,
+.italy-navigator {
+    height: 41.5vw;
+    background-size: cover;
+    display: flex;
+    background-blend-mode: multiply;
+    background-color: #fff;
+    background-position: bottom;
+    @include transition(background-color .5s);
+}
+
+.about-navigator:hover,
+.desert-navigator:hover,
+.article-navigator:hover,
+.italy-navigator:hover {
+    background-color: #3b3b3b;
+}
+
+.navigator__link {
+    margin: auto;
+    font-family: 'minion-semibold-it';
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+	color: $secondary-color !important;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: $secondary-color !important;
+}
+
+.swiper-pagination-bullet {
+	width: 14px !important;
+	height: 14px !important;
+}
+
+@media screen and (min-width: $mobile-width) {
+	.header {
+	}
+
+	.header-menu {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 999999;
+	}
+
+	.navigator__link {
+		font-size: 4vw;
+	}
+}
+
+.viaggi-seperator {
+	path {
+		fill: #9c9c9c !important;
+	}
+}
+
+.map-seperator {
+	path {
+		fill: #000 !important;
+	}	
+}
+
+#plusText {
+	font-size: 30px;
+	fill: $accent-color;
+	font-family: minion;
+}
