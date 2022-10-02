@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import axios from 'axios';
 import Glimmer from '../components/Glimmer';
-import {ReactComponent as Seperator} from "../assets/imgs/seperator.svg";
+import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
 import Footer from '../components/Footer';
 import SettingContext from '../components/SettingContext';
 import style from '../style/Article.module.scss';

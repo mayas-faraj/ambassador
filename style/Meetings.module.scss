@@ -1,4 +1,4 @@
-@import "compass/css3";
+
 @import "colors";
 @import "fonts";
 
@@ -83,7 +83,7 @@
 	transition: filter 1s;
 	object-fit: cover;
 	object-position: top;
-	@include animation(scale-up 1s);
+	animation: scale-up 1s;
 }
 
 .meetings-item__image:hover {
@@ -99,7 +99,7 @@
 	white-space: pre-line;
 }
 
-@include keyframes(scale-up) {
-	from { @include transform(scale(0.1)); }
-	to { @include transform(scale(1)); }
+@keyframes scale-up {
+	from { transform: scale(0.1); }
+	to { transform: scale(1); }
 }

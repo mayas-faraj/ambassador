@@ -1,7 +1,7 @@
 import {Fragment} from 'react';
 import {Link} from 'react-router-dom';
 import Footer from '../components/Footer';
-import {ReactComponent as Seperator} from "../assets/imgs/seperator.svg";
+import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
 import funeralImg from '../assets/imgs/claudio-pacifico-libya.jpg';
 import style from '../style/About.module.scss';
 

@@ -1,4 +1,4 @@
-import pulseImage from '../assets/imgs/pulse.svg';
+import pulseImage from '/public/assets/imgs/pulse.svg';
 import style from '../style/Glimmer.module.scss';
 export default props=>{
 	return (

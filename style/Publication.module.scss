@@ -1,4 +1,4 @@
-@import "compass/css3";
+
 @import "colors";
 @import "fonts";
 
@@ -199,7 +199,7 @@
 	}
 }
 
-@include keyframes(fade-in) {
+@keyframes fade-in {
 	from { opacity: 0; }
 	to { opacity: 1; }
 }

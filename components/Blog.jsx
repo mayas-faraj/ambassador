@@ -11,7 +11,7 @@ import {ReactComponent as TwitterButtonIcon} from '../assets/imgs/social-twitter
 import {ReactComponent as LinkedinButtonIcon} from '../assets/imgs/social-linkedin.svg';
 import {ReactComponent as YoutubeButtonIcon} from '../assets/imgs/social-youtube.svg';
 import {ReactComponent as InstagramButtonIcon} from '../assets/imgs/social-instagram.svg';
-import {ReactComponent as ArrowImage} from '../assets/imgs/arrow.svg';
+import {ReactComponent as ArrowImage} from '/public/assets/imgs/arrow.svg';
 import {ReactComponent as MobileImage} from '../assets/imgs/iphone-dark.svg';
 import style from '../style/Blog.module.scss';
 

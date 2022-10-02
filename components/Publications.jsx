@@ -9,8 +9,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import style from '../style/Publication.module.scss';
-import transparentImage from '../assets/imgs/transparent.png';
-import pageSound from '../assets/sounds/page.mp3';
+import transparentImage from '/public/assets/imgs/transparent.png';
+import pageSound from '/public/assets/sounds/page.mp3';
 
 
 class Publications extends React.Component {

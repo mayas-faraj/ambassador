@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import { Gallery, Item } from 'react-photoswipe-gallery'
 import Glimmer from '../components/Glimmer';
-import {ReactComponent as Seperator} from '../assets/imgs/seperator.svg';
+import {ReactComponent as Seperator} from '/public/assets/imgs/seperator.svg';
 import Footer from '../components/Footer';
 import 'photoswipe/dist/photoswipe.css'
 import style from '../style/Travel.module.scss';

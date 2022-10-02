@@ -4,7 +4,7 @@ import axios from 'axios';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 import Footer from '../components/Footer';
 import SettingContext from '../components/SettingContext';
-import {ReactComponent as Seperator} from "../assets/imgs/seperator.svg";
+import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
 import funeralImg from '../assets/imgs/claudio-pacifico-libya.jpg';
 import style from '../style/About.module.scss';
 

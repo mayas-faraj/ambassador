@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import {ReactComponent as DownloadIcon} from '../assets/imgs/download.svg';
+import {ReactComponent as DownloadIcon} from '/public/assets/imgs/download.svg';
 import style from '../style/LanguageSwitcher.module.scss';
 
 export default function LanguageSwitcher(props) {

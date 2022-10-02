@@ -1,4 +1,4 @@
-@import "compass/css3";
+
 @import "colors";
 @import "fonts";
 
@@ -22,8 +22,8 @@
 	position: sticky;
 	top: 0;
 	width: 100%;
-	@include transition(transform .5s);
-	@include transform(translateY(-150px));
+	transition: transform .5s;
+	transform: translateY(-150px);
 }
 
 .top-header {
@@ -42,7 +42,7 @@
 
 .top-header__overlay--visible,
 .top-header--visible {
-	@include transform(translateY(0px) !important);
+	transform: translateY(0px) !important;
 }
 
 .top-header__title {
@@ -68,12 +68,12 @@
 	margin-bottom: 20px;
 	letter-spacing: 2.8px;
 	line-height: 18px;
-	@include transition(transform .5s);
+	transition: transform .5s;
 }
 
 
 .header-menu--sticky {
-	@include transform(translateX(-100vw));
+	transform: translateX(-100vw);
 	position: fixed;
 	top: 68px;
 	left: initial;
@@ -82,7 +82,7 @@
 
 
 .header-menu--visible {
-	@include transform(translateX(0px));
+	transform: translateX(0px);
 	background-color: rgba($secondary-color, .8);
 	padding: 0 20px;
 }
@@ -113,7 +113,7 @@
 }
 
 .header-menu__link {
-	@include transition(color 1s);
+	transition: color 1s;
 	font-family: arial-narrow, arial, sans-serif;
 	font-size: 15px;
 }
@@ -174,7 +174,7 @@
     background-blend-mode: multiply;
     background-color: #fff;
     background-position: bottom;
-    @include transition(background-color .5s);
+    transition: background-color .5s;
 }
 
 .about-navigator:hover,

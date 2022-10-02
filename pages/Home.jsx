@@ -11,7 +11,7 @@ import Footer from "../components/Footer";
 import {ReactComponent as Seperator} from "../assets/imgs/home-seperator.svg";
 //import {ReactComponent as Menu} from "./assets/imgs/menu.svg";
 import style from '../style/Home.module.scss';
-import ambassadorImg from '../assets/imgs/ambassador.png';
+import ambassadorImg from '/public/assets/imgs/ambassador.png';
 
 function Home(props) {
 	const [stickyHeader, setStickyHeader]=React.useState(false);

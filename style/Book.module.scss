@@ -1,4 +1,4 @@
-@import "compass/css3";
+
 @import "_colors";
 @import "_fonts";
 
@@ -130,7 +130,7 @@ html {
 	letter-spacing: .3px;
 	white-space: pre-line;
 	text-align: justify;
-	@include hyphens(auto);
+	hyphens: auto;
 	font-size: 18px;
 }
 
@@ -392,7 +392,7 @@ html {
 .book-item__image {
     width: 100%;
     opacity: .6;
-    @include transition(opacity .5s);
+    transition: opacity .5s;
 }
 
 .book-item__label {
