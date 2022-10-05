@@ -1,5 +1,5 @@
 import React from 'react';
-import {ReactComponent as WorldImage} from '/public/assets/imgs/word-map-new.svg';
+import WorldImage from '/public/assets/imgs/word-map-new.svg';
 import style from '/style/Map.module.scss';
 
 class Map extends React.Component {

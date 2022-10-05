@@ -12,11 +12,11 @@ import Footer from 'components/Footer';
 import SettingContext from 'components/SettingContext';
 import transparentImage from '/public/assets/imgs/transparent.png';
 import textImage from '/public/assets/imgs/text.png';
-import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
-import {ReactComponent as ShareIcon} from '/public/assets/imgs/share.svg';
-import {ReactComponent as FacebookButtonIcon} from 'assets/imgs/social-facebook.svg';
-import {ReactComponent as TwitterButtonIcon} from 'assets/imgs/social-twitter.svg';
-import {ReactComponent as LinkedinButtonIcon} from 'assets/imgs/social-linkedin.svg';
+import Seperator from "/public/assets/imgs/seperator.svg";
+import ShareIcon from '/public/assets/imgs/share.svg';
+import FacebookButtonIcon from 'assets/imgs/social-facebook.svg';
+import TwitterButtonIcon from 'assets/imgs/social-twitter.svg';
+import LinkedinButtonIcon from 'assets/imgs/social-linkedin.svg';
 import style from '/style/Essay.module.scss';
 
 export default props=>{

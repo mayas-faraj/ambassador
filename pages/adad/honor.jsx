@@ -1,8 +1,8 @@
 import {Fragment} from 'react';
 import Link from 'next/link';
-import Footer from 'components./footer';
-import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
-import funeralImg from 'assets/imgs/claudio-pacifico-libya.jpg';
+import Footer from '../../components/footer';
+import Seperator from "/public/assets/imgs/seperator.svg";
+import funeralImg from '/public/assets/imgs/claudio-pacifico-libya.jpg';
 import style from '/style/About.module.scss';
 
 export default function Honor() {

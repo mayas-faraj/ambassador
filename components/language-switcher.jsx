@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {ReactComponent as DownloadIcon} from '/public/assets/imgs/download.svg';
+import DownloadIcon from '/public/assets/imgs/download.svg';
 import style from '/style/LanguageSwitcher.module.scss';
 
 export default function LanguageSwitcher(props) {

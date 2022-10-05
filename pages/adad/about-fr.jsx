@@ -1,11 +1,11 @@
 import React, {Fragment} from 'react';
 import Link from 'next/link';
 import axios from 'axios';
-import LanguageSwitcher from 'components/LanguageSwitcher';
-import Footer from 'components./footer';
-import SettingContext from 'components/SettingContext';
-import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
-import funeralImg from 'assets/imgs/claudio-pacifico-libya.jpg';
+import LanguageSwitcher from '/components/language-switcher';
+import Footer from '/components/footer';
+import SettingContext from '/components/setting-context';
+import Seperator from "/public/assets/imgs/seperator.svg";
+import funeralImg from '/public/assets/imgs/claudio-pacifico-libya.jpg';
 import style from '/style/About.module.scss';
 
 export default function About() {

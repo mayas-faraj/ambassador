@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import axios from 'axios';
 import SettingContext from 'components/SettingContext';
-import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
+import Seperator from "/public/assets/imgs/seperator.svg";
 import headerImage from 'assets/imgs/header-articles.png';
 import Footer from "/components/Footer";
 import style from '/style/Articles.module.scss';

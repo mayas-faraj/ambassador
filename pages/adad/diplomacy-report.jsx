@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
-import { Link, useParams } from "react-router-dom";
+import Link from "next/link";
 import { Gallery, Item } from "react-photoswipe-gallery";
 import Glimmer from "/components/Glimmer";
-import { ReactComponent as Seperator } from "/public/assets/imgs/seperator.svg";
+import Seperator from "/public/assets/imgs/seperator.svg";
 import Footer from "/components./footer";
 import "photoswipe/dist/photoswipe.css";
 import style from "/style/DiplomaticReport.module.scss";

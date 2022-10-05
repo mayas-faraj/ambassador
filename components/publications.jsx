@@ -23,7 +23,6 @@ class Publications extends React.Component {
 		};
 
 		this.categoryClickHandler=this.categoryClickHandler.bind(this);
-		this.pageAudio=new Audio('/public/assets/sounds/page.mp3');
 	}
 
 	static contextType=SettingContext;
@@ -37,6 +36,7 @@ class Publications extends React.Component {
 	}
 
 	componentDidMount() {
+		this.pageAudio=new window.Audio('/public/assets/sounds/page.mp3');
 		axios.post(this.context.backendApiUrl, {"operation": "read-publication-categories"})
 		.then(result=>{
 			this.setState({categories: result.data}, ()=>{
@@ -100,21 +100,21 @@ class Publications extends React.Component {
 								<p className={style["publications-top__mark"]}>
 								Libri, Memorie, Opere narrative,<br/>
 								Libri fotografici
-								<div className={style["publications-top__mark-white"]}>
+								<span className={style["publications-top__mark-white"]}>
 								Alcuni libri dell’Ambasciatore<br/>
 								sono stati tradotti anche <br/>
 								in altre lingue
-								</div>
+								</span>
 								</p>
 								
 						)}
 						{
 							this.state.activeCategoryIndex===1 && (
 								<p className={style["publications-top__mark"]}>
-								Saggi di politica internazionale e Articoli
-								<div className={style["publications-top__mark-white"]}>
-								Testi di Lezioni di Master, Interviste
-								</div>
+									Saggi di politica internazionale e Articoli
+									<span className={style["publications-top__mark-white"]}>
+									Testi di Lezioni di Master, Interviste
+									</span>
 								</p>
 								
 						)}
@@ -129,11 +129,13 @@ class Publications extends React.Component {
 						{ this.state.books.status!=="failed" && this.state.books.status!=="error" && this.state.books.map((book, index)=>(
 								<SwiperSlide key={book.title}>
 										<Link className={style["publications-item"]} onMouseEnter={()=>this.bookHoverEventHandler(index)} href={"/adad/"+this.state.categories[this.state.activeCategoryIndex].name+"/"+book.slug}>
+											<a>
 											<p className={"publications-item__content"+(/[ا-ي]/.test(book.title)?" publications-item__content--arabic":"")}>
 											{book.title}
 											</p>
 											<img src={book.image?this.context.uploadsUrl+"/"+book.image:transparentImage} className={style["publications-item__image"]} alt={book.title} />
 											<h3 className={style["publications-item__title"]}>{(book.month?(parseInt(book.month)+1)+"/":"")+book.year}</h3>
+											</a>
 										</Link>
 								</SwiperSlide>
 						)) }

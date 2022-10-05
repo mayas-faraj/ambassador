@@ -8,8 +8,8 @@ import Events from "/components/events";
 import Contact from "/components/contact";
 import Travel from "/components/travel";
 import Footer from "/components/footer";
-import {ReactComponent as Seperator} from "/public/assets/imgs/home-seperator.svg";
-//import {ReactComponent as Menu} from "./assets/imgs/menu.svg";
+import Seperator from "/public/assets/imgs/home-seperator.svg";
+//import Menu from "./assets/imgs/menu.svg";
 import style from '/style/Home.module.scss';
 import ambassadorImg from '/public/assets/imgs/ambassador.png';
 
@@ -25,30 +25,30 @@ export default function Home(props) {
 	const travelRef=React.useRef();
 
 	const MENU=[
-		{"title": "Biografia", "link": "about-it"},
-		{"title": "Onorificenze", "link": "honor"},
+		{"title": "Biografia", "link": "/adad/about-it"},
+		{"title": "Onorificenze", "link": "/adad/honor"},
 		{"title": "Libri", "link": "#library", clickHandler: ()=>setActiveCategoryIndex(0)},
 		{"title": "Saggi e articoli", "link": "#library", clickHandler: ()=>setActiveCategoryIndex(1)},
 		{"title": "Blog", "link": "#blog"},
 		{"title": "Mappa", "link": "#map"},
-		{"title": "Letture", "link": "articles"},
-		{"title": "Repertorio diplomatico", "link": "diplomacy-report"},
-		{"title": "Viaggi e Spedizioni", "link": "travel"},
-		{"title": "Contatti", "link": "contact"},
+		{"title": "Letture", "link": "adad/articles"},
+		{"title": "Repertorio diplomatico", "link": "/adad/diplomacy-report"},
+		{"title": "Viaggi e Spedizioni", "link": "adad/travel"},
+		{"title": "Contatti", "link": "adad/contact"},
 	];
 
 	const SECTIONS=[
 		{"id": "meetings", "element": <Meetings />},
-		//{"id": "blog", "element": <Blog />},
-		//{"id": "library", "element": <Publications setRef={libraryRef} activeCategoryIndex={activeCategoryIndex}/>},
-		//{"id": "map", "element": <Map />},
-		//{"id": "events", "element": <Events />},
-		//{"id": "contact", "element": <Contact />},
-		//{"id": "viaggi", "element": <Travel />},
-		//{"id": "biografia", "element": <Biografia />},
-		//{"id": "letture", "element": <Letture />},
-		//{"id": "diplomacy", "element": <Diplomacy />},
-		//{"id": "travel", "element": <TravelSection />}
+		{"id": "blog", "element": <Blog />},
+		{"id": "library", "element": <Publications setRef={libraryRef} activeCategoryIndex={activeCategoryIndex}/>},
+		{"id": "map", "element": <Map />},
+		{"id": "events", "element": <Events />},
+		{"id": "contact", "element": <Contact />},
+		{"id": "viaggi", "element": <Travel />},
+		{"id": "biografia", "element": <Biografia />},
+		{"id": "letture", "element": <Letture />},
+		{"id": "diplomacy", "element": <Diplomacy />},
+		{"id": "travel", "element": <TravelSection />}
 	];
 
 	/*
@@ -139,7 +139,7 @@ function Letture(props) {
 function Diplomacy(props) {
 	return (
 		<div ref={props.diplomacyRef}  className={style["italy-navigator"]}>
-			<Link className={style["navigator__link"]} href="/adad/diplomacy-report">repertorio<br/>diplomatico</Link>
+			<Link className={style["navigator__link"]} href="/adad/diplomacy-report"><a>repertorio<br/>diplomatico</a></Link>
 		</div>
 	);
 }
@@ -147,7 +147,7 @@ function Diplomacy(props) {
 function TravelSection(props) {
 	return (
 		<div ref={props.travelRef}  className={style["desert-navigator"]}>
-			<Link className={style["navigator__link"]} href="/adad/travel">viaggi<br/>e spedizioni</Link>
+			<Link className={style["navigator__link"]} href="/adad/travel"><a>viaggi<br/>e spedizioni</a></Link>
 		</div>
 	);
 }

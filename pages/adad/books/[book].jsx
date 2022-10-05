@@ -12,12 +12,12 @@ import Footer from 'components/Footer';
 import SettingContext from 'components/SettingContext';
 import transparentImage from '/public/assets/imgs/transparent.png';
 import textImage from '/public/assets/imgs/text.png';
-import {ReactComponent as Seperator} from "/public/assets/imgs/seperator.svg";
-import {ReactComponent as ShareIcon} from '/public/assets/imgs/share.svg';
-import {ReactComponent as FullScreenIcon} from 'assets/imgs/full-screen.svg';
-import {ReactComponent as FacebookButtonIcon} from 'assets/imgs/social-facebook.svg';
-import {ReactComponent as TwitterButtonIcon} from 'assets/imgs/social-twitter.svg';
-import {ReactComponent as LinkedinButtonIcon} from 'assets/imgs/social-linkedin.svg';
+import Seperator from "/public/assets/imgs/seperator.svg";
+import ShareIcon from '/public/assets/imgs/share.svg';
+import FullScreenIcon from 'assets/imgs/full-screen.svg';
+import FacebookButtonIcon from 'assets/imgs/social-facebook.svg';
+import TwitterButtonIcon from 'assets/imgs/social-twitter.svg';
+import LinkedinButtonIcon from 'assets/imgs/social-linkedin.svg';
 import style from '/style/Book.module.scss';
 
 export default props=>{
@@ -59,9 +59,11 @@ export default props=>{
 		<Fragment key={slug}>
 			<header className={style["book-header"]}>
 				<Link href="/adad/#library" className={style["book-header__menu"]}>
-				Libri e Pubblicazioni  dell’Ambasciatore d’Italia.<br/>
-				Storia e cultura dei Paesi arabi e asiatici,<br/>
-				luoghi in cui ha vissuto a lungo.
+					<a>
+					Libri e Pubblicazioni  dell’Ambasciatore d’Italia.<br/>
+					Storia e cultura dei Paesi arabi e asiatici,<br/>
+					luoghi in cui ha vissuto a lungo.
+					</a>
 				</Link>
 				<Seperator className="book-seperator section-seperator" />
 			</header>
