@@ -143,18 +143,6 @@
 	letter-spacing: 0 !important;
 }
 
-.swiper-wrapper {
-	padding-bottom: 45px;
-}
-
-.swiper-pagination-bullet {
-	background-color: #fff;
-}
-
-.swiper-slide-duplicate {
-	visibility: hidden;
-}
-
 .publications-item__image {
 	height: 200px;
 	object-fit: cover;
@@ -202,10 +190,6 @@
 @keyframes fade-in {
 	from { opacity: 0; }
 	to { opacity: 1; }
-}
-
-.swiper-pagination-bullets {
-	bottom: 0 !important;
 }
 
 .publications-noitems {

@@ -1,27 +1,22 @@
 import React, {Fragment} from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
-import Link from 'next/router';
+import Link from 'next/link';
 import {useRouter} from 'next/router';
 import axios from 'axios';
-import {Helmet} from 'react-helmet';
-import {Document, Page} from 'react-pdf/dist/esm/entry.webpack';
-import Pagination from 'components/Pagination';
-import Glimmer from 'components/Glimmer';
-import Footer from 'components/Footer';
-import SettingContext from 'components/SettingContext';
-import transparentImage from '/public/assets/imgs/transparent.png';
-import textImage from '/public/assets/imgs/text.png';
+import {pdfjs, Document, Page} from 'react-pdf';
+import Pagination from '/components/pagination';
+import Glimmer from '/components/glimmer';
+import Footer from '/components/footer';
+import SettingContext from '/components/setting-context';
 import Seperator from "/public/assets/imgs/seperator.svg";
-import ShareIcon from '/public/assets/imgs/share.svg';
-import FacebookButtonIcon from 'assets/imgs/social-facebook.svg';
-import TwitterButtonIcon from 'assets/imgs/social-twitter.svg';
-import LinkedinButtonIcon from 'assets/imgs/social-linkedin.svg';
-import style from '/style/Essay.module.scss';
+import style from '/style/essay.module.scss';
+
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
 
 export default props=>{
 	const router=useRouter();
-	const slug=useParams().essay;
+	const slug=router.query.essay;
 	const context=React.useContext(SettingContext);
 	const [essays, setEssays]=React.useState(null);
 	const [bookPagesCount, setBookPagesCount]=React.useState([]);
@@ -51,13 +46,15 @@ export default props=>{
 	return (
 		<Fragment>
 			<header className={style["essay-header"]}>
-				<Link href="/adad/#saggi" className={style["essay-header__menu"]}>
-				Saggi di politica internazionale e Articoli
+				<Link href="/adad/#saggi">
+					<a className={style["essay-header__menu"]}>
+						Saggi e articoli di politica estera
+					</a>
 				</Link>
-				<Seperator className="essay-seperator section-seperator" />
+				<Seperator className={style["essay-seperator"] + " section-seperator"} />
 			</header>
 			{ !essays && <Glimmer/> }
-			<div className={style["essays"]}>
+			<div className="essays">
 				<div className={style["essays__title"]}>
 				L’Ambasciatore Pacifico è altresì impegnato<br/>
 				in un’ampia attività di saggista, pubblicando articoli<br/>
@@ -80,8 +77,8 @@ export default props=>{
 							</div>
 							<p className={style["essay-info"]}>
 								<span className={style["essay-info__comment"]}>{essay.comment}</span><br/>
-								{essay.title}.<br/>
-								({essay.book_name?essay.book_name+". ":""}{essay.city?essay.city+", ":""}{(essay.month!=null && essay.month>=0) && [ "Gennaio", "febbraio", "Marzo", "aprile", "Maggio", "Giugno", "Luglio", "agosto", "settembre", "ottobre", "novembre", "Dicembre" ][essay.month]+" "}{essay.year})
+								{essay.title && (<h2>{essay.title}<h2/>)}
+								{essay.book_name?essay.book_name:""}{essay.city?essay.city+", ":""}{(essay.month!=null && essay.month>=0) && [ "Gennaio", "febbraio", "Marzo", "aprile", "Maggio", "Giugno", "Luglio", "agosto", "settembre", "ottobre", "novembre", "Dicembre" ][essay.month]+" "}{essay.year}
 							</p>
 						</div>
 				))}

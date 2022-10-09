@@ -2,11 +2,6 @@
 @import "_colors";
 @import "_fonts";
 
-html {
-	scroll-behavior: auto !important;
-	background-color: $primary-color;
-}
-
 .book-header {
 	background-color: $primary-color;
 	text-align: center;
@@ -146,7 +141,7 @@ html {
 .book-browse-basic::before,
 .book-browse-revision::before {
 	content: ' ';
-	background-image: url(/public/assets/imgs/lines.svg);
+	background-image: url(/assets/imgs/lines.svg);
 	height: 150px;
 	width: 100%;
 	top: calc(50% - 75px);
@@ -234,16 +229,6 @@ html {
 	padding-top: 0 !important;
 }
 
-
-.book-modal .book-browse-basic .react-pdf__Page__canvas,
-.revision-modal .book-browse-revision .react-pdf__Page__canvas {
-	width: auto !important;
-	height: calc(100vh - 90px) !important;
-	max-width: 100%;
-	object-fit: contain;
-	object-position: top;
-}
-
 .book-info-share {
 	position: relative;
 }
@@ -284,50 +269,6 @@ html {
 .book-info-share-item svg {
 	width: 100%;
 	height: 100%;
-}
-
-@media screen and (min-width: $desktop-width) {
-}
-
-.react-pdf__Page__canvas {
-	width: 100% !important;
-	height: 100% !important;
-	margin: 0 auto;
-	border: 1px solid #44454b;
-	object-fit: cover;
-	object-position: top;
-	cursor: zoom-in;
-}
-
-.react-pdf__message {
-	background-color: #e0dcd4;
-	line-height: 60px;
-	text-align: center;
-	margin-top: 28px;
-}
-
-.react-pdf__Page__textContent {
-    display: none;
-}
-
-.book-browse__pdf--multiple-page .react-pdf__Document {
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: center;
-}
-
-.book-browse__pdf--multiple-page .react-pdf__Document > * {
-	width: 50%;
-}
-
-.book-browse__pdf--multiple-page .react-pdf__Document:not(.book-browse__pdf-single) .react-pdf__Page:first-child .react-pdf__Page__canvas {
-	margin-right: 0;
-	margin-left: auto;
-}
-
-.book-browse__pdf--multiple-page .react-pdf__Document:not(.book-browse__pdf-single) .react-pdf__Page:last-child .react-pdf__Page__canvas {
-	margin-right: auto;
-	margin-left: 0;
 }
 
 .book-list {

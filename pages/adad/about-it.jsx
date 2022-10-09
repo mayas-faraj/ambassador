@@ -1,12 +1,13 @@
 import React, {Fragment} from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import axios from 'axios';
 import LanguageSwitcher from '/components/language-switcher';
 import Footer from '/components/footer';
 import SettingContext from '/components/setting-context';
 import Seperator from "/public/assets/imgs/seperator.svg";
 import funeralImg from '/public/assets/imgs/claudio-pacifico-libya.jpg';
-import style from '/style/About.module.scss';
+import style from '/style/about.module.scss';
 
 export default function About() {
 	const context=React.useContext(SettingContext);
@@ -20,10 +21,17 @@ export default function About() {
 
 	return (
 		<Fragment>
+			<Head>
+				<title>Claudio Pacifico | Biografia</title>
+				<meta property="og:title" content="Claudio Pacifico - Biografia" />
+				<meta name="description" content="ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
+				<meta property="og:description" content="ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
+				<meta property="og:image" content="/assets/imgs/claudio-pacifico-libya.jpg" />
+			</Head>
 			<header className={style["about-header"]}>
 				<div className={style["about-header__image-container"]}>
-					<Link href="/adad/#biografia"><img className={style["about-header__image"]} src={funeralImg} alt="Claudio Pacifico on libya"/></Link>
-					<Seperator className="about-seperator section-seperator" />
+					<Link href="/adad/#biografia"><a><img className={style["about-header__image"]} src={funeralImg.src} alt="Claudio Pacifico on libya"/></a></Link>
+					<Seperator viewBox="0 0 331 34" className={style["about-seperator"]+" section-seperator"} />
 				</div>
 				<LanguageSwitcher pageLink="/adad/about-it" downloadLink="/books/about-it.pdf"/>
 				<h1 className={style["about-header__title"]}>Biografia</h1>
@@ -42,10 +50,10 @@ export default function About() {
 				</nav>
 				{
 					sections && sections.map(section=>(
-						<div key={section.slug} id={section.slug} className={style["about-section"]}>
+						<div key={section.slug} id={section.slug} className={style["about-section"]+" "+style[section.slug]}>
 							<div className={style["about-section__image-container"]}>
 							{
-								section.image_src && <img className={style["about-section__image"]} src={'/imgs/'+section.image_src}/>
+								section.image_src && <img className={style["about-section__image"]} src={'/assets/imgs/'+section.image_src}/>
 							}
 							</div>
 							<div className={style["about-section__text-container"]}>

@@ -8,23 +8,6 @@
 	text-align: center;
 }
 
-#meetings {
-	background-color: $primary-color;
-}
-
-#meetings::before {
-	content: ' ';
-	display: block;
-	//background: repeating-linear-gradient(-45deg, transparent 0, $lines-color 1px, $lines-color 2px, transparent 3px, transparent 6px);
-	background-image: url(/public/assets/imgs/lines.svg);
-	background-size: 120px;
-	width: 100%;
-	height: 250px;
-	position: absolute;
-	z-index: -1;
-	left: 0px;
-}
-
 .meetings__title {
 	font-family: minion-bold;
 	padding: 0 56px;

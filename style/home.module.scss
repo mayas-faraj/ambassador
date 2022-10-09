@@ -1,11 +1,9 @@
-
 @import "colors";
 @import "fonts";
 
 .header-wrapper {
 	position: relative;
 }
-
 
 .header {
 	position: relative;	
@@ -145,15 +143,15 @@
 }
 
 .about-navigator {
-	background-image: url(/public/assets/imgs/claudio-pacifico-libya.jpg);
+	background-image: url(/assets/imgs/claudio-pacifico-libya.jpg);
 }
 
 .italy-navigator {
-	background-image: url(/public/assets/imgs/claudio-pacifico-with-arafat.jpg);
+	background-image: url(/assets/imgs/claudio-pacifico-with-arafat.jpg);
 }
 
 .desert-navigator {
-	background-image: url(/public/assets/imgs/claudio-pacifico-desert.jpg);
+	background-image: url(/assets/imgs/claudio-pacifico-desert.jpg);
 	.navigator__link {
 		padding-right: 58vw;
 		margin-top: 110px;
@@ -161,7 +159,7 @@
 }
 
 .article-navigator {
-	background-image: url(/public/assets/imgs/claudio-pacifico-newspaper.jpg);
+	background-image: url(/assets/imgs/claudio-pacifico-newspaper.jpg);
 }
 
 .about-navigator,
@@ -193,19 +191,6 @@
     padding-top: 30px;
 }
 
-.swiper-button-next, .swiper-button-prev {
-	color: $secondary-color !important;
-}
-
-.swiper-pagination-bullet-active {
-	background-color: $secondary-color !important;
-}
-
-.swiper-pagination-bullet {
-	width: 14px !important;
-	height: 14px !important;
-}
-
 @media screen and (min-width: $mobile-width) {
 	.header {
 	}
@@ -234,7 +219,17 @@
 	}	
 }
 
-#plusText {
+.meetings-seperator text,
+.blog-seperator text,
+.library-seperator text,
+.map-seperator text,
+.events-seperator text,
+.contact-seperator text,
+.viaggi-seperator text,
+.biografia-seperator text,
+.letture-seperator text,
+.diplomacy-seperator text,
+.travel-seperator text {
 	font-size: 30px;
 	fill: $accent-color;
 	font-family: minion;

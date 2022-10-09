@@ -1,8 +1,8 @@
 import React, {Fragment} from 'react';
 import axios from 'axios';
 import SettingContext from './setting-context';
-import pulseImage from '/public/assets/imgs/pulse.svg';
-import style from '/style/Events.module.scss';
+import PulseImage from '/public/assets/imgs/pulse.svg';
+import style from '/style/events.module.scss';
 
 class Events extends React.Component {
 	constructor(props) {
@@ -25,7 +25,7 @@ class Events extends React.Component {
 			<div className={style["events"]}>
 				<div className={style["event-wrapper"]}>
 				{ 
-					this.state.events==null && <p className={style["event-noitems"]}><img src={pulseImage} alt="loading.."/></p> 
+					this.state.events==null && <p className={style["event-noitems"]}><PulseImage alt="loading.."/></p> 
 				}
 				{
 					this.state.events!=null && (

@@ -1,12 +1,12 @@
 import React, {Fragment} from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import { Gallery, Item } from 'react-photoswipe-gallery'
-import Glimmer from 'components/Glimmer';
+import Glimmer from '/components/glimmer';
 import Seperator from '/public/assets/imgs/seperator.svg';
-import Footer from 'components./footer';
+import Footer from '/components/footer';
 import 'photoswipe/dist/photoswipe.css'
-import style from '/style/Travel.module.scss';
-
+import style from '/style/travel.module.scss';
 
 export default function Travel() {
 	const images=[
@@ -55,17 +55,22 @@ export default function Travel() {
 		{"title": "Yucatan Maya", "name": "YucatanMaya.jpg"}
 	];
 
-	for(let i=0; i<images.length; i++)
-		images[i].src=require("/public/assets/imgs/viaggi/"+images[i].name);
-	console.log(images);
-	
 	return (
 		<Fragment>
+			<Head>
+				<title>Claudio Pacifico | Viaggi e spedizioni</title>
+				<meta property="og:title" content="Claudio Pacifico - Viaggi e spedizioni" />
+				<meta name="description" content="dell’ambasciatore Claudio Pacifico in ogni parte del mondo: Europa, Asia, Africa, Australia e Oceania, Americhe, Antartide."/>
+				<meta property="og:description" content="dell’ambasciatore Claudio Pacifico in ogni parte del mondo: Europa, Asia, Africa, Australia e Oceania, Americhe, Antartide."/>
+				<meta property="og:image" content="/assets/imgs/claudio-pacifico-desert.jpg" />
+			</Head>
 			<header className={style["travel-header"]}>
-				<Link href="/adad/#travel" className={style["travel-header__menu"]}>
-				L’Ambasciatore d’Italia Claudio Pacifico
+				<Link href="/adad/#travel">
+					<a className={style["travel-header__menu"]}>
+						L’Ambasciatore d’Italia Claudio Pacifico
+					</a>
 				</Link>
-				<Seperator className="travel-seperator section-seperator" />
+				<Seperator viewBox="0 0 331 34" className={style["travel-seperator"]+" section-seperator"} />
 			</header>
 			<h1 className={style["travel-header__title"]}>Viaggi e spedizioni</h1>
 			<p className={style["travel-header__paragraph"]}>
@@ -85,16 +90,16 @@ export default function Travel() {
 					<Gallery withCaption>
 					{
 						images.map(image=>(
-							<div className={style["travel-item"]}>
-								<Item key={image.title}
+							<div key={image.title} className={style["travel-item"]}>
+								<Item 
 									caption={image.title}
-									original={image.src}
-									thumbnail={image.src}
+									original={"/assets/imgs/viaggi/"+image.name}
+									thumbnail={"/assets/imgs/viaggi/"+image.name}
 									width={800}
 									height={800}
 								>
 								{
-									({ref, open})=><img ref={ref} className={style["travel-item__image"]} onClick={open} src={image.src}/> 
+									({ref, open})=><img ref={ref} className={style["travel-item__image"]} onClick={open} src={"/assets/imgs/viaggi/"+image.name}/> 
 								}
 								</Item>
 								<strong className={style["travel-item__title"]}>{image.title}</strong>
@@ -103,41 +108,41 @@ export default function Travel() {
 					}
 					</Gallery>
 				</div>
-				<p className="travel__content travel-list">
-					<div className={style["travel-list__item"]}><div className="travel-list__number">1</div><div className="travel-list__desc">Le Ande a cavallo</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">2</div><div className="travel-list__desc">Deserto del Sinai - Monastero di Santa Chiara</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">3</div><div className="travel-list__desc">Giungle birmane e thai; tra i Meo</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">4</div><div className="travel-list__desc">Himalaya, Ladak e Tibet</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">5</div><div className="travel-list__desc">Mogadiscio…con i soldati italiani</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">6</div><div className="travel-list__desc">Mongolia: Transiberiana-Transmongolica, nel Deserto del Gobi</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">7</div><div className="travel-list__desc">Nei deserti australiani: Ayers Rock</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">8</div><div className="travel-list__desc">Nel Deserto del Bayuda</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">9</div><div className="travel-list__desc">Nuova Zelanda; Maori</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">10</div><div className="travel-list__desc">Papua Nuova Guinea; il fiume Sepik</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">11</div><div className="travel-list__desc">Sahara:  Deserto di Ubari</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">12</div><div className="travel-list__desc">Sahara, Western Desert. Il Gran Mare di sabbia</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">13</div><div className="travel-list__desc">Sahara. Gilf Kebir. Monumento a Kamal El Din</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">14</div><div className="travel-list__desc">Savane</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">15</div><div className="travel-list__desc">Somalia: savane somale</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">16</div><div className="travel-list__desc">Ande. Lago Titicaca e Indios Uros</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">17</div><div className="travel-list__desc">Yucatan e Maya</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">18</div><div className="travel-list__desc">Sahara. Gilf  Kebir: Almasy, <br/>“La Grotta dei Nuotatori”; “La Grotta Foggini”</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">19</div><div className="travel-list__desc">El Alamein e la Depressione di Al Qattara</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">20</div><div className="travel-list__desc">Kurkur Talh</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">21</div><div className="travel-list__desc">Masai e Kilimanjaro</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">22</div><div className="travel-list__desc">Mogadiscio: la mia casa prima della distruzione</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">23</div><div className="travel-list__desc">Napata</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">24</div><div className="travel-list__desc">Nei deserti del sud-ovest americano; civilità; pueblo</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">25</div><div className="travel-list__desc">Nel deserto Arabico</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">26</div><div className="travel-list__desc">Sahara: l’Oasi di Siwa</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">27</div><div className="travel-list__desc">Sahara: Gebel Al Uwueybat</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">28</div><div className="travel-list__desc">Sahara: Hoggan e Assekrem</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">29</div><div className="travel-list__desc">Sahara, Deserto Libico. Il Gran Mare di sabbia</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">30</div><div className="travel-list__desc">Sahara, Western Desert: Abu Ballas</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">31</div><div className="travel-list__desc">Sul Mekong</div></div>
-					<div className={style["travel-list__item"]}><div className="travel-list__number">32</div><div className="travel-list__desc">Wadi Mathen Dush</div></div>
-				</p>
 			</div>
+			<p className={style["travel__content"] + " " + style["travel-list"]}>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>1</span><span className={style["travel-list__desc"]}>Le Ande a cavallo</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>2</span><span className={style["travel-list__desc"]}>Deserto del Sinai - Monastero di Santa Chiara</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>3</span><span className={style["travel-list__desc"]}>Giungle birmane e thai; tra i Meo</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>4</span><span className={style["travel-list__desc"]}>Himalaya, Ladak e Tibet</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>5</span><span className={style["travel-list__desc"]}>Mogadiscio…con i soldati italiani</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>6</span><span className={style["travel-list__desc"]}>Mongolia: Transiberiana-Transmongolica, nel Deserto del Gobi</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>7</span><span className={style["travel-list__desc"]}>Nei deserti australiani: Ayers Rock</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>8</span><span className={style["travel-list__desc"]}>Nel Deserto del Bayuda</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>9</span><span className={style["travel-list__desc"]}>Nuova Zelanda; Maori</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>10</span><span className={style["travel-list__desc"]}>Papua Nuova Guinea; il fiume Sepik</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>11</span><span className={style["travel-list__desc"]}>Sahara:  Deserto di Ubari</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>12</span><span className={style["travel-list__desc"]}>Sahara, Western Desert. Il Gran Mare di sabbia</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>13</span><span className={style["travel-list__desc"]}>Sahara. Gilf Kebir. Monumento a Kamal El Din</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>14</span><span className={style["travel-list__desc"]}>Savane</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>15</span><span className={style["travel-list__desc"]}>Somalia: savane somale</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>16</span><span className={style["travel-list__desc"]}>Ande. Lago Titicaca e Indios Uros</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>17</span><span className={style["travel-list__desc"]}>Yucatan e Maya</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>18</span><span className={style["travel-list__desc"]}>Sahara. Gilf  Kebir: Almasy, <br/>“La Grotta dei Nuotatori”; “La Grotta Foggini”</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>19</span><span className={style["travel-list__desc"]}>El Alamein e la Depressione di Al Qattara</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>20</span><span className={style["travel-list__desc"]}>Kurkur Talh</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>21</span><span className={style["travel-list__desc"]}>Masai e Kilimanjaro</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>22</span><span className={style["travel-list__desc"]}>Mogadiscio: la mia casa prima della distruzione</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>23</span><span className={style["travel-list__desc"]}>Napata</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>24</span><span className={style["travel-list__desc"]}>Nei deserti del sud-ovest americano; civilità; pueblo</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>25</span><span className={style["travel-list__desc"]}>Nel deserto Arabico</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>26</span><span className={style["travel-list__desc"]}>Sahara: l’Oasi di Siwa</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>27</span><span className={style["travel-list__desc"]}>Sahara: Gebel Al Uwueybat</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>28</span><span className={style["travel-list__desc"]}>Sahara: Hoggan e Assekrem</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>29</span><span className={style["travel-list__desc"]}>Sahara, Deserto Libico. Il Gran Mare di sabbia</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>30</span><span className={style["travel-list__desc"]}>Sahara, Western Desert: Abu Ballas</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>31</span><span className={style["travel-list__desc"]}>Sul Mekong</span></span>
+				<span className={style["travel-list__item"]}><span className={style["travel-list__number"]}>32</span><span className={style["travel-list__desc"]}>Wadi Mathen Dush</span></span>
+			</p>
 			<Footer/>
 		</Fragment>
 	);

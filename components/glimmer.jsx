@@ -1,7 +1,7 @@
-import pulseImage from '/public/assets/imgs/pulse.svg';
-import style from '/style/Glimmer.module.scss';
+import PulseImage from '/public/assets/imgs/pulse.svg';
+import style from '/style/glimmer.module.scss';
 export default props=>{
 	return (
-		<p className={style["glimmer"]}><img src={pulseImage.src} alt="loading..."/></p>
+		<p className={style["glimmer"]}><PulseImage alt="loading..."/></p>
 	);
 };

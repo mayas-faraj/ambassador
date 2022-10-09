@@ -1,33 +1,37 @@
 import React, {Fragment} from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import {useRouter} from 'next/router';
-import axios from 'axios';
 import Glimmer from '/components/glimmer';
 import Seperator from "/public/assets/imgs/seperator.svg";
 import Footer from '/components/footer';
 import SettingContext from '/components/setting-context';
-import style from '/style/Article.module.scss';
+import style from '/style/article.module.scss';
 
 
-export default function Article() {
+export default function Article(props) {
 	const router=useRouter();
 	const slug=router.query.article;
 	const context=React.useContext(SettingContext);
-	const [article, setArticle]=React.useState(null);
-	const articleLoad=React.useEffect(()=>{
-			slug && axios.post(context.backendApiUrl, {"operation": "read-article", "slug": slug})
-			.then(result=>setArticle(result.data[0]))
-			.catch(err=>console.log(err));
-	}, [slug]);
+	const article=props.article;
 
 	return (
 		<Fragment>
 		{article==null && <Glimmer/>}
 		{article!==null && (
 			<Fragment>
+				{article!=null && (
+					<Head>
+						<title>{article.title + " | Claudio Pacifico libri"}</title>
+						<meta property="og:title" content={article.title + " | Claudio Pacifico libri"}/>
+						<meta name="description" content={article.excerpt.replaceAll("\n", "")}/>
+						<meta property="og:description" content={article.excerpt.replaceAll("\n", "")}/>
+						{article.image && <meta property="og:image" content={context.uploadsUrl+"/"+article.image} />}
+					</Head>
+				)}
 				<header className={style["article-header"]}>
-					<Link href="/adad/articles" className={style["article-header__menu"]}>
-						<a>
+					<Link href="/adad/article">
+						<a className={style["article-header__menu"]}>
 						Episodi, ricordi e analisi,<br/>
 						scritti dall’Ambasciatore d’Italia<br/>
 						Claudio Pacifico
@@ -50,4 +54,34 @@ export default function Article() {
 	);
 }
 
-//mediumsubh 18px
+export async function getStaticPaths() {
+	const siteUrls=require("/public/siteUrls"); 
+	const data=await fetch(siteUrls.backendApiUrl, {
+		"method": "post", "headers": {
+			"Content-Type": "application/json"
+		}, 
+		"body": JSON.stringify({"operation": "read-all-articles"})
+	});
+	const articles=await data.json();
+	return {
+		"fallback": "blocking",
+		"paths": articles.map(article=>({"params": {"article": article.slug}}))
+	};
+}
+
+export async function getStaticProps(context) {
+	const siteUrls=require("/public/siteUrls"); 
+	const articleData=await fetch(siteUrls.backendApiUrl, {
+		"method": "post", "headers": {
+			"Content-Type": "application/json"
+		}, 
+		"body": JSON.stringify({"operation": "read-article", "slug": context.params.article})
+	});
+	const article=await articleData.json();
+
+	return {
+		"props": {
+			"article": article[0],
+		}
+	};
+}

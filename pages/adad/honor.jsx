@@ -1,24 +1,32 @@
 import {Fragment} from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
 import Footer from '../../components/footer';
 import Seperator from "/public/assets/imgs/seperator.svg";
 import funeralImg from '/public/assets/imgs/claudio-pacifico-libya.jpg';
-import style from '/style/About.module.scss';
+import style from '/style/about.module.scss';
 
 export default function Honor() {
 	return (
 		<Fragment>
+			<Head>
+				<title>Claudio Pacifico | Biografia</title>
+				<meta property="og:title" content="Claudio Pacifico - Biografia" />
+				<meta name="description" content="ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
+				<meta property="og:description" content="ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
+				<meta property="og:image" content="/assets/imgs/claudio-pacifico-libya.jpg" />
+			</Head>
 			<header className={style["about-header"]}>
 				<div className={style["about-header__image-container"]}>
-					<Link href="/adad/"><img className={style["about-header__image"]} src={funeralImg} alt="Claudio Pacifico on libya"/></Link>
-					<Seperator className="about-seperator section-seperator" />
+					<Link href="/adad/"><a><img className={style["about-header__image"]} src={funeralImg.src} alt="Claudio Pacifico on libya"/></a></Link>
+					<Seperator viewBox="0 0 331 34" className={style["about-seperator"]+ " " + "section-seperator"} />
 				</div>
 				<h1 className={style["about-header__title"]}>Onorificenze</h1>
 			</header>
 			<div className={style["about-container"]}>
 				<div id="onorificenze" className={style["about-section"]}>
 					<div className={style["about-section__text-container"]}>
-						<p className="about-section__text about-section__text--centric about-section__text--large">
+						<p className={style["about-section__text"]+" "+ style["about-section__text--centric"]+" "+style["about-section__text--large"]}>
 							<br/>Cavaliere di Gran Croce al Merito della Repubblica Italiana, d’Iniziativa del Presidente della Repubblica <br/>(la più alta onorificenza italiana concessagli per ‘gli eccezionali servizi resi al Paese’, che il Presidente della Repubblica Giorgio Napolitano ha voluto consegnargli personalmente in un’apposita udienza al Quirinale).<br/><br/>
 							Grande Ufficiale al Merito della Repubblica Italiana.<br/><br/>
 							Commendatore al Merito della Repubblica Italiana.<br/><br/>

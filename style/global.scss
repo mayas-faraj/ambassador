@@ -1,0 +1,314 @@
+@import "colors";
+@import "fonts";
+
+html {
+	scroll-behavior: smooth;
+	font-size: 20px;
+}
+
+header {
+	position: relative;	
+	background-color: $header-background-color;
+}
+
+
+body {
+	font-family: arial-narrow, arial, sans-serif;
+	letter-spacing: 2.8px;
+	background-color: $primary-color;
+	color: $accent-color;
+	overflow-x: hidden;
+	margin: 0;
+}
+
+@media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+	#__next {
+		zoom: 90%;
+	}
+}
+
+#__next {
+	background-color: $accent-color;
+}
+
+#__next > * > *  {
+	max-width: 1344px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#library {
+	background-color: $primary-color;
+}
+
+#blog {
+	background-color: #212227;
+}
+
+#map {
+	background-color: #f0f0f0;
+	position: relative;
+	overflow-x: clip;
+}
+
+#meetings {
+	background-color: $primary-color;
+}
+
+#meetings::before {
+	content: ' ';
+	display: block;
+	//background: repeating-linear-gradient(-45deg, transparent 0, $lines-color 1px, $lines-color 2px, transparent 3px, transparent 6px);
+	background-image: url(/assets/imgs/lines.svg);
+	background-size: 120px;
+	width: 100%;
+	height: 250px;
+	position: absolute;
+	z-index: -1;
+	left: 0px;
+}
+
+#events {
+	background-color: #9c9c9c;
+}
+
+#twitter-widget-0 .css-1dbjc4n.r-38sf4c.r-qklmqi.r-1cbz2o1 {
+	display: none;
+}
+
+#special-red-path {
+	fill: red !important;
+}
+
+.section-seperator {
+	.seperator_svg__minus-sign {
+		font-family: minion;
+		font-size: 50px;
+		color: $primary-color;
+	}
+}
+
+.section-seperator {
+	position: absolute;
+	left: calc(50vw - 150px);
+	z-index: 10;
+	width: 300px;
+
+	#shape {
+		fill: #15161e;
+	}
+
+	@media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+		left: calc(50vw - 90px);
+	}
+}
+
+.swiper-wrapper {
+	padding-bottom: 45px;
+}
+
+.swiper-pagination-bullet {
+	background-color: #fff;
+}
+
+.swiper-slide-duplicate {
+	visibility: hidden;
+}
+
+.swiper-pagination-bullets {
+	bottom: 0 !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+	color: $secondary-color !important;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: $secondary-color !important;
+}
+
+.swiper-pagination-bullet {
+	width: 14px !important;
+	height: 14px !important;
+	background-color: #fff;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+a[href="#library"] path {
+    fill: #212227 !important;
+}
+
+.map__image--ambasciatore .word-map-new_svg__country-sd,
+.map__image--ambasciatore .word-map-new_svg__country-ly,
+.map__image--ambasciatore .word-map-new_svg__country-bd,
+.map__image--ambasciatore .word-map-new_svg__country-eg,
+.map__image--console .word-map-new_svg__country-ir,
+.map__image--primo-segratario .word-map-new_svg__united-states,
+.map__image--rappresentante-permanente .word-map-new_svg__country-eg,
+.map__image--rappresentante-permanente .word-map-new_svg__country-sd,
+.map__image--rappresentante-permanente .word-map-new_svg__country-ly,
+.map__image--rappresentante-permanente .word-map-new_svg__country-ss,
+.map__image--rappresentante-permanente .word-map-new_svg__country-so,
+.map__image--rappresentante-permanente .word-map-new_svg__country-sa,
+.map__image--rappresentante-permanente .word-map-new_svg__country-sy,
+.map__image--rappresentante-permanente .word-map-new_svg__country-lb,
+.map__image--rappresentante-permanente .word-map-new_svg__country-jo,
+.map__image--rappresentante-permanente .word-map-new_svg__country-iq,
+.map__image--rappresentante-permanente .word-map-new_svg__country-ps,
+.map__image--rappresentante-permanente .word-map-new_svg__country-il,
+.map__image--rappresentante-permanente .word-map-new_svg__country-lb,
+.map__image--rappresentante-permanente .word-map-new_svg__country-tn,
+.map__image--rappresentante-permanente .word-map-new_svg__country-ma,
+.map__image--rappresentante-permanente .word-map-new_svg__country-dz,
+.map__image--rappresentante-permanente .word-map-new_svg__country-eh,
+.map__image--rappresentante-permanente .word-map-new_svg__country-mr,
+.map__image--rappresentante-permanente .word-map-new_svg__country-ye,
+.map__image--rappresentante-permanente .word-map-new_svg__country-qa,
+.map__image--rappresentante-permanente .word-map-new_svg__oman,
+.map__image--rappresentante-permanente .word-map-new_svg__country-ae,
+.map__image--rappresentante-permanente .word-map-new_svg__country-kw,
+.map__image--vice-ambasciatore .word-map-new_svg__country-so,
+.map__image--direttore-generale .word-map-new_svg__australia,
+.map__image--direttore-generale .word-map-new_svg__russian-federation:not(.kaliningrad),
+.map__image--direttore-generale .word-map-new_svg__papua-new.word-map-new_svg__guinea,
+.map__image--direttore-generale .word-map-new_svg__indonesia,
+.map__image--direttore-generale .word-map-new_svg__philippines,
+.map__image--direttore-generale .word-map-new_svg__oman,
+.map__image--direttore-generale .word-map-new_svg__malaysia,
+.map__image--direttore-generale .word-map-new_svg__azerbaijan,
+.map__image--direttore-generale .word-map-new_svg__turkey:not(.costantibol),
+.map__image--direttore-generale .word-map-new_svg__country-tl,
+.map__image--direttore-generale .word-map-new_svg__country-qa,
+.map__image--direttore-generale .word-map-new_svg__country-lb,
+.map__image--direttore-generale .word-map-new_svg__country-il,
+.map__image--direttore-generale .word-map-new_svg__country-ps,
+.map__image--direttore-generale .word-map-new_svg__country-am,
+.map__image--direttore-generale .word-map-new_svg__country-ge,
+.map__image--direttore-generale .word-map-new_svg__country-bn,
+.map__image--direttore-generale .word-map-new_svg__country-tw,
+.map__image--direttore-generale .word-map-new_svg__country-ae,
+.map__image--direttore-generale .word-map-new_svg__country-kw,
+.map__image--direttore-generale .word-map-new_svg__country-lk,
+.map__image--direttore-generale .word-map-new_svg__country-ar,
+.map__image--direttore-generale .word-map-new_svg__country-mn,
+.map__image--direttore-generale .word-map-new_svg__country-mn,
+.map__image--direttore-generale .word-map-new_svg__country-in,
+.map__image--direttore-generale .word-map-new_svg__country-ie
+.map__image--direttore-generale .word-map-new_svg__country-ir,
+.map__image--direttore-generale .word-map-new_svg__country-iq,
+.map__image--direttore-generale .word-map-new_svg__country-iq,
+.map__image--direttore-generale .word-map-new_svg__country-sa,
+.map__image--direttore-generale .word-map-new_svg__country-kz,
+.map__image--direttore-generale .word-map-new_svg__country-ye,
+.map__image--direttore-generale .word-map-new_svg__country-np,
+.map__image--direttore-generale .word-map-new_svg__country-bd,
+.map__image--direttore-generale .word-map-new_svg__country-uz,
+.map__image--direttore-generale .word-map-new_svg__country-tm,
+.map__image--direttore-generale .word-map-new_svg__country-tj,
+.map__image--direttore-generale .word-map-new_svg__country-kg,
+.map__image--direttore-generale .word-map-new_svg__country-af,
+.map__image--direttore-generale .word-map-new_svg__country-pk,
+.map__image--direttore-generale .word-map-new_svg__country-bt,
+.map__image--direttore-generale .word-map-new_svg__country-mm,
+.map__image--direttore-generale .word-map-new_svg__country-th,
+.map__image--direttore-generale .word-map-new_svg__country-vn,
+.map__image--direttore-generale .word-map-new_svg__country-la,
+.map__image--direttore-generale .word-map-new_svg__country-kh,
+.map__image--direttore-generale .word-map-new_svg__country-kr,
+.map__image--direttore-generale .word-map-new_svg__country-kp,
+.map__image--direttore-generale .word-map-new_svg__country-ir,
+.map__image--direttore-generale .word-map-new_svg__country-sa,
+.map__image--direttore-generale .word-map-new_svg__country-iq,
+.map__image--direttore-generale .word-map-new_svg__country-sy,
+.map__image--direttore-generale .word-map-new_svg__country-lb,
+.map__image--direttore-generale .word-map-new_svg__country-jo,
+.map__image--direttore-generale .word-map-new_svg__japan,
+.map__image--direttore-generale .word-map-new_svg__china {
+	fill: $active-color !important;
+}
+
+.word-map-new_svg__country-sd, .word-map-new_svg__country-ly, .word-map-new_svg__country-bd, .word-map-new_svg__country-eg, .word-map-new_svg__country-ir, .word-map-new_svg__united-states, .word-map-new_svg__country-eg, .word-map-new_svg__country-sd, .word-map-new_svg__country-ly, .word-map-new_svg__country-ss, .word-map-new_svg__country-so, .word-map-new_svg__country-sa, .word-map-new_svg__country-sy, .word-map-new_svg__country-lb, .word-map-new_svg__country-jo, .word-map-new_svg__country-iq, .word-map-new_svg__country-ps, .word-map-new_svg__country-il, .word-map-new_svg__country-lb, .word-map-new_svg__country-tn, .word-map-new_svg__country-ma, .word-map-new_svg__country-dz, .word-map-new_svg__country-eh, .word-map-new_svg__country-mr, .word-map-new_svg__country-ye, .word-map-new_svg__country-qa, .word-map-new_svg__oman, .word-map-new_svg__country-ae, .word-map-new_svg__country-kw, .word-map-new_svg__country-so, .word-map-new_svg__australia, .word-map-new_svg__russian-federation:not(.kaliningrad), .word-map-new_svg__papua-new.word-map-new_svg__guinea, .word-map-new_svg__indonesia, .word-map-new_svg__philippines, .word-map-new_svg__oman, .word-map-new_svg__malaysia, .word-map-new_svg__azerbaijan, .word-map-new_svg__turkey:not(.costantibol), .word-map-new_svg__country-tl, .word-map-new_svg__country-qa, .word-map-new_svg__country-lb, .word-map-new_svg__country-il, .word-map-new_svg__country-ps, .word-map-new_svg__country-am, .word-map-new_svg__country-ge, .word-map-new_svg__country-bn, .word-map-new_svg__country-tw, .word-map-new_svg__country-ae, .word-map-new_svg__country-kw, .word-map-new_svg__country-lk, .word-map-new_svg__country-ar, .word-map-new_svg__country-mn, .word-map-new_svg__country-mn, .word-map-new_svg__country-in, .word-map-new_svg__country-ie .word-map-new_svg__country-ir, .word-map-new_svg__country-iq, .word-map-new_svg__country-iq, .word-map-new_svg__country-sa, .word-map-new_svg__country-kz, .word-map-new_svg__country-ye, .word-map-new_svg__country-np, .word-map-new_svg__country-bd, .word-map-new_svg__country-uz, .word-map-new_svg__country-tm, .word-map-new_svg__country-tj, .word-map-new_svg__country-kg, .word-map-new_svg__country-af, .word-map-new_svg__country-pk, .word-map-new_svg__country-bt, .word-map-new_svg__country-mm, .word-map-new_svg__country-th, .word-map-new_svg__country-vn, .word-map-new_svg__country-la, .word-map-new_svg__country-kh, .word-map-new_svg__country-kr, .word-map-new_svg__country-kp, .word-map-new_svg__country-ir, .word-map-new_svg__country-sa, .word-map-new_svg__country-iq, .word-map-new_svg__country-sy, .word-map-new_svg__country-lb, .word-map-new_svg__country-jo, .word-map-new_svg__japan, .word-map-new_svg__china {
+	fill: $map-general-color !important;
+}
+
+.react-pdf__message {
+	background-color: #e0dcd4;
+	line-height: 60px;
+	text-align: center;
+	margin-top: 28px;
+}
+
+.book-browse__pdf--multiple-page .react-pdf__Document {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.book-browse__pdf--multiple-page .react-pdf__Document > * {
+	width: 50%;
+}
+
+.book-browse__pdf--multiple-page .react-pdf__Document:not(.book-browse__pdf-single) .react-pdf__Page:first-child .react-pdf__Page__canvas {
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.book-browse__pdf--multiple-page .react-pdf__Document:not(.book-browse__pdf-single) .react-pdf__Page:last-child .react-pdf__Page__canvas {
+	margin-right: auto;
+	margin-left: 0;
+}
+
+.essays .react-pdf__Page__canvas {
+	width: 100% !important;
+	height: 100% !important;
+	margin: 0 auto;
+	border: 1px solid #44454b;
+	object-fit: cover;
+	object-position: top;
+	cursor: zoom-in;
+}
+
+.book-page .react-pdf__Page__canvas {
+	width: fit-content !important;
+	height: 100% !important;
+	max-height: 60vh;
+	max-width: 95%;
+	margin: 0 auto;
+	object-fit: cover;
+	object-position: top;
+	cursor: zoom-in;
+	padding: 10px;
+	background-color: #fff;
+	box-shadow: 0px 0px 15px #5e5e5e;
+	box-sizing: border-box;
+}
+
+.react-pdf__Page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.react-pdf__Document {
+    position: relative;
+    z-index: 99;
+}
+
+.react-pdf__Page__textContent {
+	display: none;
+}
+
+
+.pswp img {
+    object-fit: contain;
+    object-position: bottom;
+    padding: 175px;
+}
+
+.pswp__bg {
+    opacity: .92 !important;
+}

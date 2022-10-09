@@ -1,4 +1,4 @@
-import style from "/style/Pagination.module.scss";
+import style from "/style/pagination.module.scss";
 
 export default function(props) {
 	let pages=Array(props.pagesCount);
@@ -12,7 +12,7 @@ export default function(props) {
 	return (
 		<div className={style["pagination"]}>
 		{
-			pages.map((v, index)=><div key={index} title={`Pagin (${index+1})`} className={"pagination__item"+(props.activePage==index+1?" pagination__item--active":"")} onClick={()=>onPageChange(index+1)}></div>)
+			pages.map((v, index)=><div key={index} title={`Pagin (${index+1})`} className={style["pagination__item"]+" "+(props.activePage==index+1?style["pagination__item--active"]:"")} onClick={()=>onPageChange(index+1)}></div>)
 		}
 		</div>
 	);

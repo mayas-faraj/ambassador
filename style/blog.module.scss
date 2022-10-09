@@ -1,10 +1,6 @@
 @import "colors";
 @import "fonts";
 
-#blog {
-	background-color: #212227;
-}
-
 .blog-header {
 	text-align: center;
 	background-color: #0e0a09;
@@ -67,7 +63,7 @@
 	left: -500px;
 	content: ' ';
 	margin-top: -102px;
-	background-image: url(/public/assets/imgs/lines.svg);
+	background-image: url(/assets/imgs/lines.svg);
 	background-size: 120px;
 	z-index: 1;
 	pointer-events: none;
@@ -391,14 +387,6 @@
 	}
 }
 
-.blog-seperator path {
-    fill: #212227 !important;
-}
-
-#special-red-path {
-	fill: red !important;
-}
-
 @keyframes hideFrame {
 	0% {
 		opacity: 1;
@@ -412,8 +400,3 @@
 		opacity: 0;
 	}
 }
-
-#twitter-widget-0 .css-1dbjc4n.r-38sf4c.r-qklmqi.r-1cbz2o1 {
-	display: none;
-}
-

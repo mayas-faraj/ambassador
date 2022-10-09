@@ -8,7 +8,7 @@ import SettingContext from './setting-context';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import style from '/style/Publication.module.scss';
+import style from '/style/publication.module.scss';
 import transparentImage from '/public/assets/imgs/transparent.png';
 
 
@@ -36,7 +36,7 @@ class Publications extends React.Component {
 	}
 
 	componentDidMount() {
-		this.pageAudio=new window.Audio('/public/assets/sounds/page.mp3');
+		this.pageAudio=new window.Audio('/assets/sounds/page.mp3');
 		axios.post(this.context.backendApiUrl, {"operation": "read-publication-categories"})
 		.then(result=>{
 			this.setState({categories: result.data}, ()=>{
@@ -100,6 +100,7 @@ class Publications extends React.Component {
 								<p className={style["publications-top__mark"]}>
 								Libri, Memorie, Opere narrative,<br/>
 								Libri fotografici
+								<br/>
 								<span className={style["publications-top__mark-white"]}>
 								Alcuni libri dell’Ambasciatore<br/>
 								sono stati tradotti anche <br/>
@@ -128,12 +129,12 @@ class Publications extends React.Component {
 						{ this.state.books.length===0 && <p className={style["publications-noitems"]}>gli articoli arriveranno presto</p> }
 						{ this.state.books.status!=="failed" && this.state.books.status!=="error" && this.state.books.map((book, index)=>(
 								<SwiperSlide key={book.title}>
-										<Link className={style["publications-item"]} onMouseEnter={()=>this.bookHoverEventHandler(index)} href={"/adad/"+this.state.categories[this.state.activeCategoryIndex].name+"/"+book.slug}>
-											<a>
-											<p className={"publications-item__content"+(/[ا-ي]/.test(book.title)?" publications-item__content--arabic":"")}>
+										<Link href={"/adad/"+this.state.categories[this.state.activeCategoryIndex].name+"/"+book.slug}>
+											<a onMouseEnter={()=>this.bookHoverEventHandler(index)} className={style["publications-item"]} >
+											<p className={style["publications-item__content"]+" "+(/[ا-ي]/.test(book.title)?style["publications-item__content--arabic"]:"")}>
 											{book.title}
 											</p>
-											<img src={book.image?this.context.uploadsUrl+"/"+book.image:transparentImage} className={style["publications-item__image"]} alt={book.title} />
+											<img src={book.image?this.context.uploadsUrl+"/"+book.image:transparentImage.src} className={style["publications-item__image"]} alt={book.title} />
 											<h3 className={style["publications-item__title"]}>{(book.month?(parseInt(book.month)+1)+"/":"")+book.year}</h3>
 											</a>
 										</Link>
@@ -144,7 +145,7 @@ class Publications extends React.Component {
 					<div className={style["publications-categories"]}>
 					{
 						this.state.categories!=null && this.state.categories.status!=="failed" && this.state.categories.filter(category=>category.name!=="uncategorized").map((category, index)=>(
-							<a key={category.name} className={"publications-category"+(index===this.state.activeCategoryIndex?" publications-category__active": "")} href="#!" onClick={()=>this.categoryClickHandler(category.name, index)}>{category.name}</a>
+							<a key={category.name} className={style["publications-category"]+" "+(index===this.state.activeCategoryIndex?style["publications-category__active"]: "")} href="#!" onClick={()=>this.categoryClickHandler(category.name, index)}>{category.name}</a>
 						))
 					}
 					</div>
