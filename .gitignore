@@ -1,6 +1,7 @@
 admin-cp
 build
 .next
+out
 backend
 documentation
 node_modules
