@@ -2,7 +2,7 @@
   "name": "italinan-ambassador",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://www.claudiopacificoambassador.com",
+  "homepage": "http://www.claudiopacificoambassador.com/next",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
@@ -26,6 +26,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start"
   },
   "eslintConfig": {

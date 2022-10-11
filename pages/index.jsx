@@ -1,4 +1,5 @@
 import React, {Fragment} from "react";
+import Head from "next/head";
 import Seperator from "/public/assets/imgs/seperator.svg";
 import style from '../style/cover.module.scss';
 import ambassadorImg from '/public/assets/imgs/ambassador.png';

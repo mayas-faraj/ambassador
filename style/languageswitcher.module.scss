@@ -16,20 +16,16 @@
     width: 30px;
     height: 20px;
     object-fit: cover;
-    border-radius: 5px 5px 0 0;
-    border: 1px solid $primary-color;
     border-bottom: none;
 }
 
 .switcher-container svg {
-    background-color: #201e21;
-    border-radius: 0 0 5px 5px;
+    background-color: $secondary-color;
     height: 20px;
     display: block;
     width: 30px;
-    border: 1px solid $primary-color;
     border-top: none;
-    fill: $secondary-color;
+    fill: $primary-color;
+    margin-top: -5px;
     padding-bottom: 6px;
-    margin-top: -3px;
 }
