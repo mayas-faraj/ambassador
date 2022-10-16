@@ -37,7 +37,9 @@ export default function Article(props) {
 						Claudio Pacifico
 						</a>
 					</Link>
-					<Seperator className={style["article-seperator"] + " section-seperator"} />
+					<Link href="/adad/article">
+						<a><Seperator className={style["article-seperator"] + " section-seperator"} /></a>
+					</Link>
 				</header>
 				<div className={style["article-content"]}>
 					<div className={style["article-container"]}>

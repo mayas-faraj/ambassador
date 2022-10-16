@@ -107,8 +107,8 @@ export default class Blog extends React.Component {
 								this.state.currentSocial==="twitter" && (
 								<div className={style["blog-social-app"]+" "+style["blog-twitter"]} ref={this.mobileRef}>
 									<div className={style["blog-overlay"]+" "+style["blog-overlay--twitter"]}><TwitterIcon/></div>
-									<a className={style["twitter-timeline"]} data-theme="dark" href="https://twitter.com/CLAUDIOPACIFIC2?ref_src=twsrc%5Etfw">Tweets by CLAUDIOPACIFIC2</a> 
-									<Script src="https://platform.twitter.com/widgets.js" charSet="utf-8"></Script>
+									<a className={"twitter-timeline"} data-theme="dark" href="https://twitter.com/CLAUDIOPACIFIC2?ref_src=twsrc%5Etfw">Tweets by CLAUDIOPACIFIC2</a> 
+									<Script src="https://platform.twitter.com/widgets.js" charSet="utf-8" async></Script>
 								</div>
 								)
 							}

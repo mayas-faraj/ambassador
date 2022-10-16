@@ -29,9 +29,10 @@ export default function Articles() {
 			</Head>
 			<header className={style["articles-header"]}>
 				<div className={style["articles-header__image-container"]}>
-					<Link href="/adad/#letture"><a><img className={style["articles-header__image"]} src={headerImage.src} alt="Claudio Pacifico in newspaper"/></a></Link>
-					<Seperator className={style["articles-seperator"]+" section-seperator"} />
-					
+					<Link href="/adad/#letture"><a>
+						<img className={style["articles-header__image"]} src={headerImage.src} alt="Claudio Pacifico in newspaper"/>
+						<Seperator className={style["articles-seperator"]+" section-seperator"} />
+					</a></Link>
 				</div>
 				<h1 className={style["articles-header__title"]}>LETTURE</h1>
 				<p className={style["articles-header__paragraph"]}>

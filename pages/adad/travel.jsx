@@ -70,7 +70,9 @@ export default function Travel() {
 						L’Ambasciatore d’Italia Claudio Pacifico
 					</a>
 				</Link>
-				<Seperator viewBox="0 0 331 34" className={style["travel-seperator"]+" section-seperator"} />
+				<Link href="/adad/#travel">
+					<a><Seperator viewBox="0 0 331 34" className={style["travel-seperator"]+" section-seperator"} /></a>
+				</Link>
 			</header>
 			<h1 className={style["travel-header__title"]}>Viaggi e spedizioni</h1>
 			<p className={style["travel-header__paragraph"]}>
