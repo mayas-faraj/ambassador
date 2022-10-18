@@ -10,25 +10,14 @@ import Footer from "/components/footer";
 import "photoswipe/dist/photoswipe.css";
 import style from "/style/diplomaticreport.module.scss";
 
-export default function DiplomaticReport() {
+export default function DiplomaticReport({countries}) {
 
 	const [fixed, setFixed]=React.useState(false);
-	const [countries, setCountries]=React.useState([]);
-
 	const context=React.useContext(SettingContext);
 
 	React.useEffect(()=>{
 		window.addEventListener("scroll", contentScrollHandler, {passive: true});
 		return ()=>window.removeEventListener("scroll", contentScrollHandler);
-	}, []);
-
-	React.useEffect(()=>{
-		axios.post(context.backendApiUrl, {"operation": "read-diplomacy-report-section"})
-		.then(result=>{
-			setCountries(result.data);
-			console.log(result.data);
-		})
-		.catch(err=>console.log("read-diplomacy-error", err));
 	}, []);
 
 	function contentScrollHandler() {
@@ -75,7 +64,7 @@ export default function DiplomaticReport() {
 						<div className={style["report__subtitle"]}>{country.sub_title}</div>
 						<h3 className={style["report__header-text"]}>{country.header_text}</h3>
 						<p className={style["diplomatic-report__content"]}>{country.content}</p>
-						<p dangerouslySetInnerHTML={{__html: country.footer_text}} className={style["report__tail-text"]}/>
+						<p strategy="afterInteractive" dangerouslySetInnerHTML={{__html: country.footer_text}} className={style["report__tail-text"]}></p>
 					</div>
 					<div className={style["diplomatic-report-gallery"]}>
 						<Gallery withCaption options={{"showHideAnimationType": "none"}}>
@@ -104,5 +93,22 @@ export default function DiplomaticReport() {
 			<Footer />
 		</Fragment>
 	);
+}
+
+export async function getStaticProps(context) {
+	const siteUrls=require("/public/siteUrls"); 
+	const sectionData=await fetch(siteUrls.backendApiUrl, {
+		"method": "post", "headers": {
+			"Content-Type": "application/json"
+		}, 
+		"body": JSON.stringify({"operation": "read-diplomacy-report-section"})
+	});
+	const sections=await sectionData.json();
+
+	return {
+		"props": {
+			"countries": sections 
+		}
+	};
 }
 
