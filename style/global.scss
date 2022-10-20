@@ -108,7 +108,7 @@ body {
 }
 
 .swiper-pagination-bullet {
-	background-color: #fff;
+	background-color: #fff !important;
 }
 
 .swiper-slide-duplicate {
@@ -311,4 +311,20 @@ a[href="#library"] path {
 
 .pswp__bg {
     opacity: .92 !important;
+}
+
+.pswp__default-caption, .travel-item__title {
+    font-family: minion-it;
+    letter-spacing: 1.5px;
+    white-space: pre-line;
+    font-size: 17px !important;
+    color: #cc9966 !important;
+}
+
+.pswp__default-caption {
+    font-size: 27px !important;
+    top: calc(100vh - 120px);
+    max-width: calc(100vw - 400px);
+    white-space: initial;
+    margin: 0 auto;
 }

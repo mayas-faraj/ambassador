@@ -13,10 +13,12 @@ import style from "/style/diplomaticreport.module.scss";
 export default function DiplomaticReport({countries}) {
 
 	const [fixed, setFixed]=React.useState(false);
+	const [mounted, setMounted]=React.useState(false);
 	const context=React.useContext(SettingContext);
 
 	React.useEffect(()=>{
 		window.addEventListener("scroll", contentScrollHandler, {passive: true});
+		setMounted(true);
 		return ()=>window.removeEventListener("scroll", contentScrollHandler);
 	}, []);
 
@@ -24,7 +26,9 @@ export default function DiplomaticReport({countries}) {
 		setFixed(document.documentElement.scrollTop>=300);
 	}
 
-	return (
+	console.log(countries);
+
+	return mounted && (
 		<Fragment>
 			<Head>
 				<title>Claudio Pacifico | Repertorio Diplomatico</title>
@@ -34,9 +38,8 @@ export default function DiplomaticReport({countries}) {
 			<header className={style["diplomatic-report-header"]}>
 				<Link
 					href="/adad/#diplomacy"
-					className={style["diplomatic-report-header__menu"]}
 				>
-					<a>
+					<a className={style["diplomatic-report-header__menu"]}>
 					L’Ambasciatore d’Italia Claudio Pacifico
 					</a>
 				</Link>
@@ -64,7 +67,7 @@ export default function DiplomaticReport({countries}) {
 						<div className={style["report__subtitle"]}>{country.sub_title}</div>
 						<h3 className={style["report__header-text"]}>{country.header_text}</h3>
 						<p className={style["diplomatic-report__content"]}>{country.content}</p>
-						<p strategy="afterInteractive" dangerouslySetInnerHTML={{__html: country.footer_text}} className={style["report__tail-text"]}></p>
+						<div dangerouslySetInnerHTML={{__html: country.footer_text}} className={style["report__tail-text"]}/>
 					</div>
 					<div className={style["diplomatic-report-gallery"]}>
 						<Gallery withCaption options={{"showHideAnimationType": "none"}}>

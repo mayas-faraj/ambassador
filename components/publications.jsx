@@ -112,7 +112,7 @@ class Publications extends React.Component {
 						{
 							this.state.activeCategoryIndex===1 && (
 								<p className={style["publications-top__mark"]}>
-									Saggi di politica internazionale e Articoli
+									Saggi di politica internazionale e Articoli<br/>
 									<span className={style["publications-top__mark-white"]}>
 									Testi di Lezioni di Master, Interviste
 									</span>

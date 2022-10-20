@@ -25,18 +25,17 @@
     font-family: 'minion-bold-it';
     font-size: 46px;
     line-height: 72px;
-    color: $secondary-color;
+    color: $primary-color;
     width: 59px;
     height: 59px;
     display: inline-block;
     border-radius: 50%;
-    background-color: $primary-color;
+    background-color: #a10000;
     text-align: center;
     position: fixed;
     bottom: 85px;
     right: 25px;
     z-index: 999999;
-    box-shadow: 0px 0px 15px;
     transition: color .5s;
 }
 

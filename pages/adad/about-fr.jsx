@@ -29,10 +29,10 @@ export default function About() {
 				<meta property="og:image" content="/assets/imgs/claudio-pacifico-libya.jpg" />
 			</Head>
 			<header className={style["about-header"]}>
-				<div className={style["about-header__image-container"]}>
-					<Link href="/adad/#biografia"><a><img className={style["about-header__image"]} src={funeralImg.src} alt="Claudio Pacifico on libya"/></a></Link>
-					<Seperator viewBox="0 0 331 34" className={style["about-seperator"]+" section-seperator"} />
-				</div>
+				<Link href="/adad/#biografia"><a>
+						<img className={style["about-header__image"]} src={funeralImg.src} alt="Claudio Pacifico on libya"/>
+						<Seperator viewBox="0 0 331 34" className={style["about-seperator"]+" section-seperator"} />
+				</a></Link>
 				<LanguageSwitcher pageLink="/adad/about-it" downloadLink="/books/about-it.pdf"/>
 				<h1 className={style["about-header__title"]}>Biografia</h1>
 				<p className={style["about-header__text"]}>
