@@ -1,6 +1,10 @@
 <IfModule mod_rewrite.c>
 
   RewriteEngine On
+  RewriteRule ^(.*)$ https://www.claudiopacificoambassador.com [NC]
+  RewriteCond %{HTTP_HOST} ^claudiopacificoambassador.com/$1 [L,R=301]
+
+  RewriteEngine On
   RewriteBase /
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_FILENAME} !-f
