@@ -33,7 +33,7 @@ export default function About() {
 						<img className={style["about-header__image"]} src={funeralImg.src} alt="Claudio Pacifico on libya"/>
 						<Seperator viewBox="0 0 331 34" className={style["about-seperator"]+" section-seperator"} />
 				</a></Link>
-				<LanguageSwitcher pageLink="/adad/about-it" downloadLink="/books/about-it.pdf"/>
+				<LanguageSwitcher pageLink="/adad/about-it" downloadLink="/books/biographie-claudio-pacifico-fr.pdf"/>
 				<h1 className={style["about-header__title"]}>Biografia</h1>
 				<p className={style["about-header__text"]}>
 				Ambasciatore claudio pacifico.<br/>

@@ -35,7 +35,7 @@ export default function About() {
 							<Seperator viewBox="0 0 331 34" className={style["about-seperator"]+" section-seperator"} />
 					</a></Link>
 				</div>
-				<LanguageSwitcher pageLink="/adad/about-it" downloadLink="/books/about-it.pdf"/>
+				<LanguageSwitcher pageLink="/adad/about-it" downloadLink="/books/biographie-claudio-pacifico-en.pdf"/>
 				<h1 className={style["about-header__title"]}>Biografia</h1>
 				<p className={style["about-header__text"]}>
 				Ambasciatore claudio pacifico.<br/>
