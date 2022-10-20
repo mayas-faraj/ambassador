@@ -29,6 +29,8 @@ body {
 
 #__next {
 	background-color: $accent-color;
+	-webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
 }
 
 #__next > * > *  {

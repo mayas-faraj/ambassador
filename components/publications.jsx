@@ -73,9 +73,14 @@ class Publications extends React.Component {
 	}
 
 	bookHoverEventHandler(index) {
-		this.pageAudio.currentTime=0;
-		this.pageAudio.play();
 		this.setState({activeBookIndex: index});
+		try {
+			this.pageAudio.currentTime=0;
+			this.pageAudio.play();
+		}
+		catch (ex) {
+			console.log("audio error: ", ex);
+		}
 	}
 
 	initSwiperHandler(swiper) {

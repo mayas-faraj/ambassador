@@ -15,8 +15,13 @@ class Map extends React.Component {
 
 	setMapClass(event) {
 		this.setState({activeCharacteristic: event.target.id});
-		this.beepAudio.currentTime=0;
-		this.beepAudio.play();
+		try {
+			this.beepAudio.currentTime=0;
+			this.beepAudio.play();
+		}
+		catch (ex) {
+			console.log("audio error: ", ex);
+		}
 	}
 
 	render() {
