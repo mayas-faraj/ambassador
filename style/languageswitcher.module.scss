@@ -6,6 +6,9 @@
     padding-right: 110px;
     margin-top: 44px;
     box-sizing: border-box;
+    &+h1 {
+	    margin-top: -50px;
+    }
 }
 
 .switcher-container {

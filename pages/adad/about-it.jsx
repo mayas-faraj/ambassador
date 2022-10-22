@@ -52,7 +52,7 @@ export default function About() {
 				</nav>
 				{
 					sections && sections.map(section=>(
-						<div key={section.slug} id={section.slug} className={style["about-section"]+" "+style[section.slug]}>
+						<div key={section.slug} id={section.slug} className={style["about-section"]+" "+section.slug}>
 							<div className={style["about-section__image-container"]}>
 							{
 								section.image_src && <img className={style["about-section__image"]} src={'/assets/imgs/'+section.image_src}/>
