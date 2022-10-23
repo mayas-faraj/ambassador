@@ -26,8 +26,6 @@ export default function DiplomaticReport({countries}) {
 		setFixed(document.documentElement.scrollTop>=300);
 	}
 
-	console.log(countries);
-
 	return mounted && (
 		<Fragment>
 			<Head>
