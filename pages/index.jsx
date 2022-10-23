@@ -1,5 +1,6 @@
 import React, {Fragment} from "react";
 import Head from "next/head";
+import Footer from "/components/footer";
 import Seperator from "/public/assets/imgs/seperator.svg";
 import style from '../style/cover.module.scss';
 import ambassadorImg from '/public/assets/imgs/ambassador.png';
@@ -31,6 +32,7 @@ function Home(props) {
 						</span> SOON.</p>
 				</div>
 			</header>
+			<Footer/>
 		</Fragment>
 	);
 }

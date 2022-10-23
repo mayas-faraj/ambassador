@@ -1,13 +1,14 @@
 @import "colors";
 
 .footer {
+	font-family: "arial-narrow", sans-serif;
+	letter-spacing: 1px;
 	background-color: $primary-color;
 	max-width: 100% !important;
-	font-size: 14px;
 	color: $accent-color;
 
 	a {
-		color: $secondary-color;
+		color: $accent-color;
 	}
 
 	img {
@@ -15,30 +16,96 @@
 	}
 }
 
-.footer-copyright {
+.footer-top {
 	text-align: center;
-	padding: 5px;
-	line-height: 200px;
+}
+
+.footer-top__title {
+	font-size: 14px;
+	color: $secondary-color;
+	text-transform: uppercase;
+	padding: 22px 0;
+}
+
+.footer-icons {
+	display: flex;
+	gap: 25px;
+	flex-wrap: wrap;
+	padding: 45px 20px 0 8px;
+}
+
+.footer-icons:nth-child(2) {
+	align-items: center;
+}
+
+.footer-icons:nth-child(3) {
+	padding-bottom: 20px;
+}
+
+.footer-contact {
+	flex: 200px !important;
+	@media (min-width: $desktop-width) {
+		padding-left: 65px;
+	}
+
+	@media (max-width: $desktop-width) {
+		padding-left: 5vw;
+	}
+}
+
+.footer-icons__item {
+	flex: 140px;
+	img {
+		object-fit: contain;
+		max-height: 80px;
+	}
+}
+
+.footer-contact__title {
+	font-size: 14px;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.footer-contact__content {
+	font-size: 12px;
+	text-align: left;
+	margin: 0;
+}
+
+.footer-bottom {
+	background-color: $accent-color;
+	color: $primary-color;
+	text-transform: uppercase;
+	text-align: center;
+	max-width: 100% !important;
+	padding: 10px 0;
+}
+
+.footer-bottom__copyright {
+	font-size: 13px;
 }
 
 .footer__button-top {
     font-family: 'minion-bold-it';
     font-size: 46px;
-    line-height: 72px;
+    line-height: 63px;
     color: $primary-color;
-    width: 59px;
-    height: 59px;
+    width: 50px;
+    height: 50px;
     display: inline-block;
     border-radius: 50%;
     background-color: #a10000;
     text-align: center;
     position: fixed;
-    bottom: 85px;
-    right: 25px;
+    bottom: 70px;
+    right: 70px;
+    opacity: .5;
     z-index: 999999;
-    transition: color .5s;
+    transition: opacity .5s;
 }
 
 .footer__button-top:hover {
     color: $accent-color;
+    opacity: 1;
 }
