@@ -149,6 +149,10 @@
 .about-section__image-container {
     flex-basis: 160px;
     min-width: 160px;
+
+    img {
+       margin-top: 5px;
+    }
 }
 
 .about-section__text-container {

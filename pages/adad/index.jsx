@@ -35,7 +35,7 @@ export default function Home(props) {
 		{"title": "Letture", "link": "adad/article"},
 		{"title": "Repertorio diplomatico", "link": "/adad/diplomacy-report"},
 		{"title": "Viaggi e Spedizioni", "link": "adad/travel"},
-		{"title": "Contatti", "link": "adad/contact"},
+		{"title": "Contatti", "link": "#footer"},
 	];
 
 	const SECTIONS=[

@@ -2,10 +2,11 @@
 
 .footer {
 	font-family: "arial-narrow", sans-serif;
-	letter-spacing: .5px;
+	letter-spacing: 3px;
 	background-color: $primary-color;
 	max-width: 100% !important;
 	color: $accent-color;
+	border-top: 5px solid $secondary-color;
 
 	a {
 		color: $accent-color;
@@ -20,7 +21,7 @@
 }
 
 .footer-top__title {
-	font-size: 14px;
+	font-size: 18px;
 	color: $secondary-color;
 	text-transform: uppercase;
 	text-align: center;
@@ -31,6 +32,15 @@
 	display: flex;
 	gap: 65px;
 	flex-wrap: wrap;
+}
+
+.footer-container {
+	display: flex;
+	margin-bottom: 50px;
+}
+
+.footer-container,
+.footer-icons--first-row {
 	padding: 45px 20px 0 75px;
 }
 
@@ -64,23 +74,27 @@
 
 .footer-icons--second-row {
 	margin-bottom: 68px;
-	.footer-icons__item:nth-child(2) img {
+	margin-left: 40px;
+	.footer-icons__item:nth-child(1) img,
+	.footer-icons__item:nth-child(5) img,
+	.footer-icons__item:nth-child(6) img,
+	.footer-icons__item:nth-child(7) img {
 		width: 190px;
 		margin-right: 28px;
 	}
 
-	.footer-icons__item:nth-child(3) img {
+	.footer-icons__item:nth-child(2) img {
 		width: 190px;
 		margin-right: 20px;
 	}
 
-	.footer-icons__item:nth-child(4) img {
+	.footer-icons__item:nth-child(3) img {
 		width: 120px;
 		margin-right: 18px;
 		margin-top: -28px;
 	}
 
-	.footer-icons__item:nth-child(5) img {
+	.footer-icons__item:nth-child(4) img {
 		width: 178px;
 	}
 
@@ -88,7 +102,7 @@
 
 
 .footer-contact {
-	width: 245px;
+	width: 310px;
 	padding-top: 23px;
 }
 
