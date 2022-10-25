@@ -50,7 +50,7 @@ const VISIBLE_BLOGS_COUNT=2;
 export default class Blog extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state={ currentSocial: "twitter", blogs: null, blogIndex: 0};
+		this.state={ currentSocial: "twitter", blogs: null, blogIndex: 0, twitterLoaded: true, facebookLoaded: false, youtubeLoaded: false, linkedinLoaded: false};
 		this.arrowUpClickHandler=this.arrowUpClickHandler.bind(this);
 		this.arrowDownClickHandler=this.arrowDownClickHandler.bind(this);
 		this.socialClickHandler=this.socialClickHandler.bind(this);
@@ -79,7 +79,7 @@ export default class Blog extends React.Component {
 
 	socialClickHandler(social) {
 		if(social.enabled) {
-			this.setState({currentSocial: social.app});
+			this.setState({currentSocial: social.app, [social.app+"Loaded"]: true});
 		}
 	}
 
@@ -104,8 +104,8 @@ export default class Blog extends React.Component {
 						<div className={style["blog-social-wrapper"]}>
 							<MobileImage className={style["blog-social-mobile-cover"]} />
 							{
-								this.state.currentSocial==="twitter" && (
-								<div className={style["blog-social-app"]+" "+style["blog-twitter"]} ref={this.mobileRef}>
+								(this.state.currentSocial==="twitter" || this.state.twitterLoaded) && (
+								<div className={style["blog-social-app"]+" blog-twitter"+((this.state.currentSocial!=="twitter" && this.state.twitterLoaded)?" hide":"")} ref={this.mobileRef}>
 									<div className={style["blog-overlay"]+" "+style["blog-overlay--twitter"]}><TwitterIcon/></div>
 									<a className="twitter-timeline" data-theme="dark" href="https://twitter.com/CLAUDIOPACIFIC2?ref_src=twsrc%5Etfw">Tweets by CLAUDIOPACIFIC2</a> 
 									<Script src="https://platform.twitter.com/widgets.js" charSet="utf-8" strategy="afterInteractive" async></Script>
@@ -113,8 +113,8 @@ export default class Blog extends React.Component {
 								)
 							}
 							{
-								this.state.currentSocial==="linkedin" && (
-								<div className={style["blog-social-app"]+" "+style["blog-linkedin"]}>
+								(this.state.currentSocial==="linkedin" || this.state.linkedinLoaded) && (
+								<div className={style["blog-social-app"]+" blog-linkedin"+((this.state.currentSocial!=="linkedin" && this.state.linkedinLoaded)?" hide":"")}>
 									<div className={style["blog-overlay"]+" "+style["blog-overlay--linkedin"]}><LinkedinIcon/></div>
 									<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:6932074033874108416" allowFullScreen={true} title="Embedded post" width="130%" height="640" frameBorder="0"></iframe>				
 									{/*
@@ -131,16 +131,16 @@ export default class Blog extends React.Component {
 								)
 							}
 							{
-								this.state.currentSocial==="facebook" && (
-								<div className={style["blog-social-app"]+" "+style["blog-facebook"]}>
+								(this.state.currentSocial==="facebook" || this.state.facebookLoaded) && (
+								<div className={style["blog-social-app"]+" blog-facebook"+((this.state.currentSocial!=="facebook" && this.state.facebookLoaded)?" hide":"")}>
 									<div className={style["blog-overlay"]+" "+style["blog-overlay--facebook"]}><FacebookIcon/></div>
 									<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fclaudio.pacifico.142&tabs=timeline&width=400&height=800&small_header=true&adapt_container_width=false&hide_cover=true&show_facepile=false&appId=696344208282821" width="400" height="800" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
 								</div>
 								)
 							}
 							{
-								this.state.currentSocial==="youtube" && (
-								<div className={style["blog-social-app"]+" "+style["blog-youtube"]}>
+								(this.state.currentSocial==="youtube" || this.state.youtubeLoaded) && (
+								<div className={style["blog-social-app"]+" blog-youtube"+((this.state.currentSocial!=="youtube" && this.state.youtubeLoaded)?" hide":"")}>
 									<div className={style["blog-overlay"]+" "+style["blog-overlay--youtube"]}><YoutubeIcon/></div>
 									<iframe width="196" height="150" src="https://www.youtube.com/embed/Cp0aAExQo8Q" title="Claudio Pacifico videos" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 									<iframe width="196" height="150" src="https://www.youtube.com/embed/YTvNHlmwksI" title="Claudio Pacifico videos" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>

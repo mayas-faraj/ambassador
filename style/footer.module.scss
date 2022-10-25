@@ -2,7 +2,7 @@
 
 .footer {
 	font-family: "arial-narrow", sans-serif;
-	letter-spacing: 3px;
+	letter-spacing: 0.5px;
 	background-color: $primary-color;
 	max-width: 100% !important;
 	color: $accent-color;
@@ -22,9 +22,10 @@
 
 .footer-top__title {
 	font-size: 18px;
-	color: $secondary-color;
+	letter-spacing: 3px;
 	text-transform: uppercase;
 	text-align: center;
+	color: $secondary-color;
 	padding: 28px 0 16px;
 }
 

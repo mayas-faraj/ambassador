@@ -268,6 +268,7 @@ a[href="#library"] path {
 .essays .react-pdf__Page__canvas {
 	width: 100% !important;
 	height: 100% !important;
+	max-height: 64vh;
 	margin: 0 auto;
 	border: 1px solid #44454b;
 	object-fit: cover;
@@ -343,4 +344,8 @@ a[href="#library"] path {
 .biografia-it-incarichi-1 p,
 .biografia-it-conoscenze-linguistiche p {
 	font-weight: 600;
+}
+
+.hide {
+	display: none;
 }
