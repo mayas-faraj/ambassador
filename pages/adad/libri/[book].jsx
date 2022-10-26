@@ -62,7 +62,9 @@ export default function Book(props) {
 					luoghi in cui ha vissuto a lungo.
 					</a>
 				</Link>
-				<Seperator className={style["book-seperator"]+" section-seperator"} />
+				<Link href="/adad/#library"><a>
+					<Seperator viewBox="0 0 331 34" className={style["book-seperator"]+" section-seperator"} />
+				</a></Link>
 			</header>
 			{ book==null && <Glimmer/> }
 			{

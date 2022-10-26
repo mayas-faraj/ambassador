@@ -59,7 +59,7 @@ export default props=>{
 						Saggi e articoli di politica estera
 					</a>
 				</Link>
-				<Seperator className={style["essay-seperator"] + " section-seperator"} />
+				<Seperator viewBox={"0 0 331 34"} className={style["essay-seperator"] + " section-seperator"} />
 			</header>
 			{ !essays && <Glimmer/> }
 			<div className="essays">
@@ -86,7 +86,7 @@ export default props=>{
 							<p className={style["essay-info"]}>
 								<span className={style["essay-info__comment"]}>{essay.comment}</span><br/>
 								<span className={style["essay-info__title"]}>{essay.title}</span>
-								{essay.book_name?essay.book_name:""}{essay.city?essay.city+", ":""}{(essay.month!=null && essay.month>=0) && [ "Gennaio", "febbraio", "Marzo", "aprile", "Maggio", "Giugno", "Luglio", "agosto", "settembre", "ottobre", "novembre", "Dicembre" ][essay.month]+" "}{essay.year}
+								<span className={style["essay-info__meta"]}>{essay.book_name?essay.book_name:""}{essay.city?essay.city+", ":""}{(essay.month!=null && essay.month>=0) && [ "Gennaio", "febbraio", "Marzo", "aprile", "Maggio", "Giugno", "Luglio", "agosto", "settembre", "ottobre", "novembre", "Dicembre" ][essay.month]+" "}{essay.year}</span>
 							</p>
 						</div>
 				))}

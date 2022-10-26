@@ -32,7 +32,7 @@
 
 .essays__title::after {
     content: ' ';
-    width: 425px;
+    width: 85px;
     display: block;
     height: 3px;
     border-bottom: 1px solid $secondary-color;
@@ -93,7 +93,7 @@
 }
 
 .essay-info {
-	font-family: minion-bold-it;
+	font-family: minion-bold;
 	font-size: 22px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -109,7 +109,8 @@
 	white-space: pre-line;
 }
 
+.essay-info__meta,
 .essay-info__comment {
-	font-family: minion-bold;
+	font-family: minion-bold-it;
 }
 

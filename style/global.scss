@@ -265,17 +265,7 @@ a[href="#library"] path {
 	margin-left: 0;
 }
 
-.essays .react-pdf__Page__canvas {
-	width: 100% !important;
-	height: 100% !important;
-	max-height: 64vh;
-	margin: 0 auto;
-	border: 1px solid #44454b;
-	object-fit: cover;
-	object-position: top;
-	cursor: zoom-in;
-}
-
+.essays .react-pdf__Page__canvas,
 .book-page .react-pdf__Page__canvas {
 	width: fit-content !important;
 	height: 100% !important;
