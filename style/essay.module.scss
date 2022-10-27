@@ -4,7 +4,7 @@
 
 .essay-header {
 	text-align: center;
-	padding: 35px 0 45px;
+	padding: 45px 0 45px;
 	background-color: $primary-color;
 	position: sticky;
 	top: 0;
@@ -21,7 +21,7 @@
 
 .essays__title {
     font-family: 'minion-medium-subh';
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .5px;
@@ -86,7 +86,7 @@
 .essay::after {
 	content: ' ';
 	background-image: url(/assets/imgs/lines.svg);
-	height: 120px;
+	height: 80px;
 	width: 100%;
 	top: calc(50% - 60px);
 	position: absolute;

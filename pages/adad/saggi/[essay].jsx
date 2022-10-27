@@ -57,17 +57,16 @@ export default props=>{
 				<Link href="/adad/#saggi">
 					<a className={style["essay-header__menu"]}>
 						Saggi e articoli di politica estera
+						<Seperator viewBox={"0 0 331 34"} className={style["essay-seperator"] + " section-seperator"} />
 					</a>
 				</Link>
-				<Seperator viewBox={"0 0 331 34"} className={style["essay-seperator"] + " section-seperator"} />
 			</header>
 			{ !essays && <Glimmer/> }
 			<div className="essays">
 				<div className={style["essays__title"]}>
 				L’Ambasciatore Pacifico è altresì impegnato<br/>
-				in un’ampia attività di saggista, pubblicando articoli<br/>
-				e saggi di politica internazionale, rilasciando<br/>
-				lezioni di master ed interviste
+				in un’ampia attività di saggista.  articoli, saggi,<br/>
+				master universitari e interviste.
 				</div>
 				<div className={style["essays-list"]}>
 				{
