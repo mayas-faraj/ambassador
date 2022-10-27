@@ -10,36 +10,88 @@ export default function Footer() {
 				<div className={style["footer-icons"]+" "+style["footer-icons--first-row"]}>
 					<div className={style["footer-icons__item"]}>
 						<a target="_blank" href="#" className={style["footer-icons__link"]}>
-							<img src="/assets/imgs/footer/la-fenice.png" alt="la-fenice logo"/>
-						</a>
-					</div>
-					<div className={style["footer-icons__item"]}>
-						<a target="_blank" href="#" className={style["footer-icons__link"]}>
-							<img src="/assets/imgs/footer/associazione.png" alt="associazione logo"/>
+							<img src="/assets/imgs/footer/gran-teatro.png" alt="gran teatro logo"/>
+							<div className={style["footer-icons__title"]}>Gran teatro<br/>la fenice</div>
 						</a>
 					</div>
 					<div className={style["footer-icons__item"]}>
 						<a target="_blank" href="#" className={style["footer-icons__link"]}>
 							<img src="/assets/imgs/footer/associazione-nazionale.png" alt="associazione nazionale logo"/>
+							<div className={style["footer-icons__title"]}>Associazione Nazionale<br/>Carabinieri</div>
 						</a>
 					</div>
 					<div className={style["footer-icons__item"]}>
 						<a target="_blank" href="#" className={style["footer-icons__link"]}>
-							<img src="/assets/imgs/footer/assdiplar.png" alt="assdiplar logo"/>
+							<img src="/assets/imgs/footer/presidenza-della.png" alt="presidenza della logo"/>
+							<div className={style["footer-icons__title"]}>Presidenza della <br/>repubblica Italiana</div>
 						</a>
 					</div>
 					<div className={style["footer-icons__item"]}>
 						<a target="_blank" href="#" className={style["footer-icons__link"]}>
-							<img src="/assets/imgs/footer/studi-diplomatici.png" alt="studi-diplomatici logo"/>
+							<img src="/assets/imgs/footer/assocazione-nazionale-diplomatici.png" alt="assocazione nazionale diplomatici logo"/>
+							<div className={style["footer-icons__title"]}>Assocazione<br/>Nazionale Diplomatici<br/>ar.- constantino nigra</div>
 						</a>
 					</div>
 					<div className={style["footer-icons__item"]}>
 						<a target="_blank" href="#" className={style["footer-icons__link"]}>
-							<img src="/assets/imgs/footer/repubblica.png" alt="republica logo"/>
+							<img src="/assets/imgs/footer/l-accademia-etrusca.png" alt="l-accademia etrusca logo"/>
+							<div className={style["footer-icons__title"]}>L’ACCADEMIA <br/>ETRUSCA DI CORTONA</div>
+						</a>
+					</div>
+					<div className={style["footer-icons__item"]}>
+						<a target="_blank" href="#" className={style["footer-icons__link"]}>
+							<img src="/assets/imgs/footer/istituto-euro-mediterraneo.png" alt="istituto euro mediterraneo logo"/>
+							<div className={style["footer-icons__title"]}>Istituto <br/>Euro-mediterraneo<br/>e Per i paesi arabi</div>
+						</a>
+					</div>
+				</div>
+				<div className={style["footer-icons"]+" "+style["footer-icons--second-row"]}>
+					<div className={style["footer-icons__item"]}>
+						<a target="_blank" href="#" className={style["footer-icons__link"]}>
+							<img src="/assets/imgs/footer/ambasciata-tripoli.png" alt="ambasciata tripoli logo"/>
+						</a>
+					</div>
+					<div className={style["footer-icons__item"]}>
+						<a target="_blank" href="#" className={style["footer-icons__link"]}>
+							<img src="/assets/imgs/footer/ambasciata-cairo.png" alt="ambasciata cairo logo"/>
+						</a>
+					</div>
+					<div className={style["footer-icons__item"]}>
+						<a target="_blank" href="#" className={style["footer-icons__link"]}>
+							<img src="/assets/imgs/footer/ambasciata-teheran.png" alt="ambasciata teheran logo"/>
+						</a>
+					</div>
+					<div className={style["footer-icons__item"]}>
+						<a target="_blank" href="#" className={style["footer-icons__link"]}>
+							<img src="/assets/imgs/footer/ambasciata-khartoum.png" alt="ambasciata khartoum logo"/>
+						</a>
+					</div>
+					<div className={style["footer-icons__item"]}>
+						<a target="_blank" href="#" className={style["footer-icons__link"]}>
+							<img src="/assets/imgs/footer/ambasciata-dhaka.png" alt="ambasciata dhaka logo"/>
+						</a>
+					</div>
+					<div className={style["footer-icons__item"]}>
+						<a target="_blank" href="#" className={style["footer-icons__link"]}>
+							<img src="/assets/imgs/footer/ambasciata-khartoum2.png" alt="ambasciata khartoum logo"/>
 						</a>
 					</div>
 				</div>
 				<div className={style["footer-container"]}>
+					<div className={style["footer-icons"]+" "+style["footer-icons--third-row"]}>
+						<div className={style["footer-icons__item"]}>
+							<a href="#" className={style["footer-icons__link"]}>
+								<img src="/assets/imgs/footer/sapienza.png" alt="sapienze logo"/>
+								<div className={style["footer-icons__title"]}>La sapienza<br/>università di roma</div>
+							</a>
+						</div>
+						<div className={style["footer-icons__item"]}>
+							<a href="#" className={style["footer-icons__link"]}>
+								<img src="/assets/imgs/footer/luiss.png" alt="luiss logo"/>
+								<div className={style["footer-icons__title"]}>Luiss Università<br/>guido carli</div>
+							</a>
+						</div>
+					</div>
 					<div className={style["footer-contact"]}>
 						<div className={style["footer-contact__title"]}>Contatti</div>
 						<p className={style["footer-contact__content"]}>	
@@ -54,40 +106,16 @@ export default function Footer() {
 					<div className={style["footer-icons"]+" "+style["footer-icons--second-row"]}>
 						<div className={style["footer-icons__item"]}>
 							<a href="#" className={style["footer-icons__link"]}>
-								<img src="/assets/imgs/footer/ministries.png" alt="ministero degil Affari Esteri logo"/>
+								<img src="/assets/imgs/footer/associazione-pergine.png" alt="associazione pergine logo"/>
+								<div className={style["footer-icons__title"]}>Associazione <br/>Amici della storia</div>
 							</a>
 						</div>
 						<div className={style["footer-icons__item"]}>
 							<a href="#" className={style["footer-icons__link"]}>
-								<img src="/assets/imgs/footer/ambasciata-d-italia-dhaka.png" alt="Ambasciata d'italia Dhaka logo"/>
+								<img src="/assets/imgs/footer/studi-diplomatici.png" alt="studi diplomatici logo"/>
+								<div className={style["footer-icons__title"]}>Circolo studi<br/>diplomatici</div>
 							</a>
 						</div>
-						<div className={style["footer-icons__item"]}>
-							<a href="#" className={style["footer-icons__link"]}>
-								<img src="/assets/imgs/footer/addar-trasparente.png" alt="Addar-Transparente logo"/>
-							</a>
-						</div>
-						<div className={style["footer-icons__item"]}>
-							<a href="#" className={style["footer-icons__link"]}>
-								<img src="/assets/imgs/footer/accademia-etrusca.png" alt="Accademia-estrusca logo"/>
-							</a>
-						</div>
-						<div className={style["footer-icons__item"]}>
-							<a target="_blank" href="https://ambilcairo.esteri.it/ambasciata_ilcairo/it/ambasciata/news/dall-ambasciata/2010/06/l-ambasciatore-d-italia-al-cairo-s-e-claudio-pacifico-incontra-il-segretario-generale-della-lega-ar.html" className={style["footer-icons__link"]}>
-								<img src="/assets/imgs/footer/ambasciata-d-italia-cairo.jpg" alt="ambasciata d'italia cairo logo"/>
-							</a>
-						</div>
-						<div className={style["footer-icons__item"]}>
-							<a target="_blank" href="https://ambmogadiscio.esteri.it/ambasciata_mogadiscio/it" className={style["footer-icons__link"]}>
-								<img src="/assets/imgs/footer/ambasciata-d-italia-mogadiscio.jpg" alt="ambasciata d'italia mogadiscio logo"/>
-							</a>
-						</div>
-						<div className={style["footer-icons__item"]}>
-							<a target="_blank" href="https://ambtripoli.esteri.it/ambasciata_tripoli/it" className={style["footer-icons__link"]}>
-								<img src="/assets/imgs/footer/ambasciata-d-italia-tripoli.jpg" alt="ambasciata d'italia tripoli logo"/>
-							</a>
-						</div>
-
 					</div>
 				</div>
 		 	</div>
@@ -100,3 +128,4 @@ export default function Footer() {
 		</footer>
 	);
 }
+
