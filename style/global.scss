@@ -245,6 +245,10 @@ a[href="#library"] path {
 	margin-top: 28px;
 }
 
+.react-pdf__Page__annotations {
+	display: none;
+}
+
 .book-browse__pdf--multiple-page .react-pdf__Document {
 	display: flex;
 	flex-wrap: nowrap;
@@ -339,3 +343,4 @@ a[href="#library"] path {
 .hide {
 	display: none;
 }
+
