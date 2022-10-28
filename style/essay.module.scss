@@ -80,7 +80,14 @@
 
 .essay-book__link {
 	width: max-content;
+	z-index: 10;
 	margin: 0 auto;
+}
+
+.essay-book__image {
+	max-height: 60vh;
+	object-fit: contain;
+
 }
 
 .essay::after {

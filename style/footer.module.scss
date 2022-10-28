@@ -12,7 +12,7 @@
 	border-top: 5px solid $secondary-color;
 
 	a {
-		color: $accent-color;
+		color: $secondary-color;
 	}
 
 	img {
@@ -35,14 +35,13 @@
 .footer-icons {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 40px 20px 0 67px;
 }
 
 .footer-icons__title {
     font-size: 8.5pt;
     text-transform: uppercase;
     color: $secondary-color;
-    margin-top: 4px;
+    margin-top: 10px;
 }
 
 .footer-container {
@@ -50,77 +49,39 @@
 	margin-bottom: 50px;
 }
 
-.footer-icons--first-row {
+.footer-icons,
+.footer-icons,
+.footer-icons {
 	padding: 40px 20px 0 67px;
-	gap: 96px;
+}
+
+.footer-icons--first-row {
+	gap: 40px 102px;
 }
 
 .footer-icons--second-row {
+	gap: 50px 29px;
 }
 
 
 .footer-icons--third-row {
+	margin-top: 40px;
+	.footer-icons {
+		gap: 30px 95px;
+		justify-content: center;
+	}
 }
 
 .footer-icons__item {
 	text-align: center;
 }
 
-.footer-icons--first-row {
-	.footer-icons__item:nth-child(1) img {
-	}
-
-	.footer-icons__item:nth-child(2) img {
-		
-	}
-
-	.footer-icons__item:nth-child(3) img {
-		
-	}
-
-	.footer-icons__item:nth-child(4) img {
-		
-	}
-
-	.footer-icons__item:nth-child(5) img {
-		
-	}
-
-	.footer-icons__item:nth-child(6) img {
-		
-	}
-}
-
-.footer-icons--second-row {
-	.footer-icons__item:nth-child(1) img,
-	.footer-icons__item:nth-child(5) img,
-	.footer-icons__item:nth-child(6) img,
-	.footer-icons__item:nth-child(7) img {
-		width: 190px;
-		margin-right: 28px;
-	}
-
-	.footer-icons__item:nth-child(2) img {
-		width: 190px;
-		margin-right: 20px;
-	}
-
-	.footer-icons__item:nth-child(3) img {
-		width: 120px;
-		margin-right: 18px;
-		margin-top: -28px;
-	}
-
-	.footer-icons__item:nth-child(4) img {
-		width: 178px;
-	}
-
-}
-
-
 .footer-contact {
-	width: 310px;
+	text-align: center;
 	padding-top: 23px;
+	border-top: 1px solid rgba($secondary-color, .2);
+	margin: 20px 60px 0;
+	color: $secondary-color;
 }
 
 .footer-icons__item {
@@ -132,18 +93,16 @@
 .footer-contact__title {
 	font-size: 14px;
 	text-transform: uppercase;
-	text-align: left;
 }
 
 .footer-contact__content {
 	font-size: 12px;
 	line-height: 15px;
-	text-align: left;
 	margin: 0;
 }
 
 .footer-bottom {
-	background-color: $accent-color;
+	background-color: #c8c2b8;
 	color: $primary-color;
 	text-transform: uppercase;
 	text-align: center;
@@ -167,7 +126,7 @@
     background-color: #a10000;
     text-align: center;
     position: fixed;
-    bottom: 70px;
+    bottom: 100px;
     right: 70px;
     opacity: .5;
     z-index: 999999;
@@ -177,4 +136,36 @@
 .footer__button-top:hover {
     color: $accent-color;
     opacity: 1;
+}
+
+@media (min-width: $mobile-width) and (max-width: $desktop-width) {
+	.footer-icons--first-row,
+	.footer-icons--second-row {
+		.footer-icons__item {
+			flex: 25%;
+		}
+	}
+
+	.footer-contact {
+		margin-top: 65px;
+	}
+}
+
+@media (max-width: $tablet-width) {
+	.footer-icons__item {
+		width: 100%;
+	}
+
+	.footer-icons {
+		margin-top: 50px;
+		padding: 0;
+	}
+
+	.footer-contact {
+		margin: 25px auto 0;
+	}
+
+	.footer-container {
+		flex-wrap: wrap;
+	}
 }

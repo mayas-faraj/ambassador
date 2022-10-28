@@ -77,8 +77,8 @@ export default function Footer() {
 						</a>
 					</div>
 				</div>
-				<div className={style["footer-container"]}>
-					<div className={style["footer-icons"]+" "+style["footer-icons--third-row"]}>
+				<div className={style["footer-container"]+" "+style["footer-icons--third-row"]}>
+					<div className={style["footer-icons"]}>
 						<div className={style["footer-icons__item"]}>
 							<a href="#" className={style["footer-icons__link"]}>
 								<img src="/assets/imgs/footer/sapienza.png" alt="sapienze logo"/>
@@ -103,7 +103,7 @@ export default function Footer() {
 							Tel. <a href="tel:063221102">063221102</a>-<a href="tel:063221192">063221192</a> fax <a href="tel:0632507421">0632507421</a>
 						</p>
 					</div>
-					<div className={style["footer-icons"]+" "+style["footer-icons--second-row"]}>
+					<div className={style["footer-icons"]}>
 						<div className={style["footer-icons__item"]}>
 							<a href="#" className={style["footer-icons__link"]}>
 								<img src="/assets/imgs/footer/associazione-pergine.png" alt="associazione pergine logo"/>

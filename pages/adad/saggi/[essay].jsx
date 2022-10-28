@@ -74,11 +74,17 @@ export default props=>{
 						<div key={essay.slug} className={style["essay-wrapper"]}>
 							<div className={style["essay"]}>
 							{
-								essay.book_file && (
+								(essay.book_file && essay.book_file.lastIndexOf("pdf")>0) && (
 									<a className={style["essay-book__link"]} href={essay.book_file} target="_blank">
-										<Document file={essay.book_file} onLoadSuccess={bookLoadEventHandler} loading="Caricamento della pagina in corso..." onClick2={()=>window.document.location.href=essay.book_file}>
+										<Document file={essay.book_file} onLoadSuccess={bookLoadEventHandler} loading="Caricamento della pagina in corso...">
 											<Page width={3000} pageNumber={1} />
 										</Document>
+									</a>)
+							}
+							{
+								(essay.book_file && (essay.book_file.lastIndexOf("jpg")>0 || essay.book_file.lastIndexOf("png")>0)) && (
+									<a className={style["essay-book__link"]} href={essay.link?essay.link:"#"} target="_blank">
+										<img className={style["essay-book__image"]} src={essay.book_file}/>
 									</a>)
 							}
 							</div>
