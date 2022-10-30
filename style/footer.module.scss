@@ -49,27 +49,35 @@
 	margin-bottom: 50px;
 }
 
-.footer-icons,
-.footer-icons,
-.footer-icons {
-	padding: 40px 20px 0 67px;
-}
-
 .footer-icons--first-row {
 	gap: 40px 102px;
+	align-items: end;
+
+	img {
+		width: 80px;
+		height: 80px;
+	}
 }
 
 .footer-icons--second-row {
 	gap: 50px 29px;
+	margin-top: 50px;
+	align-items: end;
 }
 
 
 .footer-icons--third-row {
-	margin-top: 40px;
+	margin-top: 15px;
 	.footer-icons {
 		gap: 30px 95px;
 		justify-content: center;
+		align-items: end;
 	}
+
+	img {
+		width: 180px;
+		height: 60px;
+	}	
 }
 
 .footer-icons__item {

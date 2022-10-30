@@ -153,8 +153,10 @@
 .desert-navigator {
 	background-image: url(/assets/imgs/claudio-pacifico-desert.jpg);
 	.navigator__link {
-		padding-right: 58vw;
-		margin-top: 110px;
+		@media (min-width: $tablet-width) {
+			padding-right: 58vw;
+			margin-top: 110px;
+		}
 	}
 }
 

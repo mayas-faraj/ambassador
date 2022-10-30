@@ -106,14 +106,14 @@ export default function Footer() {
 					<div className={style["footer-icons"]}>
 						<div className={style["footer-icons__item"]}>
 							<a href="#" className={style["footer-icons__link"]}>
-								<img src="/assets/imgs/footer/associazione-pergine.png" alt="associazione pergine logo"/>
-								<div className={style["footer-icons__title"]}>Associazione <br/>Amici della storia</div>
+								<img src="/assets/imgs/footer/studi-diplomatici.png" alt="studi diplomatici logo"/>
+								<div className={style["footer-icons__title"]}>Circolo studi<br/>diplomatici</div>
 							</a>
 						</div>
 						<div className={style["footer-icons__item"]}>
 							<a href="#" className={style["footer-icons__link"]}>
-								<img src="/assets/imgs/footer/studi-diplomatici.png" alt="studi diplomatici logo"/>
-								<div className={style["footer-icons__title"]}>Circolo studi<br/>diplomatici</div>
+								<img src="/assets/imgs/footer/associazione-pergine.png" alt="associazione pergine logo"/>
+								<div className={style["footer-icons__title"]}>Associazione <br/>Amici della storia</div>
 							</a>
 						</div>
 					</div>
