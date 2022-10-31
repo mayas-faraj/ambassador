@@ -21,6 +21,13 @@
 }
 
 .footer-top {
+	@media (min-width: $tablet-width) and (max-width: $desktop-width) {
+		padding: 0 15vw;
+	}
+
+	@media (min-width: $desktop-width) {
+		padding: 0 30px;
+	}
 }
 
 .footer-top__title {
@@ -81,7 +88,11 @@
 }
 
 .footer-icons__item {
+	flex-grow: 1;
 	text-align: center;
+	img {
+		object-fit: contain;
+	}
 }
 
 .footer-contact {
@@ -90,12 +101,7 @@
 	border-top: 1px solid rgba($secondary-color, .2);
 	margin: 20px 60px 0;
 	color: $secondary-color;
-}
-
-.footer-icons__item {
-	img {
-		object-fit: contain;
-	}
+	flex-grow: 1;
 }
 
 .footer-contact__title {
