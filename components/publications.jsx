@@ -139,7 +139,7 @@ class Publications extends React.Component {
 											<p className={style["publications-item__content"]+" "+(/[ا-ي]/.test(book.title)?style["publications-item__content--arabic"]:"")}>
 											{book.title}
 											</p>
-											<img src={book.image?this.context.uploadsUrl+"/"+book.image:transparentImage.src} className={style["publications-item__image"]} alt={book.title} />
+											<img src={book.image?book.image:transparentImage.src} className={style["publications-item__image"]} alt={book.title} />
 											<h3 className={style["publications-item__title"]}>{(book.month?(parseInt(book.month)+1)+"/":"")+book.year}</h3>
 											</a>
 										</Link>

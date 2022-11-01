@@ -29,10 +29,12 @@ export default function About() {
 				<meta property="og:image" content="/assets/imgs/claudio-pacifico-libya.jpg" />
 			</Head>
 			<header className={style["about-header"]}>
-				<Link href="/adad/#biografia"><a>
-						<img className={style["about-header__image"]} src={funeralImg.src} alt="Claudio Pacifico on libya"/>
-						<Seperator viewBox="0 0 331 34" className={style["about-seperator"]+" section-seperator"} />
-				</a></Link>
+				<div className={style["about-header__image-container"]}>
+					<Link href="/adad/#biografia"><a>
+							<img className={style["about-header__image"]} src={funeralImg.src} alt="Claudio Pacifico on libya"/>
+							<Seperator viewBox="0 0 331 34" className={style["about-seperator"]+" section-seperator"} />
+					</a></Link>
+				</div>
 				<LanguageSwitcher pageLink="/adad/about-it" downloadLink="/books/biographie-claudio-pacifico-fr.pdf"/>
 				<h1 className={style["about-header__title"]}>Biografia</h1>
 				<p className={style["about-header__text"]}>
@@ -50,7 +52,7 @@ export default function About() {
 				</nav>
 				{
 					sections && sections.map(section=>(
-						<div key={section.slug} id={section.slug} className={style["about-section"]+" "+style[section.slug]}>
+						<div key={section.slug} id={section.slug} className={style["about-section"]+" "+section.slug}>
 							<div className={style["about-section__image-container"]}>
 							{
 								section.image_src && <img className={style["about-section__image"]} src={'/assets/imgs/'+section.image_src}/>

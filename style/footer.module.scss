@@ -32,6 +32,7 @@
 
 .footer-top__title {
 	font-size: 18px;
+	font-weight: 900;
 	letter-spacing: 3px;
 	text-transform: uppercase;
 	text-align: center;
@@ -57,17 +58,18 @@
 }
 
 .footer-icons--first-row {
-	gap: 40px 102px;
+	gap: 40px 0; /*102px;*/
 	align-items: end;
 
 	img {
 		width: 80px;
 		height: 80px;
+		padding: 0 20px;
 	}
 }
 
 .footer-icons--second-row {
-	gap: 50px 29px;
+	gap: 50px 0; /*29px;*/
 	margin-top: 50px;
 	align-items: end;
 }
@@ -76,14 +78,16 @@
 .footer-icons--third-row {
 	margin-top: 15px;
 	.footer-icons {
-		gap: 30px 95px;
+		gap: 30px 0; /* 95px;*/
 		justify-content: center;
 		align-items: end;
+		flex-grow: 1;
 	}
 
 	img {
-		width: 180px;
-		height: 60px;
+		width: 190px;
+		height: 40px;
+		padding: 0 6px;
 	}	
 }
 
@@ -101,7 +105,7 @@
 	border-top: 1px solid rgba($secondary-color, .2);
 	margin: 20px 60px 0;
 	color: $secondary-color;
-	flex-grow: 1;
+	flex-grow: 2;
 }
 
 .footer-contact__title {
@@ -156,12 +160,12 @@
 	.footer-icons--first-row,
 	.footer-icons--second-row {
 		.footer-icons__item {
-			flex: 25%;
+			flex: 30%;
 		}
 	}
 
 	.footer-contact {
-		margin-top: 65px;
+		margin-top: 90px;
 	}
 }
 

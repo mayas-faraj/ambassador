@@ -132,6 +132,7 @@
 
 .about-section-image__img {
 	margin: 0 auto;
+	max-width: 100%;
 }
 
 .about-section__title {
@@ -159,7 +160,6 @@
     flex-basis: 300px;
     flex-grow: 1;
     text-align: justify;
-    hyphens: auto;
     letter-spacing: 0.3px;
     font-family: 'minion-medium-subh';
     font-size: 18px;
