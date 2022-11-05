@@ -5,9 +5,6 @@ import {Swiper, SwiperSlide} from 'swiper/react';
 import {Pagination} from 'swiper';
 import Glimmer from './glimmer';
 import SettingContext from './setting-context';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 import style from '/style/publication.module.scss';
 import transparentImage from '/public/assets/imgs/transparent.png';
 

@@ -48,8 +48,14 @@
 .footer-icons__title {
     font-size: 8.5pt;
     text-transform: uppercase;
+    white-space: pre-line;
     color: $secondary-color;
     margin-top: 10px;
+}
+
+.footer-icons__slide {
+	text-align: center;
+	margin: auto;
 }
 
 .footer-container {
@@ -59,12 +65,11 @@
 
 .footer-icons--first-row {
 	gap: 40px 0; /*102px;*/
-	align-items: end;
+	align-items: start;
 
 	img {
 		width: 80px;
 		height: 80px;
-		padding: 0 20px;
 	}
 }
 
@@ -74,20 +79,24 @@
 	align-items: end;
 }
 
-
 .footer-icons--third-row {
 	margin-top: 15px;
 	.footer-icons {
 		gap: 30px 0; /* 95px;*/
 		justify-content: center;
 		align-items: end;
-		flex-grow: 1;
+
+		@media (min-width: $tablet-width) {
+			flex-basis: 34%;
+		}
+
+		.footer-icons__item:last-child {
+			padding: 0 6px;
+		}
 	}
 
 	img {
-		width: 190px;
-		height: 40px;
-		padding: 0 6px;
+		width: 160px;
 	}	
 }
 
@@ -102,10 +111,22 @@
 .footer-contact {
 	text-align: center;
 	padding-top: 23px;
-	border-top: 1px solid rgba($secondary-color, .2);
-	margin: 20px 60px 0;
 	color: $secondary-color;
-	flex-grow: 2;
+
+	@media (min-width: $tablet-width) {
+		flex-basis: 34%;
+	}
+}
+
+.footer-contact::before {
+	content: " ";
+	height: 1px;
+	width: 210px;
+	background-color: rgba($secondary-color, 0.2);
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	top: -20px;
 }
 
 .footer-contact__title {

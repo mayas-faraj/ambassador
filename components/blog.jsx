@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import SettingContext from './setting-context';
 import Glimmer from './glimmer';
-import Script from "next/script";
+import Head from "next/head";
 import FacebookIcon from '/public/assets/imgs/facebook-logo.svg';
 import LinkedinIcon from '/public/assets/imgs/linkedin-logo.svg';
 import TwitterIcon from '/public/assets/imgs/twitter-logo.svg';
@@ -108,7 +108,9 @@ export default class Blog extends React.Component {
 								<div className={style["blog-social-app"]+" blog-twitter"+((this.state.currentSocial!=="twitter" && this.state.twitterLoaded)?" hide":"")} ref={this.mobileRef}>
 									<div className={style["blog-overlay"]+" "+style["blog-overlay--twitter"]}><TwitterIcon/></div>
 									<a className="twitter-timeline" data-theme="dark" href="https://twitter.com/CLAUDIOPACIFIC2?ref_src=twsrc%5Etfw">Tweets by CLAUDIOPACIFIC2</a> 
-									<Script src="https://platform.twitter.com/widgets.js" charSet="utf-8" strategy="afterInteractive" async></Script>
+									<Head>
+										<script src="https://platform.twitter.com/widgets.js" charSet="utf-8" async></script>
+									</Head>
 								</div>
 								)
 							}

@@ -1,4 +1,7 @@
 import Head from "next/head";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import "../style/global.scss";
 
 export default function App(page) {
