@@ -6,7 +6,6 @@ import Link from 'next/link';
 import Head from 'next/head';
 import {useRouter} from 'next/router';
 import axios from 'axios';
-import Pagination from '/components/pagination';
 import Glimmer from '/components/glimmer';
 import Footer from '/components/footer';
 import SettingContext from '/components/setting-context';
@@ -131,7 +130,6 @@ export default function Book(props) {
 						{
 							book.book_file && (
 							<div className={style["book-browse-basic"]}>
-								<Pagination onPageChange={(pageNumber)=>setBookPageNumber(pageNumber)} activePage={bookPageNumber} pagesCount={Math.floor(bookPagesCount/book.book_file_pages_per_view)} />
 								<div className={style["book-browse__pdf"]+" "+(book.book_file_pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
 									<a className={style["book-link"]} href={book.book_file} target="_blank">
 										<Document file={book.book_file} onLoadSuccess={bookLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.book_file_pages_per_view>1 &&(bookPageNumber<=1 || bookPagesCount<2*bookPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setBookModal(true)}>
@@ -154,7 +152,6 @@ export default function Book(props) {
 						{
 							book.revision_file && (
 							<div className={style["book-browse-revision"]}>
-								<Pagination onPageChange={(pageNumber)=>setRevisionPageNumber(pageNumber)} activePage={revisionPageNumber} pagesCount={Math.floor(revisionPagesCount/book.revision_file_pages_per_view)} />
 								<div className={style["book-browse__pdf"]+" "+(book.revision_file_pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
 									<a className={style["book-link"]} href={book.revision_file} target="_blank">
 										<Document file={book.revision_file} onLoadSuccess={revisionLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.revision_file_pages_per_view>1 &&(revisionPageNumber<=1 || revisionPagesCount<2*revisionPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setRevisionModal(true)}>
