@@ -3,14 +3,10 @@
 .pagination {
 	text-align: center;
 	max-width: 1334px;
-	margin: 0 0 20px 86px;
+	margin: 20px auto;
 	z-index: 99;
 	box-sizing: border-box;
-	padding: 0 30px;
-
-	@media (min-width: $mobile-width) {
-		padding: 0 110px;
-	}
+	padding-left: 60px;
 }
 
 .pagination__item {

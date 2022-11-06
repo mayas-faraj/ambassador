@@ -133,13 +133,15 @@ export default function Book(props) {
 							<div className={style["book-browse-basic"]}>
 								<Pagination onPageChange={(pageNumber)=>setBookPageNumber(pageNumber)} activePage={bookPageNumber} pagesCount={Math.floor(bookPagesCount/book.book_file_pages_per_view)} />
 								<div className={style["book-browse__pdf"]+" "+(book.book_file_pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
-									<Document file={book.book_file} onLoadSuccess={bookLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.book_file_pages_per_view>1 &&(bookPageNumber<=1 || bookPagesCount<2*bookPageNumber-1))?style["book-browse__pdf-single"]:""} onClick={()=>setBookModal(true)}>
-										<Page width={3000} pageNumber={book.book_file_pages_per_view>1?2*bookPageNumber-1:bookPageNumber} />
-										{book.book_file_pages_per_view>1 && <Page width={3000} pageNumber={2*bookPageNumber} />}
-									</Document>
+									<a className={style["book-link"]} href={book.book_file} target="_blank">
+										<Document file={book.book_file} onLoadSuccess={bookLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.book_file_pages_per_view>1 &&(bookPageNumber<=1 || bookPagesCount<2*bookPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setBookModal(true)}>
+											<Page width={3000} pageNumber={book.book_file_pages_per_view>1?2*bookPageNumber-1:bookPageNumber} />
+											{book.book_file_pages_per_view>1 && <Page width={3000} pageNumber={2*bookPageNumber} />}
+										</Document>
+									</a>
 								</div>
 								<p className={style["book-browse__text"]}>contenuti</p>
-								<Dialog open={bookModal} onClose={()=>setBookModal(false)} maxWidth={"lg"} fullWidth={true}>
+								<Dialog open={bookModal} onClose0={()=>setBookModal(false)} maxWidth={"lg"} fullWidth={true}>
 									<DialogContent>
 										<a href={book.book_file} className={style["book-browse__fullscreen-link"]} target="_blank">
 											<FullScreenIcon/>
@@ -154,13 +156,15 @@ export default function Book(props) {
 							<div className={style["book-browse-revision"]}>
 								<Pagination onPageChange={(pageNumber)=>setRevisionPageNumber(pageNumber)} activePage={revisionPageNumber} pagesCount={Math.floor(revisionPagesCount/book.revision_file_pages_per_view)} />
 								<div className={style["book-browse__pdf"]+" "+(book.revision_file_pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
-									<Document file={book.revision_file} onLoadSuccess={revisionLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.revision_file_pages_per_view>1 &&(revisionPageNumber<=1 || revisionPagesCount<2*revisionPageNumber-1))?style["book-browse__pdf-single"]:""} onClick={()=>setRevisionModal(true)}>
-										<Page width={3000} pageNumber={book.revision_file_pages_per_view>1?2*revisionPageNumber-1:revisionPageNumber}/>
-										{book.revision_file_pages_per_view>1 && <Page width={3000} pageNumber={2*revisionPageNumber}/>}
-									</Document>
+									<a className={style["book-link"]} href={book.revision_file} target="_blank">
+										<Document file={book.revision_file} onLoadSuccess={revisionLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.revision_file_pages_per_view>1 &&(revisionPageNumber<=1 || revisionPagesCount<2*revisionPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setRevisionModal(true)}>
+											<Page width={3000} pageNumber={book.revision_file_pages_per_view>1?2*revisionPageNumber-1:revisionPageNumber}/>
+											{book.revision_file_pages_per_view>1 && <Page width={3000} pageNumber={2*revisionPageNumber}/>}
+										</Document>
+									</a>
 								</div>
 								<p className={style["book-browse__text"]}>recensioni</p>
-								<Dialog open={revisionModal} onClose={()=>setRevisionModal(false)} maxWidth={"lg"} fullWidth={true}>
+								<Dialog open={revisionModal} onClose0={()=>setRevisionModal(false)} maxWidth={"lg"} fullWidth={true}>
 									<DialogContent>
 										<a href={book.revision_file} className={style["book-browse__fullscreen-link"]} target="_blank">
 											<FullScreenIcon/>

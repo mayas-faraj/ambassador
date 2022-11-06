@@ -46,7 +46,7 @@ export default props=>{
 			{
 				essays!=null && (
 				<Head>
-					<title>{essays[0].title + " | Claudio Pacifico libri"}</title>
+					<title>{essays[0].title + " | Claudio Pacifico Saggi"}</title>
 					<meta property="og:title" content={essays[0].title + " | Claudio Pacifico libri"}/>
 					<meta name="description" content={essays[0].book_name}/>
 					<meta property="og:description" content={essays[0].book_name}/>
@@ -91,7 +91,7 @@ export default props=>{
 							<p className={style["essay-info"]}>
 								<span className={style["essay-info__comment"]}>{essay.comment}</span><br/>
 								<span className={style["essay-info__title"]}>{essay.primary_title}</span>
-								<span className={style["essay-info__meta"]}>{essay.book_name?essay.book_name:""}{essay.city?essay.city+", ":""}{(essay.month!=null && essay.month>=0) && [ "Gennaio", "febbraio", "Marzo", "aprile", "Maggio", "Giugno", "Luglio", "agosto", "settembre", "ottobre", "novembre", "Dicembre" ][essay.month]+" "}{essay.year}</span>
+								<span className={style["essay-info__meta"]}>{essay.book_name?essay.book_name:""}{essay.city?essay.city+", ":""}{(essay.month!=null && essay.month>0) && [ "Gennaio", "febbraio", "Marzo", "aprile", "Maggio", "Giugno", "Luglio", "agosto", "settembre", "ottobre", "novembre", "Dicembre" ][essay.month-1]+" "}{essay.year}</span>
 							</p>
 						</div>
 				))}

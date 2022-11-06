@@ -113,8 +113,10 @@ body {
 	background-color: #fff !important;
 }
 
-.swiper-slide-duplicate {
-	visibility: hidden;
+#library {
+	.swiper-slide-duplicate {
+		visibility: hidden;
+	}
 }
 
 .swiper-pagination-bullets {
@@ -123,6 +125,11 @@ body {
 
 .swiper-button-next, .swiper-button-prev {
 	color: $secondary-color !important;
+	opacity: .4;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+	opacity: 1;
 }
 
 .swiper-pagination-bullet-active {
