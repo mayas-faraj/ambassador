@@ -4,12 +4,14 @@
 	//opacity: .5;
 	//background-image: url("/assets/imgs/footer1.png");
 	//background-position: center -13px;
+	position: relative;
 	font-family: "arial-narrow", sans-serif;
 	letter-spacing: 0.5px;
 	background-color: $primary-color;
 	max-width: 100% !important;
 	color: $accent-color;
 	border-top: 5px solid $secondary-color;
+	box-shadow: 0 -1px 20px $primary-color;
 
 	a {
 		color: $secondary-color;
