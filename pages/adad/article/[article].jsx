@@ -22,8 +22,8 @@ export default function Article(props) {
 			<Fragment>
 				{article!=null && (
 					<Head>
-						<title>{article.title + " | Claudio Pacifico libri"}</title>
-						<meta property="og:title" content={article.title + " | Claudio Pacifico libri"}/>
+						<title>{article.title + " | Claudio Pacifico letture"}</title>
+						<meta property="og:title" content={article.title + " | Claudio Pacifico letture"}/>
 						<meta name="description" content={article.excerpt.replaceAll("\n", "")}/>
 						<meta property="og:description" content={article.excerpt.replaceAll("\n", "")}/>
 						{article.image && <meta property="og:image" content={context.uploadsUrl+"/"+article.image} />}

@@ -280,10 +280,17 @@ a[href="#library"] path {
 	margin-left: 0;
 }
 
+.book-page .react-pdf__Page__canvas {
+	height: 510px !important;
+}
+
+.essays .react-pdf__Page__canvas {
+	height: 100% !important;
+}
+
 .essays .react-pdf__Page__canvas,
 .book-page .react-pdf__Page__canvas {
 	width: fit-content !important;
-	height: 100% !important;
 	max-height: 60vh;
 	max-width: 95%;
 	margin: 0 auto;
