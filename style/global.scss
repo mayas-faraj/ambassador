@@ -2,8 +2,19 @@
 @import "fonts";
 
 html {
-	scroll-behavior: smooth;
 	font-size: 20px;
+	scroll-behavior: smooth;
+	scrollbar-width: thin;
+	scrollbar-color: $secondary-color $accent-color;
+}
+
+html::-webkit-scrollbar {
+	width: 4px;
+	background-color: $accent-color;
+}
+
+html::-webkit-scrollbar-thumb {
+	background-color: $secondary-color;
 }
 
 header {

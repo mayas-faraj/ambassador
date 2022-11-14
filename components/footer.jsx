@@ -17,11 +17,15 @@ export default function Footer() {
 		{"image": "ambasciata-teheran.png", "alt": "ambasciata teheran logo", "title": ""},
 		{"image": "ambasciata-khartoum.png", "alt": "ambasciata khartoum logo", "title": ""},
 		{"image": "ambasciata-dhaka.png", "alt": "ambasciata dhaka logo", "title": ""},
-		{"image": "ambasciata-khartoum2.png", "alt": "ambasciata khartoum logo", "title": ""},
+		{"image": "ambasciata-washington-dc.png", "alt": "ambasciata washington logo", "title": ""},
 		{"image": "sapienza.png", "alt": "sapienze logo", "title": "La sapienza\nuniversità di roma"},
 		{"image": "luiss.png", "alt": "luiss logo", "title": "Luiss Università\nguido carli"},
+		{"image": ""},
+		{"image": "harvard-university.png", "alt": "harvard university logo", "title": ""},
+		{"image": "associazione-pergine.png", "alt": "associazione pergine logo", "title": "Associazione \nAmici della storia"},
 		{"image": "studi-diplomatici.png", "alt": "studi diplomatici logo", "title": "Circolo studi\ndiplomatici"},
-		{"image": "associazione-pergine.png", "alt": "associazione pergine logo", "title": "Associazione \nAmici della storia"}
+		{"image": "cambridge-university.png", "alt": "cambridge university logo", "title": ""},
+		{"image": ""},
 	];
 
 	const [windowWidth, setWindowWidth]=React.useState(-1);
@@ -40,7 +44,7 @@ export default function Footer() {
 						<div className={style["footer-icons"]+" "+style["footer-icons--first-row"]}>
 						{
 							icons.filter((icon, index)=>index<6).map((icon, index)=>(
-								<div key={icon.image} className={style["footer-icons__item"]}>
+								<div key={icon.image} className={style["footer-icons__item"]+(icon.title.split("\n").length==2?" "+style["footer-icons__item--small-caption"]:"")}>
 									<a target="_blank" href="#" className={style["footer-icons__link"]}>
 										<img src={"/assets/imgs/footer/"+icon.image} alt={icon.alt}/>
 										<div className={style["footer-icons__title"]}>{icon.title}</div>
@@ -62,12 +66,12 @@ export default function Footer() {
 						}
 						</div>
 						<div className={style["footer-container"]+" "+style["footer-icons--third-row"]}>
-							<div className={style["footer-icons"]}>
+							<div className={style["footer-icons"]+" "+style["footer-icons--left"]}>
 							{
-								icons.filter((icon, index)=>index==12 || index==13).map((icon, index)=>(
-									<div key={icon.image} className={style["footer-icons__item"]}>
+								icons.filter((icon, index)=>index>=12 && index<16).map((icon, index)=>(
+									<div key={icon.image} className={style["footer-icons__item"]+(icon.image?"":" "+style["footer-icons__item--transparent"])}>
 										<a target="_blank" href="#" className={style["footer-icons__link"]}>
-											<img src={"/assets/imgs/footer/"+icon.image} alt={icon.alt}/>
+											<img src={icon.image?"/assets/imgs/footer/"+icon.image:"/assets/imgs/transparent.png"} alt={icon.alt}/>
 											<div className={style["footer-icons__title"]}>{icon.title}</div>
 										</a>
 									</div>
@@ -75,22 +79,26 @@ export default function Footer() {
 							}
 							</div>
 							<div className={style["footer-contact"]}>
-								<div className={style["footer-contact__title"]}>Contatti</div>
+								<div className={style["footer-contact__title"]}>Contacts</div>
 								<p className={style["footer-contact__content"]}>	
-									<a href="mainto:Info@claudiopacificoambassador.com">Info@claudiopacificoambassador.com</a><br/>
-									Sito <a href="tel:00393383733009">+39 3383733009</a><br/><br/>
-									Indirizzo sede legale<br/>
-									via Giuseppe Ferrari n. 2<br/>
-									00195 Roma<br/>
-									Tel. <a href="tel:063221102">063221102</a>-<a href="tel:063221192">063221192</a> fax <a href="tel:0632507421">0632507421</a>
+									<br/>
+									<a href="mainto:info@claudiopacificoambassador.com">Info@claudiopacificoambassador.com</a><br/><br/>	
+									Website promoters<br/>
+									Studio ADAD, Milan<br/> 
+									<a href="mainto:info@adadonline.com">info@adadonline.com</a><br/><br/>
+									Sede legale Studio Romani<br/>
+									Via Giuseppe Ferrari n. 2<br/>
+									00195, Rome<br/>
+									Tel. <a href="tel:063221102">063221102</a> - <a href="tel:063221192">063221192</a><br/>
+									Fax <a href="tel:0632507421">0632507421</a>
 								</p>
 							</div>
-							<div className={style["footer-icons"]}>
+							<div className={style["footer-icons"]+" "+style["footer-icons--right"]}>
 							{
-								icons.filter((icon, index)=>index==14 || index==15).map((icon, index)=>(
-									<div key={icon.image} className={style["footer-icons__item"]}>
+								icons.filter((icon, index)=>index>=16 && index<20).map((icon, index)=>(
+									<div key={icon.image} className={style["footer-icons__item"]+(icon.image?"":" "+style["footer-icons__item--transparent"])}>
 										<a target="_blank" href="#" className={style["footer-icons__link"]}>
-											<img src={"/assets/imgs/footer/"+icon.image} alt={icon.alt}/>
+											<img src={icon.image?"/assets/imgs/footer/"+icon.image:"/assets/imgs/transparent.png"} alt={icon.alt}/>
 											<div className={style["footer-icons__title"]}>{icon.title}</div>
 										</a>
 									</div>
@@ -103,7 +111,7 @@ export default function Footer() {
 				{ (windowWidth>0 && windowWidth<600) && (
 					<>
 						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={2} navigation>
-						{icons.filter((icon, index)=>index<6).map(icon=>(
+						{icons.filter((icon, index)=>index<6).map(icon=>icon.image && (
 							<SwiperSlide key={icon.image} className={style["footer-icons__slide"]}>
 								<a target="_blank" href="#" className={style["footer-icons__link"]}>
 									<img src={"/assets/imgs/footer/"+icon.image} alt={icon.alt}/>
@@ -114,7 +122,7 @@ export default function Footer() {
 						}
 						</Swiper>
 						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={2} navigation>
-						{icons.filter((icon, index)=>(index>=6 && index<12)).map(icon=>(
+						{icons.filter((icon, index)=>(index>=6 && index<12)).map(icon=>icon.image && (
 							<SwiperSlide key={icon.image} className={style["footer-icons__slide"]}>
 								<a target="_blank" href="#" className={style["footer-icons__link"]}>
 									<img src={"/assets/imgs/footer/"+icon.image} alt={icon.alt}/>
@@ -125,7 +133,7 @@ export default function Footer() {
 						}
 						</Swiper>
 						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={2} navigation>
-						{icons.filter((icon, index)=>index>=12).map(icon=>(
+						{icons.filter((icon, index)=>index>=12).map(icon=>icon.image && (
 							<SwiperSlide key={icon.image} className={style["footer-icons__slide"]}>
 								<a target="_blank" href="#" className={style["footer-icons__link"]}>
 									<img src={"/assets/imgs/footer/"+icon.image} alt={icon.alt}/>

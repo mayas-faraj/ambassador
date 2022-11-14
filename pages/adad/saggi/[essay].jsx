@@ -91,7 +91,7 @@ export default props=>{
 							<p className={style["essay-info"]}>
 								<span className={style["essay-info__comment"]}>{essay.comment}</span><br/>
 								<span className={style["essay-info__title"]}>{essay.primary_title}</span>
-								<span className={style["essay-info__meta"]}>{essay.book_name?essay.book_name:""}{essay.city?essay.city+", ":""}{(essay.month!=null && essay.month>0) && [ "Gennaio", "febbraio", "Marzo", "aprile", "Maggio", "Giugno", "Luglio", "agosto", "settembre", "ottobre", "novembre", "Dicembre" ][essay.month-1]+" "}{essay.year}</span>
+								<span className={style["essay-info__meta"]}>{essay.book_name?essay.book_name:""}{essay.city?essay.city+", ":""}{essay.day!=null && essay.day} {(essay.month!=null && essay.month>0) && [ "Gennaio", "febbraio", "Marzo", "aprile", "Maggio", "Giugno", "Luglio", "agosto", "settembre", "ottobre", "novembre", "Dicembre" ][essay.month-1]+" "}{essay.year}</span>
 							</p>
 						</div>
 				))}
