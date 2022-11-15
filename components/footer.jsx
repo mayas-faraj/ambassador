@@ -8,7 +8,7 @@ export default function Footer() {
 	const icons=[
 		{"image": "gran-teatro.png", "alt": "gran teatro logo", "title": "Gran teatro\nla fenice", "link": "https://www.teatrolafenice.it/"},
 		{"image": "associazione-nazionale.png", "alt": "associazione nazionale logo", "title": "Associazione Nazionale\nCarabinieri", "link": "https://assocarabinieri.it/"},
-		{"image": "presidenza-della.png", "alt": "presidenza della logo", "title": "Presidenza della \nrepubblica Italiana", "link": "https://www.quirinale.it/onorificenze/ricerca"},
+		{"image": "presidenza-della.png", "alt": "presidenza della logo", "title": "Presidenza della \nrepubblica Italiana", "link": "https://www.quirinale.it/onorificenze/insigniti/133663"},
 		{"image": "assocazione-nazionale-diplomatici.png", "alt": "assocazione nazionale diplomatici logo", "title": "Assocazione\nNazionale Diplomatici\nar.- constantino nigra", "link": "http://www.assdiplar.it/default.php"},
 		{"image": "l-accademia-etrusca.png", "alt": "l-accademia etrusca logo", "title": "L’ACCADEMIA \nETRUSCA DI CORTONA", "link": "https://www.accademia-etrusca.org/"},
 		{"image": "istituto-euro-mediterraneo.png", "alt": "istituto euro mediterraneo logo", "title": "Istituto \nEuro-mediterraneo\ne Per i paesi arabi", "link": "http://www.istitutoperilmondoarabo.it"},

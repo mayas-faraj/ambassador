@@ -2,6 +2,9 @@
 admin-cp
 build
 
+#swap files
+*.swp
+
 #build files
 .next
 out
