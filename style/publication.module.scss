@@ -31,19 +31,15 @@
 .publications-top__book-title {
 	font-size: 16px;
 	font-style: normal; 
+	text-transform: uppercase;
 	margin: 0;
 }
 
 .publications-top__book-preface {
 	white-space: pre-wrap;
 	margin-top: 5px;
-	height: 56px;
-	overflow-y: auto;
-	scrollbar-width: none;
-}
-
-.publications-top__book-preface::-webkit-scrollbar {
-	display: none;
+	overflow: hidden;
+	height: 75px;
 }
 
 .publications-top__desc {
@@ -54,6 +50,10 @@
 	font-size: 16px;
 	letter-spacing: 0.5px;
 	color: $accent-color;
+	height: 125px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	scrollbar-width: none;
 }
 
 .publications-top__desc::after {
@@ -194,5 +194,5 @@
 
 .publications-noitems {
 	text-align: center;
-	height: 400px;
+	height: 323px;
 }

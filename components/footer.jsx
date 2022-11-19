@@ -110,7 +110,7 @@ export default function Footer() {
 				}
 				{ (windowWidth>0 && windowWidth<600) && (
 					<>
-						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={2} navigation>
+						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={1} navigation>
 						{icons.filter((icon, index)=>index<6).map(icon=>icon.image && (
 							<SwiperSlide key={icon.image} className={style["footer-icons__slide"]}>
 								<a target="_blank" href={icon.link} className={style["footer-icons__link"]}>
@@ -121,7 +121,7 @@ export default function Footer() {
 						))
 						}
 						</Swiper>
-						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={2} navigation>
+						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={1} navigation>
 						{icons.filter((icon, index)=>(index>=6 && index<12)).map(icon=>icon.image && (
 							<SwiperSlide key={icon.image} className={style["footer-icons__slide"]}>
 								<a target="_blank" href={icon.link} className={style["footer-icons__link"]}>
@@ -132,7 +132,7 @@ export default function Footer() {
 						))
 						}
 						</Swiper>
-						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={2} navigation>
+						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={1} navigation>
 						{icons.filter((icon, index)=>index>=12).map(icon=>icon.image && (
 							<SwiperSlide key={icon.image} className={style["footer-icons__slide"]}>
 								<a target="_blank" href={icon.link} className={style["footer-icons__link"]}>

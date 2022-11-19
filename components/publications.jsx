@@ -25,7 +25,6 @@ class Publications extends React.Component {
 	static contextType=SettingContext;
 
 	componentDidUpdate(prevProps) {
-		console.log(this.state.categories);
 		if(this.state.categories.length>0 && prevProps.activeCategoryIndex!==this.props.activeCategoryIndex) {
 			this.setState({activeCategoryIndex: this.props.activeCategoryIndex});
 			this.categoryClickHandler(this.state.categories[this.props.activeCategoryIndex].name, this.props.activeCategoryIndex);
@@ -48,7 +47,6 @@ class Publications extends React.Component {
 					axios.post(this.context.backendApiUrl, {"operation": operation})
 					.then(result=>this.setState({books: result.data}))
 					.catch(err=>console.error(err));
-				this.componentDidUpdate({activeCategoryIndex: 0});
 			});
 		})
 		.catch(err=>console.error(err));
@@ -61,11 +59,12 @@ class Publications extends React.Component {
 				operation="read-books";
 			else if(name=="saggi")
 				operation="read-essays";
-			console.log(operation);
 			if(operation)
 				axios.post(this.context.backendApiUrl, {"operation": operation})
 				.then(result=>this.setState({books: result.data}))
 				.catch(err=>console.error(err));
+			else
+				this.setState({books: []});
 		});
 	}
 
@@ -81,21 +80,27 @@ class Publications extends React.Component {
 	}
 
 	initSwiperHandler(swiper) {
-		console.log(swiper, swiper.activeIndex);
+		//console.log(swiper, swiper.activeIndex);
 	}
 
 	render() {
+		console.log(this.state.books);
 		return (
 			<div className={style["publications"]} ref={this.props.setRef}>
 				<div className={style["publications-header"]}>
 					<div className={style["publications-top"]}>
 						<div key={this.state.activeBookIndex} className={style["publications-top__desc"]}>
 						{(this.state.activeBookIndex<0 || this.state.books.length===0) && "si prega di spostare il mouse sul libro per leggere la prefazione"}
-						{this.state.activeBookIndex>=0 && this.state.books.length>0 && this.state.activeBookIndex<this.state.books.length && (
-							<Fragment>
-								<h4 className={style["publications-top__book-title"]}>{this.state.books[this.state.activeBookIndex].title.toUpperCase()}</h4>
-								<p className={style["publications-top__book-preface"]}>{this.state.books[this.state.activeBookIndex].preface}</p>
-							</Fragment>)}
+						{(this.state.activeBookIndex>=0 && this.state.books.length>0 && this.state.activeBookIndex<this.state.books.length) && (
+							(this.state.categories[this.state.activeCategoryIndex].name=="libri") && (
+								<Fragment>
+									<h4 className={style["publications-top__book-title"]}>{this.state.books[this.state.activeBookIndex].title}</h4>
+									<p className={style["publications-top__book-preface"]}>{this.state.books[this.state.activeBookIndex].preface}</p>
+								</Fragment>
+							) || (this.state.categories[this.state.activeCategoryIndex].name=="saggi") && (
+								<h4 className={style["publications-top__book-title"]}>{this.state.books[this.state.activeBookIndex].preface}</h4>
+							)
+						)}
 						</div>
 						{
 							this.state.activeCategoryIndex===0 && (
@@ -125,7 +130,7 @@ class Publications extends React.Component {
 					<h2 className={style["publications-header__title"]}>{this.state.categories!=null && this.state.categories[this.state.activeCategoryIndex]!=null && this.state.categories[this.state.activeCategoryIndex].name}</h2>
 				</div>
 				<div className={style["publications-content"]}>
-					{ this.state.books==null && <Glimmer/> }
+					{ this.state.books===null && <Glimmer/> }
 					{ this.state.books!==null && (
 						<Swiper key={this.state.books.length} modules={[Pagination]} spaceBetween={15} loop={true} centerInsufficientSlides={true} grabCursor={true} loopFillGroupWithBlank={true} loopedSlides={5-this.state.books.length%5} initialSlide={this.state.books.length-1} onUpdate={this.initSwiperHandler} pagination={{clickable: true}} breakpoints={{100: {slidesPerView: 1, slidesPerGroup: 1}, 550: {slidesPerView: 2, slidesPerGroup: 2}, 700: {slidesPerView: 3, slidesPerGroup: 3}, 900: {slidesPerView: 4, slidesPerGroup: 4}, 1100: {slidesPerView: 5, slidesPerGroup: 5}}}>
 						{ this.state.books.length===0 && <p className={style["publications-noitems"]}>gli articoli arriveranno presto</p> }

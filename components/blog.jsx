@@ -3,6 +3,7 @@ import axios from 'axios';
 import SettingContext from './setting-context';
 import Glimmer from './glimmer';
 import Head from "next/head";
+import Script from "next/script";
 import FacebookIcon from '/public/assets/imgs/facebook-logo.svg';
 import LinkedinIcon from '/public/assets/imgs/linkedin-logo.svg';
 import TwitterIcon from '/public/assets/imgs/twitter-logo.svg';
