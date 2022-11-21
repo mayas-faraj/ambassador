@@ -32,10 +32,14 @@ body {
 	margin: 0;
 }
 
-@media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
-	#__next {
+#__next {
+  @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
 		zoom: 90%;
 	}
+
+  @media screen and (max-width: $mobile-width) {
+		zoom: 70%;
+  }
 }
 
 #__next {
@@ -118,6 +122,10 @@ body {
 	@media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
 		left: calc(50vw - 90px);
 	}
+
+	@media screen and (max-width: $mobile-width) {
+		left: calc(50vw - 70px);
+  }
 }
 
 .swiper-wrapper {

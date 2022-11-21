@@ -28,6 +28,15 @@ export default function Footer() {
 		{"image": "", "link": ""},
 	];
 
+  const swiperIconIndex=[
+    [0, 6, 12],
+    [1, 7, 13],
+    [2, 8, 15],
+    [3, 9, 16],
+    [4, 10, 17],
+    [5, 11, 18]
+  ];
+
 	const [windowWidth, setWindowWidth]=React.useState(-1);
 
 	React.useEffect(()=>{
@@ -111,56 +120,42 @@ export default function Footer() {
 				{ (windowWidth>0 && windowWidth<600) && (
 					<>
 						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={1} navigation>
-						{icons.filter((icon, index)=>index<6).map(icon=>icon.image && (
-							<SwiperSlide key={icon.image} className={style["footer-icons__slide"]}>
-								<a target="_blank" href={icon.link} className={style["footer-icons__link"]}>
-									<img src={"/assets/imgs/footer/"+icon.image} alt={icon.alt}/>
-									<div className={style["footer-icons__title"]}>{icon.title}</div>
-								</a>
-							</SwiperSlide>
-						))
-						}
+						{
+              swiperIconIndex.map(indexes=>(
+                <SwiperSlide key={indexes.join("")} className={style["footer-icons__slide"]}>
+                {
+                  indexes.map(index=>(
+                    <a key={icons[index].title} target="_blank" href={icons[index].link} className={style["footer-icons__swiper-link"]}>
+                      <img src={"/assets/imgs/footer/"+icons[index].image} alt={icons[index].alt}/>
+                      <div className={style["footer-icons__title"]}>{icons[index].title}</div>
+                    </a>
+                  ))
+                }
+							  </SwiperSlide>
+               ))
+            }
 						</Swiper>
-						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={1} navigation>
-						{icons.filter((icon, index)=>(index>=6 && index<12)).map(icon=>icon.image && (
-							<SwiperSlide key={icon.image} className={style["footer-icons__slide"]}>
-								<a target="_blank" href={icon.link} className={style["footer-icons__link"]}>
-									<img src={"/assets/imgs/footer/"+icon.image} alt={icon.alt}/>
-									<div className={style["footer-icons__title"]}>{icon.title}</div>
-								</a>
-							</SwiperSlide>
-						))
-						}
-						</Swiper>
-						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={1} navigation>
-						{icons.filter((icon, index)=>index>=12).map(icon=>icon.image && (
-							<SwiperSlide key={icon.image} className={style["footer-icons__slide"]}>
-								<a target="_blank" href={icon.link} className={style["footer-icons__link"]}>
-									<img src={"/assets/imgs/footer/"+icon.image} alt={icon.alt}/>
-									<div className={style["footer-icons__title"]}>{icon.title}</div>
-								</a>
-							</SwiperSlide>
-						))
-						}
-						</Swiper>
-						<div className={style["footer-contact"]}>
-							<div className={style["footer-contact__title"]}>Contatti</div>
-							<p className={style["footer-contact__content"]}>	
-								<a href="mainto:Info@claudiopacificoambassador.com">Info@claudiopacificoambassador.com</a><br/>
-								Sito <a href="tel:00393383733009">+39 3383733009</a><br/><br/>
-								Indirizzo sede legale<br/>
-								via Giuseppe Ferrari n. 2<br/>
-								00195 Roma<br/>
-								Tel. <a href="tel:063221102">063221102</a>-<a href="tel:063221192">063221192</a> fax <a href="tel:0632507421">0632507421</a>
-							</p>
+            <div className={style["footer-contact"]+" "+style["footer-contact--mobile"]}>
+								<div className={style["footer-contact__title"]}>Contacts</div>
+								<p className={style["footer-contact__content"]}>	
+									<br/>
+									<a href="mainto:info@claudiopacificoambassador.com">Info@claudiopacificoambassador.com</a><br/><br/>	
+									Website promoters<br/>
+									Studio ADAD, Milan<br/> 
+									<a href="mainto:info@adadonline.com">info@adadonline.com</a><br/><br/>
+									Sede legale Studio Romani<br/>
+									Via Giuseppe Ferrari n. 2<br/>
+									00195, Rome<br/>
+									Tel. <a href="tel:063221102">063221102</a> - <a href="tel:063221192">063221192</a><br/>
+									Fax <a href="tel:0632507421">0632507421</a>
+								</p>
 						</div>
-
 					</>)
 				}	
 		 	</div>
 			<div className={style["footer-bottom"]}>
 				<p className={style["footer-bottom__copyright"]}>
-					Sito ufficiale dell’Ambasciatore Claudio Pacifico<br/>
+					Sito ufficiale <wbr/> dell’Ambasciatore Claudio Pacifico<br/>
 					tutti i diritti sono riservati ©2022
 				</p>
 			</div>
