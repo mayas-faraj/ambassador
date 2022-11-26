@@ -189,11 +189,15 @@
     background-color: #a10000;
     text-align: center;
     position: fixed;
-    bottom: 100px;
-    right: 70px;
-    opacity: .5;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0;
     z-index: 999999;
     transition: opacity .5s;
+}
+
+.footer__button-top--active {
+    opacity: .5;
 }
 
 .footer__button-top:hover {

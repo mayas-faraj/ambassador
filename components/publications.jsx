@@ -84,7 +84,6 @@ class Publications extends React.Component {
 	}
 
 	render() {
-		console.log(this.state.books);
 		return (
 			<div className={style["publications"]} ref={this.props.setRef}>
 				<div className={style["publications-header"]}>

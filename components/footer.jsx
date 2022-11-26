@@ -38,14 +38,20 @@ export default function Footer() {
   ];
 
 	const [windowWidth, setWindowWidth]=React.useState(-1);
-
+  const [topButtonVisible, setTopButtonVisible]=React.useState(false);
 	React.useEffect(()=>{
 		setWindowWidth(window.innerWidth);
 	}, []);
 
+  React.useEffect(()=>{
+    const setTopButtonVisibleByScroll=()=>setTopButtonVisible(window.scrollY>=500);
+    window.addEventListener("scroll", setTopButtonVisibleByScroll);
+    return ()=>window.removeEventListener("scroll", setTopButtonVisibleByScroll);
+  }, []);
+
 	return (
 		<footer id="footer" className={style["footer"]}>
-			<a className={style["footer__button-top"]} href="#__next">^</a>
+			<a className={style["footer__button-top"]+(topButtonVisible?" "+style["footer__button-top--active"]:"")} href="#__next">^</a>
 			<div className={style["footer-top"]}>
 				<div className={style["footer-top__title"]}>fonti e SIti collegati</div>
 				{ windowWidth>=600 && (
@@ -122,10 +128,10 @@ export default function Footer() {
 						<Swiper className={style["footer-swiper"]} modules={[Navigation]} spaceBetween={0} loop={true} grabCursor={true} slidesPerView={1} navigation>
 						{
               swiperIconIndex.map(indexes=>(
-                <SwiperSlide key={indexes.join("")} className={style["footer-icons__slide"]}>
+                <SwiperSlide key={indexes.join(",")} className={style["footer-icons__slide"]}>
                 {
                   indexes.map(index=>(
-                    <a key={icons[index].title} target="_blank" href={icons[index].link} className={style["footer-icons__swiper-link"]}>
+                    <a key={icons[index].image} target="_blank" href={icons[index].link} className={style["footer-icons__swiper-link"]}>
                       <img src={"/assets/imgs/footer/"+icons[index].image} alt={icons[index].alt}/>
                       <div className={style["footer-icons__title"]}>{icons[index].title}</div>
                     </a>

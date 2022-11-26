@@ -10,9 +10,9 @@ import Contact from "/components/contact";
 import Travel from "/components/travel";
 import Footer from "/components/footer";
 import Seperator from "/public/assets/imgs/home-seperator.svg";
-//import Menu from "./assets/imgs/menu.svg";
-import style from '/style/home.module.scss';
+import Menu from "/public/assets/imgs/menu.svg";
 import ambassadorImg from '/public/assets/imgs/ambassador.png';
+import style from '/style/home.module.scss';
 
 export default function Home(props) {
 	const [stickyHeader, setStickyHeader]=React.useState(false);
@@ -52,7 +52,7 @@ export default function Home(props) {
 		{"id": "travel", "element": <TravelSection />}
 	];
 
-	/*
+  /*
 	const setSticky=()=> {
 		if(window.scrollY>=350)
 			setStickyHeader(true);
@@ -65,8 +65,7 @@ export default function Home(props) {
 			window.removeEventListener("scroll", setSticky);
 		};
 	}, []);
-	*/
-
+  */
 	React.useEffect(()=>{
 		/*
 		if(window.location.hash==="#library") libraryRef.current.scrollIntoView();
@@ -84,13 +83,15 @@ export default function Home(props) {
 
 	return (
 		<Fragment>
-			{/*
+      {
+      /*
 			<div className={"top-header__overlay"+(stickyHeader?" top-header__overlay--visible":"")}></div>
 			<div className={"top-header"+(stickyHeader?" top-header--visible":"")}>
 				<Menu className={style["top-header__menu"]} onClick={()=>setStickyMenuVisible(!stickyMenuVisible)}/>
 				<h1 className={style["top-header__title"]}>Ambasciatore d&apos;Italia<br/>Claudio Pacifico</h1>
 			</div>
-			*/}
+      */
+      }
 			<Head>
 				<meta name="description" content="ambasciatore d'italia, Claudio Pacifico, il diplomatico, lo scrittore, il saggista"/>
 				<meta property="og:title" content="Claudio Pacifico - Ambasciatore d'Italia" />
