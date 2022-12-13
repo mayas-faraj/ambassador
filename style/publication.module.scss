@@ -33,6 +33,9 @@
 	font-style: normal; 
 	text-transform: uppercase;
 	margin: 0;
+}
+
+.publications-top__book-title--prewrap {
   white-space: pre-wrap;
 }
 
@@ -56,6 +59,11 @@
 	overflow-x: hidden;
 	scrollbar-width: none;
 }
+
+.publications-top__desc::-webkit-scrollbar {
+  display: none;
+}
+
 
 .publications-top__desc::after {
 	content: ' ';

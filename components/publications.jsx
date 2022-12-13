@@ -95,7 +95,7 @@ class Publications extends React.Component {
 									<p className={style["publications-top__book-preface"]}>{this.state.books[this.state.activeBookIndex].preface}</p>
 								</Fragment>
 							) || (this.state.categories[this.state.activeCategoryIndex].name=="saggi") && (
-								<h4 className={style["publications-top__book-title"]}>{this.state.books[this.state.activeBookIndex].preface}</h4>
+								<h4 className={style["publications-top__book-title"]+" "+style["publications-top__book-title--prewrap"}>{this.state.books[this.state.activeBookIndex].preface}</h4>
 							)
 						)}
 						</div>
