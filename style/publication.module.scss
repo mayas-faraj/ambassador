@@ -33,6 +33,7 @@
 	font-style: normal; 
 	text-transform: uppercase;
 	margin: 0;
+  white-space: pre-wrap;
 }
 
 .publications-top__book-preface {
@@ -137,6 +138,10 @@
 	margin: 4px;
 	color: #000;
 	line-height: 20px;
+}
+
+.publications-item__content--full-height {
+  height: 288px;
 }
 
 .publications-item__content--arabic {

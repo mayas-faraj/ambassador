@@ -76,7 +76,7 @@
 	text-align: right;
 	text-transform: uppercase;
 	flex-basis: 400px;
-	margin-left: 55px;
+  margin-left: 55px;
 
 	@media (min-width: $desktop-width) {
 		flex-basis: 410px;
@@ -107,7 +107,7 @@
 	font-family: minion-bold-subh;
 	font-size: 28px;
 	line-height: 26px;
-	margin: 52px 0 6px;
+	margin: 14px 0 6px;
 	color: $secondary-color;
 	letter-spacing: 1px;
 	white-space: pre-line;
@@ -176,7 +176,6 @@
 	position: relative;
 	z-index: 999;
 	object-fit: cover;
-	margin-left: 55px;
 }
 
 .book-browse__iframe {
@@ -275,7 +274,7 @@
     position: absolute;
     top: 200px;
     margin-left: -100px;
-    width: 90px;
+    width: 120px;
     height: calc(100% - 220px);
     padding-right: 10px;
     overflow: scroll;
@@ -286,7 +285,7 @@
 
 .book-list::before {
     content: ' ';
-    width: 80px;
+    width: 110px;
     border-top: 1px solid;
     height: 5px;
     position: sticky;
@@ -324,6 +323,10 @@
     margin-bottom: 8px;
     z-index: 99;
     background-color: $accent-color;
+}
+
+.book-frame {
+    height: 400px;
 }
 
 .book-item:hover .book-item__image {

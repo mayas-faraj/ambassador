@@ -6,8 +6,6 @@ import {Pagination} from 'swiper';
 import Glimmer from './glimmer';
 import SettingContext from './setting-context';
 import style from '/style/publication.module.scss';
-import transparentImage from '/public/assets/imgs/transparent.png';
-
 
 class Publications extends React.Component {
 	constructor(props) {
@@ -134,13 +132,15 @@ class Publications extends React.Component {
 						<Swiper key={this.state.books.length} modules={[Pagination]} spaceBetween={15} loop={true} centerInsufficientSlides={true} grabCursor={true} loopFillGroupWithBlank={true} loopedSlides={5-this.state.books.length%5} initialSlide={this.state.books.length-1} onUpdate={this.initSwiperHandler} pagination={{clickable: true}} breakpoints={{100: {slidesPerView: 1, slidesPerGroup: 1}, 550: {slidesPerView: 2, slidesPerGroup: 2}, 700: {slidesPerView: 3, slidesPerGroup: 3}, 900: {slidesPerView: 4, slidesPerGroup: 4}, 1100: {slidesPerView: 5, slidesPerGroup: 5}}}>
 						{ this.state.books.length===0 && <p className={style["publications-noitems"]}>gli articoli arriveranno presto</p> }
 						{ this.state.books.status!=="failed" && this.state.books.status!=="error" && this.state.books.map((book, index)=>(
-								<SwiperSlide key={book.title}>
+								<SwiperSlide key={book.slug+index}>
 										<Link href={"/adad/"+this.state.categories[this.state.activeCategoryIndex].name+"/"+book.slug}>
 											<a onMouseEnter={()=>this.bookHoverEventHandler(index)} className={style["publications-item"]} >
-											<p className={style["publications-item__content"]+" "+(/[ا-ي]/.test(book.title)?style["publications-item__content--arabic"]:"")}>
+											<p className={style["publications-item__content"]+(!book.image?" "+style["publications-item__content--full-height"]:"")+" "+(/[ا-ي]/.test(book.title)?style["publications-item__content--arabic"]:"")}>
 											{book.title}
 											</p>
-											<img src={book.image?book.image:transparentImage.src} className={style["publications-item__image"]} alt={book.title} />
+                      {
+											book.image && <img src={book.image} className={style["publications-item__image"]} alt={book.title} />
+                      }
 											<h3 className={style["publications-item__title"]}>{(book.month?(parseInt(book.month)+1)+"/":"")+book.year}</h3>
 											</a>
 										</Link>

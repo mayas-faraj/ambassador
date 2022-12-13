@@ -131,12 +131,19 @@ export default function Book(props) {
 							book.book_file && (
 							<div className={style["book-browse-basic"]}>
 								<div className={style["book-browse__pdf"]+" "+(book.book_file_pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
+                {
+                  (book.book_file && !book.book_file.startsWith("http")) &&
 									<a className={style["book-link"]} href={book.book_file} target="_blank">
 										<Document file={book.book_file} onLoadSuccess={bookLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.book_file_pages_per_view>1 &&(bookPageNumber<=1 || bookPagesCount<2*bookPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setBookModal(true)}>
 											<Page width={3000} pageNumber={book.book_file_pages_per_view>1?2*bookPageNumber-1:bookPageNumber} />
 											{book.book_file_pages_per_view>1 && <Page width={3000} pageNumber={2*bookPageNumber} />}
 										</Document>
 									</a>
+                }
+                {
+                  (book.book_file && book.book_file.startsWith("http")) &&
+                  <iframe className={style["book-frame"]} src={book.book_file} />
+                }
 								</div>
 								<p className={style["book-browse__text"]}>contenuti</p>
 								<Dialog open={bookModal} onClose0={()=>setBookModal(false)} maxWidth={"lg"} fullWidth={true}>
@@ -153,12 +160,19 @@ export default function Book(props) {
 							book.revision_file && (
 							<div className={style["book-browse-revision"]}>
 								<div className={style["book-browse__pdf"]+" "+(book.revision_file_pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
+                {
+                  (book.revision_file && !book.revision_file.startsWith("http")) &&
 									<a className={style["book-link"]} href={book.revision_file} target="_blank">
 										<Document file={book.revision_file} onLoadSuccess={revisionLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.revision_file_pages_per_view>1 &&(revisionPageNumber<=1 || revisionPagesCount<2*revisionPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setRevisionModal(true)}>
 											<Page width={3000} pageNumber={book.revision_file_pages_per_view>1?2*revisionPageNumber-1:revisionPageNumber}/>
 											{book.revision_file_pages_per_view>1 && <Page width={3000} pageNumber={2*revisionPageNumber}/>}
 										</Document>
 									</a>
+                }
+                {
+                  (book.revision_file && book.revision_file.startsWith("http")) &&
+                  <iframe className={style["book-frame"]} src={book.revision_file} />
+                }
 								</div>
 								<p className={style["book-browse__text"]}>recensioni</p>
 								<Dialog open={revisionModal} onClose0={()=>setRevisionModal(false)} maxWidth={"lg"} fullWidth={true}>

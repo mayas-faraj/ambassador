@@ -73,11 +73,11 @@ export default function Home(props) {
 		if(window.location.hash==="#biografia") biografiaRef.current.scrollIntoView();
 		if(window.location.hash==="#diplomacy") diplomacyRef.current.scrollIntoView();
 		if(window.location.hash==="#travel") travelRef.current.scrollIntoView();
+    */
 		if(window.location.hash==="#saggi") {
-			libraryRef.current.scrollIntoView();
 			setActiveCategoryIndex(1);
+			libraryRef.current.scrollIntoView();
 		}
-		*/
 	}, []);
 
 
