@@ -21,6 +21,7 @@
     "react-pdf": "^5.7.2",
     "react-photoswipe-gallery": "^2.2.1",
     "react-scripts": "5.0.1",
+    "react-tiny-link": "^3.6.1",
     "swiper": "^8.1.5",
     "web-vitals": "^2.1.4"
   },

@@ -1,10 +1,11 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
-import {pdfjs, Document, Page} from 'react-pdf';
+import { pdfjs, Document, Page } from 'react-pdf';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Head from 'next/head';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 import axios from 'axios';
 import Glimmer from '/components/glimmer';
 import Footer from '/components/footer';
@@ -41,6 +42,8 @@ export default function Book(props) {
 
 	const bookLoadEventHandler=({numPages}) => setBookPagesCount(numPages);
 	const revisionLoadEventHandler=({numPages}) => setRevisionPagesCount(numPages);
+
+  const ReactTinyLink = dynamic(() => import('react-tiny-link').then(mod => mod.ReactTinyLink), { ssr: false });
 				
 	return (
 		<Fragment key={slug}>
@@ -142,7 +145,7 @@ export default function Book(props) {
                 }
                 {
                   (book.book_file && book.book_file.startsWith("http")) &&
-                  <iframe className={style["book-frame"]} src={book.book_file} />
+                  <ReactTinyLink cardSize="large" showGraphic={true} maxLine={2} minLine={1} url={book.book_file}/>
                 }
 								</div>
 								<p className={style["book-browse__text"]}>contenuti</p>
@@ -171,7 +174,7 @@ export default function Book(props) {
                 }
                 {
                   (book.revision_file && book.revision_file.startsWith("http")) &&
-                  <iframe className={style["book-frame"]} src={book.revision_file} />
+                  <ReactTinyLink cardSize="large" showGraphic={true} maxLine={2} minLine={1} url={book.revision_file}/>
                 }
 								</div>
 								<p className={style["book-browse__text"]}>recensioni</p>

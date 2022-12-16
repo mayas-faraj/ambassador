@@ -272,7 +272,8 @@ a[href="#library"] path {
 	background-color: #e0dcd4;
 	line-height: 60px;
 	text-align: center;
-	margin-top: 28px;
+  max-width: 720px;
+  margin: 54px auto 0;
 }
 
 .react-pdf__Page__annotations {
@@ -353,6 +354,13 @@ a[href="#library"] path {
     white-space: pre-line;
     font-size: 17px !important;
     color: #cc9966 !important;
+}
+
+.react_tinylink_card {
+	height: 400px;
+	max-width: 720px;
+	margin: 0 auto;
+	background: #e0dcd4;
 }
 
 .pswp__default-caption {
