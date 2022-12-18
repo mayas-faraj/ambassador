@@ -167,7 +167,7 @@ export default function Book(props) {
                 }
                 {
                   (book.revision_file && book.revision_file.endsWith(".jpg")) && (
-                  <a href={book.revision_link} target="_blank" className={style["book-link"]}>
+                  <a href={book.revision_link} target="_blank" className={style["book-image-link"]}>
                     <img src={book.revision_file} alt={book.title} className={style["book-image"]}/>
                   </a>)
                 }
