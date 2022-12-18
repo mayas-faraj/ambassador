@@ -43,8 +43,6 @@ export default function Book(props) {
 	const bookLoadEventHandler=({numPages}) => setBookPagesCount(numPages);
 	const revisionLoadEventHandler=({numPages}) => setRevisionPagesCount(numPages);
 
-  const ReactTinyLink = dynamic(() => import('react-tiny-link').then(mod => mod.ReactTinyLink), { ssr: false });
-				
 	return (
 		<Fragment key={slug}>
 			{props.book!=null && (
@@ -135,17 +133,13 @@ export default function Book(props) {
 							<div className={style["book-browse-basic"]}>
 								<div className={style["book-browse__pdf"]+" "+(book.book_file_pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
                 {
-                  (book.book_file && !book.book_file.startsWith("http")) &&
+                  (book.book_file && !book.book_file.endsWith(".pdf")) &&
 									<a className={style["book-link"]} href={book.book_file} target="_blank">
 										<Document file={book.book_file} onLoadSuccess={bookLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.book_file_pages_per_view>1 &&(bookPageNumber<=1 || bookPagesCount<2*bookPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setBookModal(true)}>
 											<Page width={3000} pageNumber={book.book_file_pages_per_view>1?2*bookPageNumber-1:bookPageNumber} />
 											{book.book_file_pages_per_view>1 && <Page width={3000} pageNumber={2*bookPageNumber} />}
 										</Document>
 									</a>
-                }
-                {
-                  (book.book_file && book.book_file.startsWith("http")) &&
-                  <ReactTinyLink cardSize="large" showGraphic={true} maxLine={2} minLine={1} url={book.book_file}/>
                 }
 								</div>
 								<p className={style["book-browse__text"]}>contenuti</p>
@@ -164,7 +158,7 @@ export default function Book(props) {
 							<div className={style["book-browse-revision"]}>
 								<div className={style["book-browse__pdf"]+" "+(book.revision_file_pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
                 {
-                  (book.revision_file && !book.revision_file.startsWith("http")) &&
+                  (book.revision_file && book.revision_file.endsWith(".pdf")) &&
 									<a className={style["book-link"]} href={book.revision_file} target="_blank">
 										<Document file={book.revision_file} onLoadSuccess={revisionLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.revision_file_pages_per_view>1 &&(revisionPageNumber<=1 || revisionPagesCount<2*revisionPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setRevisionModal(true)}>
 											<Page width={3000} pageNumber={book.revision_file_pages_per_view>1?2*revisionPageNumber-1:revisionPageNumber}/>
@@ -173,8 +167,10 @@ export default function Book(props) {
 									</a>
                 }
                 {
-                  (book.revision_file && book.revision_file.startsWith("http")) &&
-                  <ReactTinyLink cardSize="large" showGraphic={true} maxLine={2} minLine={1} url={book.revision_file}/>
+                  (book.revision_file && book.revision_file.endsWith(".jpg")) && (
+                  <a href={book.revision_link} target="_blank" className={style["book-link"]}>
+                    <img src={book.revision_file} alt={book.title} className={style["book-image"]}/>
+                  </a>)
                 }
 								</div>
 								<p className={style["book-browse__text"]}>recensioni</p>

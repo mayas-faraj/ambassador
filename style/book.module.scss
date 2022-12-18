@@ -306,7 +306,7 @@
 .book-list-wrapper::before {
     content: ' ';
     display: block;
-    width: 80px;
+    width: 110px;
     height: 18px;
     background: $accent-color;
     z-index: 999;
@@ -323,6 +323,15 @@
     margin-bottom: 8px;
     z-index: 99;
     background-color: $accent-color;
+}
+
+.book-link {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.book-image {
+  width: 100%;
 }
 
 .book-item:hover .book-item__image {
