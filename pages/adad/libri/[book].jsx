@@ -133,7 +133,6 @@ export default function Book(props) {
 							<div className={style["book-browse-basic"]}>
 								<div className={style["book-browse__pdf"]+" "+(book.book_file_pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
                 {
-                  (book.book_file && !book.book_file.endsWith(".pdf")) &&
 									<a className={style["book-link"]} href={book.book_file} target="_blank">
 										<Document file={book.book_file} onLoadSuccess={bookLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.book_file_pages_per_view>1 &&(bookPageNumber<=1 || bookPagesCount<2*bookPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setBookModal(true)}>
 											<Page width={3000} pageNumber={book.book_file_pages_per_view>1?2*bookPageNumber-1:bookPageNumber} />
