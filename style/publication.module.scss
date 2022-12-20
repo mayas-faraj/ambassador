@@ -118,6 +118,10 @@
 	margin: 45px 62px 0;
 }
 
+.publications-item--active {
+  background-color: $accent-color !important;
+}
+
 .publications-item {
 	display: block;
 	background-color: #fff;
@@ -128,10 +132,6 @@
 
 	a {
 		color: inherit; 
-	}
-
-	&:hover {
-		background-color: $accent-color;
 	}
 }
 
