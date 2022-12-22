@@ -133,7 +133,7 @@ class Publications extends React.Component {
 						{ this.state.books.length===0 && <p className={style["publications-noitems"]}>gli articoli arriveranno presto</p> }
 						{ this.state.books.status!=="failed" && this.state.books.status!=="error" && this.state.books.map((book, index)=>(
 								<SwiperSlide key={book.slug+index}>
-										<Link href={"/adad/"+this.state.categories[this.state.activeCategoryIndex].name+"/"+book.slug}>
+										<Link href={"/"+this.state.categories[this.state.activeCategoryIndex].name+"/"+book.slug}>
 											<a onMouseEnter={()=>this.bookHoverEventHandler(index)} className={style["publications-item"]+(index===this.state.activeBookIndex?" "+style["publications-item--active"]:"")} >
 											<p className={style["publications-item__content"]+(!book.image?" "+style["publications-item__content--full-height"]:"")+" "+(/[ا-ي]/.test(book.title)?style["publications-item__content--arabic"]:"")}>
 											{book.title}

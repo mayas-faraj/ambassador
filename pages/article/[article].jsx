@@ -30,14 +30,14 @@ export default function Article(props) {
 					</Head>
 				)}
 				<header className={style["article-header"]}>
-					<Link href="/adad/article">
+					<Link href="/article">
 						<a className={style["article-header__menu"]}>
 						Episodi, ricordi e analisi,<br/>
 						scritti dall’Ambasciatore d’Italia<br/>
 						Claudio Pacifico
 						</a>
 					</Link>
-					<Link href="/adad/article">
+					<Link href="/article">
 						<a><Seperator className={style["article-seperator"] + " section-seperator"} /></a>
 					</Link>
 				</header>

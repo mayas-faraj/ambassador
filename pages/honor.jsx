@@ -1,7 +1,7 @@
 import {Fragment} from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import Footer from '../../components/footer';
+import Footer from '/components/footer';
 import Seperator from "/public/assets/imgs/seperator.svg";
 import funeralImg from '/public/assets/imgs/claudio-pacifico-libya.jpg';
 import style from '/style/about.module.scss';
@@ -18,7 +18,7 @@ export default function Honor(props) {
 			</Head>
 			<header className={style["about-header"]}>
 				<div className={style["about-header__image-container"]}>
-					<Link href="/adad/"><a>
+					<Link href="/"><a>
 						<img className={style["about-header__image"]} src={funeralImg.src} alt="Claudio Pacifico on libya"/>
 						<Seperator viewBox="0 0 331 34" className={style["about-seperator"]+ " " + "section-seperator"} />
 					</a></Link>

@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 	"body": JSON.stringify({"operation": "read-books"})
    });
    const books=await data.json();
-   books.map(async book=>await res.revalidate(`/adad/libri/${book.slug}`));
+   books.map(async book=>await res.revalidate(`/libri/${book.slug}`));
    return res.json({ revalidated: true })
   } catch (err) {
     return res.status(500).send('Error revalidating')

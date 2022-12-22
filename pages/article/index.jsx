@@ -29,7 +29,7 @@ export default function Articles() {
 			</Head>
 			<header className={style["articles-header"]}>
 				<div className={style["articles-header__image-container"]}>
-					<Link href="/adad/#letture"><a>
+					<Link href="/#letture"><a>
 						<img className={style["articles-header__image"]} src={headerImage.src} alt="Claudio Pacifico in newspaper"/>
 						<Seperator className={style["articles-seperator"]+" section-seperator"} />
 					</a></Link>
@@ -47,11 +47,11 @@ export default function Articles() {
 					{
 						articles.map(article=>(
 							<div key={article.slug} className={style["articles-item"]}>
-								<Link href={"/adad/article/"+article.slug}>
+								<Link href={"/article/"+article.slug}>
 									<a><img className={style["articles-item__image"]} src={context.uploadsUrl+"/"+article.image} alt={article.excerpt}/></a>
 								</Link>
 								<strong className={style["articles-item__type"]}>{article.type}</strong>
-								<Link href={"/adad/article/"+article.slug}>
+								<Link href={"/article/"+article.slug}>
 									<a className={style["articles-item__name"]}>{article.title + "\n..."}</a>
 								</Link>
 							</div>

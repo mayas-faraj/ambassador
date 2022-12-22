@@ -35,13 +35,13 @@ export default function DiplomaticReport({countries}) {
 			</Head>
 			<header className={style["diplomatic-report-header"]}>
 				<Link
-					href="/adad/#diplomacy"
+					href="/#diplomacy"
 				>
 					<a className={style["diplomatic-report-header__menu"]}>
 					L’Ambasciatore d’Italia Claudio Pacifico
 					</a>
 				</Link>
-				<Link href="/adad/#diplomacy">
+				<Link href="/#diplomacy">
 					<a><Seperator viewBox="0 0 331 34" className={style["diplomatic-report-seperator"]+" section-seperator"} /></a>
 				</Link>
 			</header>

@@ -13,7 +13,7 @@ export default function About() {
 	const context=React.useContext(SettingContext);
 	const [sections, setSections]=React.useState([]);
 	React.useEffect(()=>{
-		axios.post(context.backendApiUrl, {"operation": "read-about-fr-sections"})
+		axios.post(context.backendApiUrl, {"operation": "read-about-it-sections"})
 		.then(result=>setSections(result.data))
 		.catch(err=>console.error(err));
 
@@ -30,12 +30,12 @@ export default function About() {
 			</Head>
 			<header className={style["about-header"]}>
 				<div className={style["about-header__image-container"]}>
-					<Link href="/adad/#biografia"><a>
-							<img className={style["about-header__image"]} src={funeralImg.src} alt="Claudio Pacifico on libya"/>
-							<Seperator viewBox="0 0 331 34" className={style["about-seperator"]+" section-seperator"} />
+					<Link href="/#biografia"><a>
+						<img className={style["about-header__image"]} src={funeralImg.src} alt="Claudio Pacifico on libya"/>
+						<Seperator viewBox="0 0 331 34" className={style["about-seperator"]+" section-seperator"} />
 					</a></Link>
 				</div>
-				<LanguageSwitcher pageLink="/adad/about-it" downloadLink="/books/biographie-claudio-pacifico-fr.pdf"/>
+				<LanguageSwitcher pageLink="/about-it" downloadLink="/books/biographie-claudio-pacifico-it.pdf"/>
 				<h1 className={style["about-header__title"]}>Biografia</h1>
 				<p className={style["about-header__text"]}>
 				Ambasciatore claudio pacifico.<br/>

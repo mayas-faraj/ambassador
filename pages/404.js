@@ -11,7 +11,7 @@ export default function PageNotFound(props) {
 					<div className={style["header-menu"]}>
 						<div className={style["header-menu__list"]}>
 							<div className={style["header-menu__item"]}>
-								<Link href="/adad/" className={style["header-menu__link"]}>Indietro</Link>
+								<Link href="/" className={style["header-menu__link"]}>Indietro</Link>
 							</div>
 						</div>
 					</div>

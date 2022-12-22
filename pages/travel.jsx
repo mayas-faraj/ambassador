@@ -65,12 +65,12 @@ export default function Travel() {
 				<meta property="og:image" content="/assets/imgs/claudio-pacifico-desert.jpg" />
 			</Head>
 			<header className={style["travel-header"]}>
-				<Link href="/adad/#travel">
+				<Link href="/#travel">
 					<a className={style["travel-header__menu"]}>
 						L’Ambasciatore d’Italia Claudio Pacifico
 					</a>
 				</Link>
-				<Link href="/adad/#travel">
+				<Link href="/#travel">
 					<a><Seperator viewBox="0 0 331 34" className={style["travel-seperator"]+" section-seperator"} /></a>
 				</Link>
 			</header>

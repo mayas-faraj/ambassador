@@ -55,14 +55,14 @@ export default function Book(props) {
 				</Head>
 			)}
 			<header className={style["book-header"]}>
-				<Link href="/adad/#library">
+				<Link href="/#library">
 					<a className={style["book-header__menu"]}>
 					Libri e Pubblicazioni  dell’Ambasciatore d’Italia.<br/>
 					Storia e cultura dei Paesi arabi e asiatici,<br/>
 					luoghi in cui ha vissuto a lungo.
 					</a>
 				</Link>
-				<Link href="/adad/#library"><a>
+				<Link href="/#library"><a>
 					<Seperator viewBox="0 0 331 34" className={style["book-seperator"]+" section-seperator"} />
 				</a></Link>
 			</header>
@@ -77,7 +77,7 @@ export default function Book(props) {
 										<div className={style["book-list-wrapper"]}>
 										{
 											books.filter(book=>book.image!=null && book.image!="").reverse().map(book=>book.image && (
-												<Link key={book.slug} href={"/adad/libri/"+book.slug} title={book.title} ref={book.slug===slug?itemRef:null}>
+												<Link key={book.slug} href={"/libri/"+book.slug} title={book.title} ref={book.slug===slug?itemRef:null}>
 													<a className={style["book-item"]}>
 														<img src={book.image?book.image:transparentImage.src} className={style["book-item__image"]} alt={book.title} />
 													</a>
@@ -129,61 +129,62 @@ export default function Book(props) {
 							</div>
 						</div>
 						{
-							book.book_file && (
+							book.file && (
 							<div className={style["book-browse-basic"]}>
-								<div className={style["book-browse__pdf"]+" "+(book.book_file_pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
+								<div className={style["book-browse__pdf"]+" "+(book.pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
                 {
-									<a className={style["book-link"]} href={book.book_file} target="_blank">
-										<Document file={book.book_file} onLoadSuccess={bookLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.book_file_pages_per_view>1 &&(bookPageNumber<=1 || bookPagesCount<2*bookPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setBookModal(true)}>
-											<Page width={3000} pageNumber={book.book_file_pages_per_view>1?2*bookPageNumber-1:bookPageNumber} />
-											{book.book_file_pages_per_view>1 && <Page width={3000} pageNumber={2*bookPageNumber} />}
+									<a className={style["book-link"]} href={book.file} target="_blank">
+										<Document file={book.file} onLoadSuccess={bookLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.pages_per_view>1 &&(bookPageNumber<=1 || bookPagesCount<2*bookPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setBookModal(true)}>
+											<Page width={3000} pageNumber={book.pages_per_view>1?2*bookPageNumber-1:bookPageNumber} />
+											{book.pages_per_view>1 && <Page width={3000} pageNumber={2*bookPageNumber} />}
 										</Document>
 									</a>
                 }
 								</div>
-								<p className={style["book-browse__text"]}>contenuti</p>
+								<p className={style["book-browse__text"]}>{book.header}</p>
 								<Dialog open={bookModal} onClose0={()=>setBookModal(false)} maxWidth={"lg"} fullWidth={true}>
 									<DialogContent>
-										<a href={book.book_file} className={style["book-browse__fullscreen-link"]} target="_blank">
+										<a href={book.file} className={style["book-browse__fullscreen-link"]} target="_blank">
 											<FullScreenIcon/>
 										</a>
-										<iframe className={style["book-browse__iframe"]} src={book.book_file}/>
+										<iframe className={style["book-browse__iframe"]} src={book.file}/>
 									</DialogContent>
 								</Dialog>
 							</div>
 						)}
 						{
-							book.revision_file && (
+							book.revisions && book.revisions.map(revision=>(
 							<div className={style["book-browse-revision"]}>
-								<div className={style["book-browse__pdf"]+" "+(book.revision_file_pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
+								<div className={style["book-browse__pdf"]+" "+(revision.pages_per_view>1?"book-browse__pdf--multiple-page":"")}>
                 {
-                  (book.revision_file && book.revision_file.endsWith(".pdf")) &&
-									<a className={style["book-link"]} href={book.revision_file} target="_blank">
-										<Document file={book.revision_file} onLoadSuccess={revisionLoadEventHandler} loading="Caricamento della pagina in corso..." className={(book.revision_file_pages_per_view>1 &&(revisionPageNumber<=1 || revisionPagesCount<2*revisionPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setRevisionModal(true)}>
-											<Page width={3000} pageNumber={book.revision_file_pages_per_view>1?2*revisionPageNumber-1:revisionPageNumber}/>
-											{book.revision_file_pages_per_view>1 && <Page width={3000} pageNumber={2*revisionPageNumber}/>}
+                  (revision.file && revision.file.endsWith(".pdf")) &&
+									<a className={style["book-link"]} href={revision.file} target="_blank">
+										<Document file={revision.file} onLoadSuccess={revisionLoadEventHandler} loading="Caricamento della pagina in corso..." className={(revision.pages_per_view>1 &&(revisionPageNumber<=1 || revisionPagesCount<2*revisionPageNumber-1))?style["book-browse__pdf-single"]:""} onClick0={()=>setRevisionModal(true)}>
+											<Page width={3000} pageNumber={revision.pages_per_view>1?2*revisionPageNumber-1:revisionPageNumber}/>
+											{revision.pages_per_view>1 && <Page width={3000} pageNumber={2*revisionPageNumber}/>}
 										</Document>
 									</a>
                 }
                 {
-                  (book.revision_file && book.revision_file.endsWith(".jpg")) && (
-                  <a href={book.revision_link} target="_blank" className={style["book-image-link"]}>
-                    <img src={book.revision_file} alt={book.title} className={style["book-image"]}/>
+                  (revision.file && revision.file.endsWith(".jpg")) && (
+                  <a href={revision.link} target="_blank" className={style["book-image-link"]}>
+                    <img src={revision.file} alt={book.title} className={style["book-image"]}/>
                   </a>)
                 }
 								</div>
-								<p className={style["book-browse__text"]}>recensioni</p>
+								<p className={style["book-browse__text"]}>{revision.header}</p>
 								<Dialog open={revisionModal} onClose0={()=>setRevisionModal(false)} maxWidth={"lg"} fullWidth={true}>
 									<DialogContent>
-										<a href={book.revision_file} className={style["book-browse__fullscreen-link"]} target="_blank">
+										<a href={revision.file} className={style["book-browse__fullscreen-link"]} target="_blank">
 											<FullScreenIcon/>
 										</a>
-										<iframe className={style["book-browse__iframe"]} src={book.revision_file}/>
+										<iframe className={style["book-browse__iframe"]} src={revision.file}/>
 									</DialogContent>
 								</Dialog>
 
 							</div>
-						)}
+              ))
+					}
 					</div>
 			)}
 			<Footer/>

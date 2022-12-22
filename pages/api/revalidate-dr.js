@@ -7,7 +7,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    await res.revalidate('/adad/diplomacy-report')
+    await res.revalidate('/diplomacy-report')
     return res.json({ revalidated: true })
   } catch (err) {
     return res.status(500).send('Error revalidating')
