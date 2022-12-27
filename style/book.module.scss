@@ -326,12 +326,14 @@
 }
 
 .book-image-link {
-  max-width: 720px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .book-image {
-  width: 100%;
+  width: 95%;
+  max-height: 60vh;
+  object-fit: contain;
 }
 
 .book-item:hover .book-item__image {
