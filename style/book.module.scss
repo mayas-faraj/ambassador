@@ -119,6 +119,24 @@
 	white-space: pre-line;
 }
 
+.book-info__buy-button {
+  font-family: 'arial-narrow';
+  background-color: $text-color;
+  height: 40px;
+  width: 40px;
+  margin: 0 auto;
+  border-radius: 9px;
+  font-size: 10px;
+  line-height: 40px;
+  font-weight: 600;
+  margin-top: 25px;
+  margin-bottom: 16px;
+}
+
+.book-info__buy-button:hover {
+  background-color: $secondary-color;
+}
+
 .book-content__text {
 	font-family: minion-medium-subh;
 	margin-top: 0px;
@@ -281,6 +299,10 @@
     scrollbar-width: none;
     text-align: center;
     box-sizing: border-box;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
 }
 
 .book-list::before {

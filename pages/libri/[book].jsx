@@ -103,7 +103,7 @@ export default function Book(props) {
 									{book.comment && <div className={style["book-info__meta"]}>{book.comment.replaceAll("\\n", "\n")}</div>}
 									{book.format && <div className={style["book-info__meta"]}>formato: {book.format}</div>}
 									{book.isbn && <div className={style["book-info__meta"]}>ISBN: {book.isbn}</div>}
-									{book.buy_link && <div className={style["book-info__meta"]}><a href={book.buy_link} target="_blank"><BuyIcon/></a></div>}
+									{book.buy_link && <div className={style["book-info__meta"]+" "+style["book-info__buy-button"]}><a href={book.buy_link} target="_blank">ottien</a></div>}
 									<div className={style["book-info-share"]}>
 										<ShareIcon className={style["book-info-share__icon"]}/>
 										<ul className={style["book-info-share-list"]}>
