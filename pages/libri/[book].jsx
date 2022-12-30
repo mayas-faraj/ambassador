@@ -14,7 +14,6 @@ import transparentImage from '/public/assets/imgs/transparent.png';
 import textImage from '/public/assets/imgs/text.png';
 import Seperator from "/public/assets/imgs/seperator.svg";
 import ShareIcon from '/public/assets/imgs/share.svg';
-import BuyIcon from '/public/assets/imgs/buy.svg';
 import FullScreenIcon from '/public/assets/imgs/full-screen.svg';
 import FacebookButtonIcon from '/public/assets/imgs/social-facebook.svg';
 import TwitterButtonIcon from '/public/assets/imgs/social-twitter.svg';
