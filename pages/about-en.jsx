@@ -24,8 +24,8 @@ export default function About() {
 			<Head>
 				<title>Claudio Pacifico | Biografia</title>
 				<meta property="og:title" content="Claudio Pacifico - Biografia" />
-				<meta name="description" content="ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
-				<meta property="og:description" content="ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
+				<meta name="description" content="ambasciatore Claudio Pacifico, diplomatico di carriera, scrittore, saggista, docente universitario"/>
+				<meta property="og:description" content="ambasciatore Claudio Pacifico, diplomatico di carriera, scrittore, saggista, docente universitario"/>
 				<meta property="og:image" content="/assets/imgs/claudio-pacifico-libya.jpg" />
 			</Head>
 			<header className={style["about-header"]}>
@@ -39,7 +39,7 @@ export default function About() {
 				<h1 className={style["about-header__title"]}>Biografia</h1>
 				<p className={style["about-header__text"]}>
 				Ambasciatore claudio pacifico.<br/>
-				Diplomatico di carriea, scrittore, saggista, docente universitario.
+				Diplomatico di carriera, scrittore, saggista, docente universitario.
 				</p>
 			</header>
 			<div className={style["about-container"]}>
