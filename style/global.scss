@@ -300,7 +300,8 @@ a[href="#library"] path {
 	margin-left: 0;
 }
 
-.book-page .react-pdf__Page__canvas {
+.book-page .react-pdf__Page__canvas,
+.fixed-height {
 	height: 510px !important;
 }
 

@@ -169,7 +169,7 @@ export default function Book(props) {
                 {
                   (revision.file && revision.file.endsWith(".jpg")) && (
                   <a href={revision.link} target="_blank" className={style["book-image-link"]}>
-                    <img src={revision.file} alt={book.title} className={style["book-image"]+" react-pdf__Page__canvas"}/>
+                    <img src={revision.file} alt={book.title} className={style["book-image"]+" fixed-height"}/>
                   </a>)
                 }
 								</div>
