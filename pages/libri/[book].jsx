@@ -48,10 +48,10 @@ export default function Book(props) {
 			{props.book!=null && (
 				<Head>
 					<title>{props.book.title + " | Claudio Pacifico libri"}</title>
-					<meta property="og:title" content={props.book.title + " | Claudio Pacifico libri"}/>
+					<meta name="title" property="og:title" content={props.book.title + " | Claudio Pacifico libri"}/>
 					<meta name="description" content={props.book.preface}/>
-					<meta property="og:description" content={props.book.preface}/>
-					{props.book.image && <meta property="og:image" content={props.book.image} />}
+					<meta name="description" property="og:description" content={props.book.preface}/>
+					{props.book.image && <meta name="image" property="og:image" content={props.book.image} />}
 				</Head>
 			)}
 			<header className={style["book-header"]}>
