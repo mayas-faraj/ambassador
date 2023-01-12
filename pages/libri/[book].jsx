@@ -102,7 +102,7 @@ export default function Book(props) {
 									{book.comment && <div className={style["book-info__meta"]}>{book.comment.replaceAll("\\n", "\n")}</div>}
 									{book.format && <div className={style["book-info__meta"]}>formato: {book.format}</div>}
 									{book.isbn && <div className={style["book-info__meta"]}>ISBN: {book.isbn}</div>}
-									{book.buy_link && <div className={style["book-info__meta"]+" "+style["book-info__buy-button"]}><a href={book.buy_link} target="_blank">ottien</a></div>}
+									{book.buy_link && <div className={style["book-info__meta"]+" "+style["book-info__buy-button"]}><a href={book.buy_link} target="_blank">ottieni</a></div>}
 									<div className={style["book-info-share"]}>
 										<ShareIcon className={style["book-info-share__icon"]}/>
 										<ul className={style["book-info-share-list"]}>
@@ -169,7 +169,7 @@ export default function Book(props) {
                 {
                   (revision.file && revision.file.endsWith(".jpg")) && (
                   <a href={revision.link} target="_blank" className={style["book-image-link"]}>
-                    <img src={revision.file} alt={book.title} className={style["book-image"]}/>
+                    <img src={revision.file} alt={book.title} className={style["book-image"]+" react-pdf__Page__canvas"}/>
                   </a>)
                 }
 								</div>
