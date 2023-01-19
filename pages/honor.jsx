@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Footer from '/components/footer';
 import Seperator from "/public/assets/imgs/seperator.svg";
 import funeralImg from '/public/assets/imgs/claudio-pacifico-libya.jpg';
+import siteUrls from '/public/siteUrls.json';
 import style from '/style/about.module.scss';
 
 export default function Honor(props) {
@@ -14,7 +15,7 @@ export default function Honor(props) {
 				<meta property="og:title" content="Claudio Pacifico - Biografia" />
 				<meta name="description" content="ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
 				<meta property="og:description" content="ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
-				<meta property="og:image" content="/assets/imgs/claudio-pacifico-libya.jpg" />
+				<meta property="og:image" content={siteUrls.siteUrl + "/assets/imgs/claudio-pacifico-libya.jpg"} />
 			</Head>
 			<header className={style["about-header"]}>
 				<div className={style["about-header__image-container"]}>

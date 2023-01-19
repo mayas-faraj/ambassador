@@ -12,6 +12,7 @@ import Footer from "/components/footer";
 import Seperator from "/public/assets/imgs/home-seperator.svg";
 import Menu from "/public/assets/imgs/menu.svg";
 import ambassadorImg from '/public/assets/imgs/ambassador.png';
+import siteUrls from '/public/siteUrls.json';
 import style from '/style/home.module.scss';
 
 export default function Home(props) {
@@ -95,7 +96,7 @@ export default function Home(props) {
 			<Head>
 				<meta name="description" content="ambasciatore d'italia, Claudio Pacifico, il diplomatico, lo scrittore, il saggista"/>
 				<meta property="og:title" content="Claudio Pacifico - Ambasciatore d'Italia" />
-				<meta property="og:image" content="/assets/imgs/claudio-pacifico.png" />
+				<meta property="og:image" content={siteUrls.siteUrl + "/assets/imgs/website-cover.png"} />
 				<meta property="og:description" content="ambasciatore d'italia, Claudio Pacifico, il diplomatico, lo scrittore, il saggista"/>
 			</Head>
 			<header>

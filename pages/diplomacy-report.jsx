@@ -8,6 +8,7 @@ import Glimmer from "/components/glimmer";
 import Seperator from "/public/assets/imgs/seperator.svg";
 import Footer from "/components/footer";
 import "photoswipe/dist/photoswipe.css";
+import siteUrls from '/public/siteUrls.json';
 import style from "/style/diplomaticreport.module.scss";
 
 export default function DiplomaticReport({countries}) {
@@ -31,7 +32,7 @@ export default function DiplomaticReport({countries}) {
 			<Head>
 				<title>Claudio Pacifico | Repertorio Diplomatico</title>
 				<meta property="og:title" content="Claudio Pacifico - Repertorio Diplomatico" />
-				<meta property="og:image" content="/assets/imgs/claudio-pacifico-with-afarat.jpg" />
+				<meta property="og:image" content={siteUrls.siteUrl + "/assets/imgs/claudio-pacifico-with-afarat.jpg"} />
 			</Head>
 			<header className={style["diplomatic-report-header"]}>
 				<Link

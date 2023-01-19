@@ -6,6 +6,7 @@ import Glimmer from '/components/glimmer';
 import Seperator from '/public/assets/imgs/seperator.svg';
 import Footer from '/components/footer';
 import 'photoswipe/dist/photoswipe.css'
+import siteUrls from '/public/siteUrls.json';
 import style from '/style/travel.module.scss';
 
 export default function Travel() {
@@ -62,7 +63,7 @@ export default function Travel() {
 				<meta property="og:title" content="Claudio Pacifico - Viaggi e spedizioni" />
 				<meta name="description" content="dell’ambasciatore Claudio Pacifico in ogni parte del mondo: Europa, Asia, Africa, Australia e Oceania, Americhe, Antartide."/>
 				<meta property="og:description" content="dell’ambasciatore Claudio Pacifico in ogni parte del mondo: Europa, Asia, Africa, Australia e Oceania, Americhe, Antartide."/>
-				<meta property="og:image" content="/assets/imgs/claudio-pacifico-desert.jpg" />
+				<meta property="og:image" content={siteUrls.siteUrl + "/assets/imgs/claudio-pacifico-desert.jpg"} />
 			</Head>
 			<header className={style["travel-header"]}>
 				<Link href="/#travel">
