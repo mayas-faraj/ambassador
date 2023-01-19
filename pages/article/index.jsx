@@ -25,7 +25,7 @@ export default function Articles() {
 				<meta property="og:title" content="Claudio Pacifico - Letture" />
 				<meta name="description" content="episodi, ricordi e analisi,scritti dall’ambasciatore d’italia, claudio pacifico"/>
 				<meta property="og:description" content="episodi, ricordi e analisi,scritti dall’ambasciatore d’italia, claudio pacifico"/>
-				<meta property="og:image" content={content.uploadsUrl + "/assets/imgs/header-articles.jpg"} />
+				<meta property="og:image" content={context.uploadsUrl + "/assets/imgs/header-articles.jpg"} />
 			</Head>
 			<header className={style["articles-header"]}>
 				<div className={style["articles-header__image-container"]}>
