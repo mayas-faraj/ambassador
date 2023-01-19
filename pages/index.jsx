@@ -97,7 +97,7 @@ export default function Home(props) {
 				<meta name="description" content="ambasciatore d'italia, Claudio Pacifico, il diplomatico, lo scrittore, il saggista"/>
 				<meta property="og:title" content="Claudio Pacifico - Ambasciatore d'Italia" />
 				<meta property="og:image" content={siteUrls.siteUrl + "/assets/imgs/website-cover.png"} />
-				<meta property="og:description" content="ambasciatore d'italia, Claudio Pacifico, il diplomatico, lo scrittore, il saggista"/>
+				<meta property="og:description" content="Ambasciatore d'Italia, Claudio Pacifico, il diplomatico, lo scrittore, il saggista"/>
 			</Head>
 			<header>
 				<div className={style["header-wrapper"]}>

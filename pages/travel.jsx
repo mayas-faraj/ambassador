@@ -61,8 +61,8 @@ export default function Travel() {
 			<Head>
 				<title>Claudio Pacifico | Viaggi e spedizioni</title>
 				<meta property="og:title" content="Claudio Pacifico - Viaggi e spedizioni" />
-				<meta name="description" content="dell’ambasciatore Claudio Pacifico in ogni parte del mondo: Europa, Asia, Africa, Australia e Oceania, Americhe, Antartide."/>
-				<meta property="og:description" content="dell’ambasciatore Claudio Pacifico in ogni parte del mondo: Europa, Asia, Africa, Australia e Oceania, Americhe, Antartide."/>
+				<meta name="description" content="Dell’ambasciatore Claudio Pacifico in ogni parte del mondo: Europa, Asia, Africa, Australia e Oceania, Americhe, Antartide."/>
+				<meta property="og:description" content="Dell’ambasciatore Claudio Pacifico in ogni parte del mondo: Europa, Asia, Africa, Australia e Oceania, Americhe, Antartide."/>
 				<meta property="og:image" content={siteUrls.siteUrl + "/assets/imgs/claudio-pacifico-desert.jpg"} />
 			</Head>
 			<header className={style["travel-header"]}>

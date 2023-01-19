@@ -13,8 +13,8 @@ export default function Honor(props) {
 			<Head>
 				<title>Claudio Pacifico | Biografia</title>
 				<meta property="og:title" content="Claudio Pacifico - Biografia" />
-				<meta name="description" content="ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
-				<meta property="og:description" content="ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
+				<meta name="description" content="Ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
+				<meta property="og:description" content="Ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
 				<meta property="og:image" content={siteUrls.siteUrl + "/assets/imgs/claudio-pacifico-libya.jpg"} />
 			</Head>
 			<header className={style["about-header"]}>

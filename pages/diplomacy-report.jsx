@@ -33,6 +33,7 @@ export default function DiplomaticReport({countries}) {
 				<title>Claudio Pacifico | Repertorio Diplomatico</title>
 				<meta property="og:title" content="Claudio Pacifico - Repertorio Diplomatico" />
 				<meta property="og:image" content={siteUrls.siteUrl + "/assets/imgs/claudio-pacifico-with-afarat.jpg"} />
+				<meta property="og:description" content="Ambasciatore Claudio Pacifico, diplomatico di carriea, scrittore, saggista, docente universitario"/>
 			</Head>
 			<header className={style["diplomatic-report-header"]}>
 				<Link
