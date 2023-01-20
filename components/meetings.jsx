@@ -29,7 +29,7 @@ class Meetings extends React.Component {
 				{ this.state.meetings!=null && this.state.meetings.status!=="failed" && this.state.meetings.map(meeting=>(
 						<div key={meeting.title} className={style["meetings-item"]}>
 							<Link href={"/article/"+meeting.slug}>
-								<a><img src={this.context.uploadsUrl+"/"+meeting.image} className={style["meetings-item__image"]} alt={"Claudio Pacifico meeting, "+meeting.title}/></a>
+								<a><img src={this.context.imagesUrl+"/"+meeting.image} className={style["meetings-item__image"]} alt={"Claudio Pacifico meeting, "+meeting.title}/></a>
 							</Link>
 
 							<h3 className={style["meetings-item__title"]}>

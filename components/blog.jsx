@@ -181,7 +181,7 @@ export default class Blog extends React.Component {
 						{ this.state.blogs!=null && this.state.blogs.status!=="failed" && this.state.blogs.map((blog, index)=>(
 							(index>=this.state.blogIndex && index<this.state.blogIndex+VISIBLE_BLOGS_COUNT) && <div key={blog.title+blog.image} className={style["blog-item"]}>
 								<a className={style["blog-item__link"]} href={blog.source_link?blog.source_link:""} target="_blank" rel="noreferrer">
-									<img src={this.context.uploadsUrl+"/"+blog.image} className={style["blog-item__image"]} alt={blog.title}/>
+									<img src={this.context.imagesUrl+"/"+blog.image} className={style["blog-item__image"]} alt={blog.title}/>
 									<div className={style["blog-info"]}>
 										<span className={style["blog-info__category"]}>{blog.type}</span>
 										<h3 className={style["blog-info__title"]}>{blog.title.replaceAll("\\n", "\n")}</h3>
