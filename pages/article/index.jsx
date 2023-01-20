@@ -25,7 +25,7 @@ export default function Articles() {
 				<meta property="og:title" content="Claudio Pacifico - Letture" />
 				<meta name="description" content="Episodi, ricordi e analisi,scritti dall’ambasciatore d’italia, claudio pacifico"/>
 				<meta property="og:description" content="Episodi, ricordi e analisi,scritti dall’ambasciatore d’italia, claudio pacifico"/>
-				<meta property="og:image" content={context.uploadsUrl + "/assets/imgs/header-articles.jpg"} />
+				<meta property="og:image" content={context.siteUrl + "/assets/imgs/header-articles.jpg"} />
 			</Head>
 			<header className={style["articles-header"]}>
 				<div className={style["articles-header__image-container"]}>
@@ -48,7 +48,7 @@ export default function Articles() {
 						articles.map(article=>(
 							<div key={article.slug} className={style["articles-item"]}>
 								<Link href={"/article/"+article.slug}>
-									<a><img className={style["articles-item__image"]} src={context.uploadsUrl+"/"+article.image} alt={article.excerpt}/></a>
+									<a><img className={style["articles-item__image"]} src={context.imagesUrl+"/"+article.image} alt={article.excerpt}/></a>
 								</Link>
 								<strong className={style["articles-item__type"]}>{article.type}</strong>
 								<Link href={"/article/"+article.slug}>

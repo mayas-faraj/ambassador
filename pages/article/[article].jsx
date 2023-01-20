@@ -27,7 +27,7 @@ export default function Article(props) {
 						<meta property="og:title" content={article.title + " | Claudio Pacifico letture"}/>
 						<meta name="description" content={article.excerpt.replaceAll("\n", "")}/>
 						<meta property="og:description" content={article.excerpt.replaceAll("\n", "")}/>
-						{article.image && <meta property="og:image" content={siteUrls.siteUrl+"/"+article.image} />}
+						{article.image && <meta property="og:image" content={context.imagesUrl+"/"+article.image} />}
 					</Head>
 				)}
 				<header className={style["article-header"]}>
@@ -44,10 +44,10 @@ export default function Article(props) {
 				</header>
 				<div className={style["article-content"]}>
 					<div className={style["article-container"]}>
-						<img className={style["article__feature-image"]} src={siteUrls.siteUrl+ "/" + article.image}/>
+						<img className={style["article__feature-image"]} src={context.imagesUrl+ "/"   + article.image}/>
 						<h1 className={style["article__type"]}>{article.type}</h1>
 						<p className={style["article__excerpt"]}>{article.excerpt}</p>
-						<p className={style["article__content"]}>article.content</p>
+						<p className={style["article__content"]}>{article.content}</p>
 					</div>
 				</div>
 				<Footer/>

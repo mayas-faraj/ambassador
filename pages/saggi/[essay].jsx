@@ -50,7 +50,7 @@ export default props=>{
 					<meta property="og:title" content={essays[0].title + " | Claudio Pacifico Saggi"}/>
 					<meta name="description" content={essays[0].book_name}/>
 					<meta property="og:description" content={essays[0].book_name}/>
-					{essays[0].image && <meta property="og:image" content={context.uploadsUrl+"/"+essays[0].image} />}
+					{essays[0].image && <meta property="og:image" content={context.imagesUrl+"/"+essays[0].image} />}
 				</Head>)
 			}
 			<header className={style["essay-header"]}>
