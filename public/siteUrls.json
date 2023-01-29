@@ -1,7 +1,7 @@
 {
 	"backendApiUrl": "https://laravel.ae/claudio-pacifico/backend/api.php",
-	"imagesUrl": "https://claudiopacificoambassador.com/public/images",
-	"booksUrl": "https://claudiopacificoambassador.com/public/books",
+	"imagesUrl": "https://claudiopacificoambassador.com/images",
+	"booksUrl": "https://claudiopacificoambassador.com/books",
 	"siteUrl": "https://claudiopacificoambassador.com"
 }
 
