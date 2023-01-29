@@ -21,28 +21,34 @@ const SOCIALS=[
 	{
 		"app": "linkedin", 
 		"enabled": true,
-		"icon": <LinkedinButtonIcon className={style["social-linkedin"]}/>
+		"icon": <LinkedinButtonIcon className={style["social-linkedin"]}/>,
+    "link": "https://www.linkedin.com/in/claudio-pacifico-044b698a"
 	},
 	{
 		"app": "twitter", 
 		"enabled": true,
-		"icon": <TwitterButtonIcon className={style["social-twitter"]}/>
+		"icon": <TwitterButtonIcon className={style["social-twitter"]}/>,
+    "link": ""
 	},
 	{
 		"app": "facebook", 
 		"enabled": true,
-		"icon": <FacebookButtonIcon className={style["social-facebook"]}/>
+		"icon": <FacebookButtonIcon className={style["social-facebook"]}/>,
+    "link": "https://www.facebook.com/claudio.pacifico.142"
 	},
 	{
 		"app": "youtube", 
 		"enabled": true,
-		"icon": <YoutubeButtonIcon className={style["social-youtube"]}/>
+		"icon": <YoutubeButtonIcon className={style["social-youtube"]}/>,
+    "link": ""
 	},
+  /*
 	{
 		"app": "instagram", 
 		"enabled": false,
 		"icon": <InstagramButtonIcon className={style["social-instagram"]}/>
 	}
+  */
 ];
 
 const MONTHS=["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -167,9 +173,18 @@ export default class Blog extends React.Component {
 						{
 							SOCIALS.map(social=>(
 								<div key={social.app} className={style["blog-social-icon"]}>
+                {
+                  (social.link === "") &&
 									<span className={style["blog-social-icon__link"]+" "+(social.app===this.state.currentSocial?style["blog-social-icon__link--active"]:"")} onClick={()=>this.socialClickHandler(social)}>
 									{social.icon}
 									</span>
+                }
+                {
+                  (social.link !== "") &&
+                  <a className={style["blog-social-icon__link"]} href={social.link} target="_blank">
+									{social.icon}
+                  </a>
+                }
 								</div>
 							))
 						}
