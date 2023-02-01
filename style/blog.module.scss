@@ -46,7 +46,6 @@
 }
 
 .blog-content {
-	position: relative;
 	display: flex;
 	//background: repeating-linear-gradient(-45deg, transparent, $lines-color, transparent 7px);
 	padding: 40px;
@@ -57,10 +56,10 @@
 
 .blog-content::before {
 	position: absolute;
-	width: 3000px;
+	width: 100%;
 	height: calc(100% + 40px);
 	top: 100px;
-	left: -500px;
+	left: 0;
 	content: ' ';
 	margin-top: -102px;
 	background-image: url(/assets/imgs/lines.svg);
@@ -304,8 +303,9 @@
 .blog-social-icons {
 	display: flex;
 	gap: 5px;
-	justify-content: space-around;
-	margin-bottom: 35px;
+	justify-content: space-between;
+  width: 218px;
+	margin: 0 auto 35px;
 }
 
 .social-facebook:hover path {
