@@ -33,6 +33,7 @@ body {
 }
 
 #__next {
+  /*
   @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
 		zoom: 90%;
 	}
@@ -40,6 +41,7 @@ body {
   @media screen and (max-width: $mobile-width) {
 		zoom: 70%;
   }
+  */
 }
 
 #__next {
@@ -120,13 +122,13 @@ body {
 		fill: #15161e;
 	}
 
-	@media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
+	/*@media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
 		left: calc(50vw - 90px);
 	}
 
 	@media screen and (max-width: $mobile-width) {
 		left: calc(50vw - 70px);
-  }
+  }*/
 }
 
 .swiper-wrapper {
@@ -267,6 +269,10 @@ a[href="#library"] path {
 
 .word-map-new_svg__country-sd, .word-map-new_svg__country-ly, .word-map-new_svg__country-bd, .word-map-new_svg__country-eg, .word-map-new_svg__country-ir, .word-map-new_svg__united-states, .word-map-new_svg__country-eg, .word-map-new_svg__country-sd, .word-map-new_svg__country-ly, .word-map-new_svg__country-ss, .word-map-new_svg__country-so, .word-map-new_svg__country-sa, .word-map-new_svg__country-sy, .word-map-new_svg__country-lb, .word-map-new_svg__country-jo, .word-map-new_svg__country-iq, .word-map-new_svg__country-ps, .word-map-new_svg__country-il, .word-map-new_svg__country-lb, .word-map-new_svg__country-tn, .word-map-new_svg__country-ma, .word-map-new_svg__country-dz, .word-map-new_svg__country-eh, .word-map-new_svg__country-mr, .word-map-new_svg__country-ye, .word-map-new_svg__country-qa, .word-map-new_svg__oman, .word-map-new_svg__country-ae, .word-map-new_svg__country-kw, .word-map-new_svg__country-so, .word-map-new_svg__australia, .word-map-new_svg__russian-federation:not(.kaliningrad), .word-map-new_svg__papua-new.word-map-new_svg__guinea, .word-map-new_svg__indonesia, .word-map-new_svg__philippines, .word-map-new_svg__oman, .word-map-new_svg__malaysia, .word-map-new_svg__azerbaijan, .word-map-new_svg__turkey:not(.costantibol), .word-map-new_svg__country-tl, .word-map-new_svg__country-qa, .word-map-new_svg__country-lb, .word-map-new_svg__country-il, .word-map-new_svg__country-ps, .word-map-new_svg__country-am, .word-map-new_svg__country-ge, .word-map-new_svg__country-bn, .word-map-new_svg__country-tw, .word-map-new_svg__country-ae, .word-map-new_svg__country-kw, .word-map-new_svg__country-lk, .word-map-new_svg__country-ar, .word-map-new_svg__country-mn, .word-map-new_svg__country-mn, .word-map-new_svg__country-in, .word-map-new_svg__country-ie .word-map-new_svg__country-ir, .word-map-new_svg__country-iq, .word-map-new_svg__country-iq, .word-map-new_svg__country-sa, .word-map-new_svg__country-kz, .word-map-new_svg__country-ye, .word-map-new_svg__country-np, .word-map-new_svg__country-bd, .word-map-new_svg__country-uz, .word-map-new_svg__country-tm, .word-map-new_svg__country-tj, .word-map-new_svg__country-kg, .word-map-new_svg__country-af, .word-map-new_svg__country-pk, .word-map-new_svg__country-bt, .word-map-new_svg__country-mm, .word-map-new_svg__country-th, .word-map-new_svg__country-vn, .word-map-new_svg__country-la, .word-map-new_svg__country-kh, .word-map-new_svg__country-kr, .word-map-new_svg__country-kp, .word-map-new_svg__country-ir, .word-map-new_svg__country-sa, .word-map-new_svg__country-iq, .word-map-new_svg__country-sy, .word-map-new_svg__country-lb, .word-map-new_svg__country-jo, .word-map-new_svg__japan, .word-map-new_svg__china {
 	fill: $map-general-color !important;
+}
+
+.word-map-new_svg__italy {
+	fill: $map-italy-color !important;
 }
 
 .react-pdf__message {
