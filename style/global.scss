@@ -33,18 +33,6 @@ body {
 }
 
 #__next {
-  /*
-  @media screen and (min-width: $mobile-width) and (max-width: $desktop-width) {
-		zoom: 90%;
-	}
-
-  @media screen and (max-width: $mobile-width) {
-		zoom: 70%;
-  }
-  */
-}
-
-#__next {
 	background-color: $accent-color;
 	-webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -73,6 +61,10 @@ body {
 
 #meetings {
 	background-color: $primary-color;
+
+	@media (max-width: $mobile-width) {
+		display: none;
+	}
 }
 
 #meetings::before {
@@ -141,7 +133,7 @@ body {
 
 #library {
 	.swiper-slide-duplicate {
-		visibility: hidden;
+		display: none;
 	}
 }
 

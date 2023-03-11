@@ -58,6 +58,10 @@
 	overflow-y: auto;
 	overflow-x: hidden;
 	scrollbar-width: none;
+
+	@media (max-width: $mobile-width) {
+		display: none;
+	}
 }
 
 .publications-top__desc::-webkit-scrollbar {

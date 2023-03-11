@@ -2,12 +2,15 @@
 
 .switcher {
     display: flex;
-    justify-content: flex-end;
-    padding-right: 110px;
+    justify-content: center;
     margin-top: 44px;
     box-sizing: border-box;
-    &+h1 {
-	    margin-top: -50px;
+    @media (min-width: $mobile-width) {
+        padding-right: 110px;
+        justify-content: flex-end;
+        &+h1 {
+            margin-top: -50px;
+        }
     }
 }
 

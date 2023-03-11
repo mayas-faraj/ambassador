@@ -92,7 +92,6 @@
 }
 
 .book-info__img {
-	max-height: calc(100vh - 300px);
 	width: 100%;
 	object-fit: contain;
 }
@@ -355,7 +354,6 @@
 
 .book-image {
   width: 100%;
-  max-height: 60vh;
   object-fit: contain;
 }
 

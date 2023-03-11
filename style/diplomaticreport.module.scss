@@ -22,6 +22,10 @@
 	background-size: 150px auto;
 	opacity: 0.5;
 	pointer-events: none;
+
+	@media (max-width: $mobile-width) {
+		display: none;
+	}
 }
 
 .diplomatic-report-header__menu {
@@ -75,6 +79,10 @@
 	height: 3px;
 	border-bottom: 1px solid $secondary-color;
 	border-top: 1px solid $secondary-color;
+
+	@media (max-width: $mobile-width) {
+		display: none;
+	}
 }
 
 .diplomatic-report-header__wrapper::before {
@@ -96,7 +104,10 @@
 }
 
 .diplomatic-report-countries__item {
-    display: inline;
+	@media (min-width: $mobile-width) {
+		display: inline;
+	}
+
     margin-right: 12px;
 
     a {
@@ -188,6 +199,7 @@
 
 .diplomatic-report-gallery {
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 	gap: 40px;
 	max-width: 1000px !important;

@@ -3,6 +3,10 @@
 
 .header-wrapper {
 	position: relative;
+
+	@media (max-width: $mobile-width) {
+		display: none;
+	}
 }
 
 .header {
