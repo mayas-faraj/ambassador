@@ -5,7 +5,7 @@
 .book-header {
 	background-color: $primary-color;
 	text-align: center;
-	padding: 35px 0 45px;
+	padding: 35px 10px 45px;
 	position: relative;
 }
 
@@ -76,7 +76,10 @@
 	text-align: right;
 	text-transform: uppercase;
 	flex-basis: 400px;
-  margin-left: 55px;
+
+	@media (min-width: $mobile-width) {
+		margin-left: 55px;
+	}
 
 	@media (min-width: $desktop-width) {
 		flex-basis: 410px;

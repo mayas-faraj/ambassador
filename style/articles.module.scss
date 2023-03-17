@@ -18,6 +18,7 @@
 
 .articles-container {
 	max-width: 1200px !important;
+	padding: 0 15px;
 }
 
 .articles-header__image-container {
@@ -63,6 +64,10 @@
 	height: 3px;
 	border-bottom: 1px solid $secondary-color;
 	border-top: 1px solid $secondary-color;
+
+	@media (max-width: $mobile-width) {
+		display: none;
+	}
 }
 
 .articles-header__title::before {
