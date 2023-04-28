@@ -6,6 +6,7 @@ import {Pagination} from 'swiper';
 import Glimmer from './glimmer';
 import SettingContext from './setting-context';
 import style from '/style/publication.module.scss';
+import 'swiper/css/pagination';
 
 class Publications extends React.Component {
 	constructor(props) {
@@ -129,10 +130,10 @@ class Publications extends React.Component {
 				<div className={style["publications-content"]}>
 					{ this.state.books===null && <Glimmer/> }
 					{ this.state.books!==null && (
-						<Swiper key={this.state.books.length} modules={[Pagination]} spaceBetween={15} loop={true} centerInsufficientSlides={true} grabCursor={true} loopFillGroupWithBlank={true} loopedSlides={5-this.state.books.length%5} initialSlide={this.state.books.length-1} onUpdate={this.initSwiperHandler} pagination={{clickable: true}} breakpoints={{100: {slidesPerView: 1, slidesPerGroup: 1}, 550: {slidesPerView: 2, slidesPerGroup: 2}, 700: {slidesPerView: 3, slidesPerGroup: 3}, 900: {slidesPerView: 4, slidesPerGroup: 4}, 1100: {slidesPerView: 5, slidesPerGroup: 5}}}>
+						<Swiper key={this.state.books.length} modules={[Pagination]} spaceBetween={15} loop={false} centerInsufficientSlides={true} grabCursor={true} loopFillGroupWithBlank={true} loopedSlides={5-this.state.books.length%5} initialSlide={this.state.books.length-1} onUpdate={this.initSwiperHandler} pagination={{clickable: true}} breakpoints={{100: {slidesPerView: 1, slidesPerGroup: 1}, 550: {slidesPerView: 2, slidesPerGroup: 2}, 700: {slidesPerView: 3, slidesPerGroup: 3}, 900: {slidesPerView: 4, slidesPerGroup: 4}, 1100: {slidesPerView: 5, slidesPerGroup: 5}}}>
 						{ this.state.books.length===0 && <p className={style["publications-noitems"]}>gli articoli arriveranno presto</p> }
 						{ this.state.books.status!=="failed" && this.state.books.status!=="error" && this.state.books.map((book, index)=>(
-								<SwiperSlide key={book.slug+index}>
+								<SwiperSlide key={book.slug+book.image+book.title}>
 										<Link href={"/"+this.state.categories[this.state.activeCategoryIndex].name+"/"+book.slug}>
 											<a onMouseEnter={()=>this.bookHoverEventHandler(index)} className={style["publications-item"]+(index===this.state.activeBookIndex?" "+style["publications-item--active"]:"")} >
 											<p className={style["publications-item__content"]+(!book.image?" "+style["publications-item__content--full-height"]:"")+" "+(/[ا-ي]/.test(book.title)?style["publications-item__content--arabic"]:"")}>
